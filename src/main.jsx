@@ -1,19 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import { HashRouter, Routes, Route } from "react-router-dom";  // Correct import for react-router-dom
-import './index.scss';
-import Hero from './pages/home/Hero.jsx';
+import { HashRouter, Routes, Route } from "react-router-dom"; // Correct import for react-router-dom
+import "./index.scss";
+import Hero from "./pages/home/Hero.jsx";
 import ScrollToTop from "./functions/scrollToTop.jsx";
 import Home from "./pages/home/Home.jsx";
 
 export default function App() {
   return (
-    // HashRouter is used for GitHub Pages; BrowserRouter should be used for other environments
-    <HashRouter>
-
-    // Change from HashRouter to BrowserRouter when deploying other than GitHub Pages
-    // GitHub Pages does not support BrowserRouter, so use HashRouter instead
     <HashRouter>
       {/* Function to Scroll To Top of Page for React-Router when changing pages */}
 
@@ -22,7 +17,7 @@ export default function App() {
       <Routes>
         {/* Home Route */}
         <Route index element={<Home />} />
-        
+
         {/* Hero Route */}
         <Route path="/hero" element={<Hero />} />
       </Routes>
