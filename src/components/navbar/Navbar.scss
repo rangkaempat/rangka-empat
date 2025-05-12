@@ -1,0 +1,56 @@
+$primary: #0aaab8;
+$secondary: #0a6ab8;
+$dark: #323232;
+$light: #f2f2f2;
+
+.navbarBackground {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom: 1px solid rgba(10, 106, 184, 0.35);
+  background: rgba(2, 14, 42);
+  backdrop-filter: blur(12.5px);
+
+  //   Fix Position to Top
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1000;
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 1366px;
+  min-width: auto;
+  margin: auto;
+  background: rgba(2, 14, 42);
+  backdrop-filter: blur(12.5px);
+  display: flex;
+}
+
+.navlogo {
+  height: 70px;
+}
+
+.navlink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 75px;
+  padding: 0 1rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.navlinkContainer {
+  display: flex;
+  gap: 1rem;
+}

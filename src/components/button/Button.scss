@@ -1,0 +1,32 @@
+$primary: #0aaab8;
+$secondary: #0a6ab8;
+$dark: #323232;
+$light: #ffffff;
+$darkbg: #020e2a;
+$lightbg: #f2f2f2;
+
+.btnType1 {
+  padding: 0.5rem 1.5rem;
+  color: white;
+  background: linear-gradient(to right, $primary, $secondary);
+  border-radius: 30px;
+  //   border: 1px solid rgba(255, 255, 255, 0);
+
+  &:hover {
+    // border: 1px solid $primary;
+    color: white;
+    transition: 0.2s;
+  }
+}
+
+.btnType2 {
+  padding: 0.5rem 1.5rem;
+  color: white;
+  border: 1px solid white;
+  border-radius: 30px;
+
+  &:hover {
+    border: 1px solid $primary;
+    color: $primary;
+  }
+}

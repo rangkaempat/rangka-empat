@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Navbar from "../../components/navbar/Navbar";
 
 function About() {
-  return <div>About</div>;
+  useEffect(() => {
+    document.title = "Rangka Empat Studio | Who We Are.";
+  }, []);
+
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 }
 
 export default About;

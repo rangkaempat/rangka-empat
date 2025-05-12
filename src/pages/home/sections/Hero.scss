@@ -1,0 +1,59 @@
+$primary: #0aaab8;
+$secondary: #0a6ab8;
+$dark: #323232;
+$light: #ffffff;
+$darkbg: #020e2a;
+$lightbg: #f2f2f2;
+
+.heroBackground {
+  background-image: url("././src/assets/home-hero-bg.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .bgBlur {
+    backdrop-filter: blur(10px);
+
+    .heroContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+
+      height: 100vh;
+      min-height: 500px;
+      max-width: 1366px;
+      margin: auto;
+      padding: 3rem 3rem;
+
+      gap: 2rem;
+
+      .heroTitle {
+        h1 {
+          color: white;
+          span {
+            font-weight: 400;
+            background-color: #0aaab8;
+            color: white;
+
+            padding: 0 0.5rem;
+          }
+        }
+      }
+
+      p {
+        width: 50%;
+        margin: 0 auto;
+        color: white;
+      }
+
+      .heroBtnContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+    }
+  }
+}

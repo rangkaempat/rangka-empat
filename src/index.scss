@@ -1,7 +1,9 @@
-$primary: #0AAAB8;
-$secondary: #0A6AB8;
+$primary: #0aaab8;
+$secondary: #0a6ab8;
 $dark: #323232;
-$light: #f2f2f2;
+$light: #ffffff;
+$darkbg: #020e2a;
+$lightbg: #f2f2f2;
 
 :root {
   font-family: "Poppins", sans-serif;
@@ -15,7 +17,7 @@ $light: #f2f2f2;
 
 html {
   // scroll-behavior: smooth;
-  background-color: $light;
+  background-color: $lightbg;
 }
 
 body {
@@ -25,10 +27,9 @@ body {
 
 .mainWrapper {
   max-width: 1366px;
-  display : flex;
-  margin : auto;
+  display: flex;
+  margin: auto;
 }
-
 
 a {
   text-decoration: none;
