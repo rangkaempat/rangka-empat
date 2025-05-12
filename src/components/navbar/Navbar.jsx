@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.scss";
 import { Outlet, Link } from "react-router";
 import Button from "../button/Button";
+import navLogo from "/src/assets/rangka-empat-studio-logo.webp";
 
 export default function Navbar() {
   return (
@@ -10,10 +11,7 @@ export default function Navbar() {
         <div className="navbarContainer">
           {/* Navbar Logo */}
           <Link to="/">
-            <img
-              className="navlogo"
-              src="/src/assets/rangka-empat-studio-logo.webp"
-            />
+            <img className="navlogo" src={homeHeroBg} />
           </Link>
 
           {/* Navlinks */}
