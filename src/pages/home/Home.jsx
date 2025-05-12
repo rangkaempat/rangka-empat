@@ -14,10 +14,7 @@ export default function Home() {
   }, []);
 
   return (
-<>
-    
-
-    
+    <>
       <div className="navbarWrapper">
         <div className="mainWrapper">
           <div className="navbar">
@@ -37,6 +34,5 @@ export default function Home() {
 
       <Hero />
     </>
-
   );
 }

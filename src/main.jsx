@@ -21,7 +21,7 @@ export default function App() {
       <Routes>
         {/* Home Route */}
         <Route index element={<Home />} />
-        
+
         {/* Hero Route */}
         <Route path="/hero" element={<Hero />} />
       </Routes>
