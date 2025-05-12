@@ -1,19 +1,16 @@
-import {React , useEffect} from "react";
-import {Outlet, Link} from "react-router";
+// Home.js
+
+import React from "react";
+import { Link } from "react-router-dom";  // Correct import for react-router-dom
 
 export default function Home() {
-  useEffect(() => {
-    document.title = "Rangka Empat Studio | We Design. We Code. We Deliver. We Care."; // Quick solution
-  }, []);
-
   return (
-    <>
-      {/* <Link> </Link> for different pages */}
-      <Link to="/">Home</Link>
+    <div>
+      <h1>Welcome to Rangka Empat Studio</h1>
+      <p>Your digital partner for innovative solutions.</p>
 
-      <div>Hello</div>
-
-      <Outlet />
-    </>
-  )
+      {/* Link to Hero Page */}
+      <Link to="/hero">Go to Hero Page</Link>
+    </div>
+  );
 }
