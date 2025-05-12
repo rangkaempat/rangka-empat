@@ -2,11 +2,15 @@ import React from "react";
 import "./Hero.scss";
 import { Link, Outlet } from "react-router";
 import Button from "../../../components/button/Button";
+import homeHeroBg from "/src/assets/home-hero-bg.webp";
 
 export default function Hero() {
   return (
     <>
-      <section className="heroBackground">
+      <section
+        className="heroBackground"
+        style={{ backgroundImage: `url(${homeHeroBg})` }}
+      >
         <div className="bgBlur">
           <div className="heroContainer">
             {/* Hero Title */}

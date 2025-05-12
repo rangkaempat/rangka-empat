@@ -12,7 +12,7 @@ export default function Navbar() {
           <Link to="/">
             <img
               className="navlogo"
-              src="././src/assets/rangka-empat-studio-logo.webp"
+              src="/src/assets/rangka-empat-studio-logo.webp"
             />
           </Link>
 
