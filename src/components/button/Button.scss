@@ -10,23 +10,34 @@ $lightbg: #f2f2f2;
   color: white;
   background: linear-gradient(to right, $primary, $secondary);
   border-radius: 30px;
-  //   border: 1px solid rgba(255, 255, 255, 0);
+  border: 2px solid #0a6ab80a;
+  transition: 0.2s;
 
   &:hover {
-    // border: 1px solid $primary;
+    border: 2px solid $primary;
     color: white;
-    transition: 0.2s;
+  }
+
+  &:active {
+    border: 2px solid $secondary;
+    color: white;
   }
 }
 
 .btnType2 {
   padding: 0.5rem 1.5rem;
   color: white;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 30px;
+  transition: 0.2s;
 
   &:hover {
-    border: 1px solid $primary;
+    border: 2px solid $primary;
     color: $primary;
+  }
+
+  &:active {
+    border: 2px solid $secondary;
+    color: $secondary;
   }
 }

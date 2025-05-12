@@ -11,7 +11,11 @@ export default function Navbar() {
         <div className="navbarContainer">
           {/* Navbar Logo */}
           <Link to="/">
-            <img className="navlogo" src={navLogo} />
+            <img
+              className="navlogo"
+              src={navLogo}
+              alt="Rangka Empat Studio Logo"
+            />
           </Link>
 
           {/* Navlinks */}
