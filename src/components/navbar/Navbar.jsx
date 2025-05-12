@@ -11,7 +11,7 @@ export default function Navbar() {
         <div className="navbarContainer">
           {/* Navbar Logo */}
           <Link to="/">
-            <img className="navlogo" src={homeHeroBg} />
+            <img className="navlogo" src={navLogo} />
           </Link>
 
           {/* Navlinks */}
