@@ -4,24 +4,20 @@ import { React, useEffect } from "react";
 import { Outlet, Link } from "react-router";
 import "../../index.scss";
 import "./Home.scss";
+import Hero from "./Hero";
+  
 export default function Home() {
+
   useEffect(() => {
     document.title =
       "Rangka Empat Studio | We Design. We Code. We Deliver. We Care."; // Quick solution
   }, []);
 
-export default function Home() {
   return (
+<>
+    
 
-    <div>
-      <h1>Welcome to Rangka Empat Studio</h1>
-      <p>Your digital partner for innovative solutions.</p>
-
-      {/* Link to Hero Page */}
-      <Link to="/hero">Go to Hero Page</Link>
-    </div>
-
-    <>
+    
       <div className="navbarWrapper">
         <div className="mainWrapper">
           <div className="navbar">
@@ -38,6 +34,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <Hero />
     </>
 
   );
