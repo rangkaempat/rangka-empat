@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import { HashRouter, Routes, Route } from "react-router-dom"; // Correct import for react-router-dom
+import { HashRouter, Routes, Route } from "react-router"; // Correct import for react-router-dom
 import "./index.scss";
 import Hero from "./pages/home/Hero.jsx";
 import ScrollToTop from "./functions/scrollToTop.jsx";
