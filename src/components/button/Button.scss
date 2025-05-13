@@ -5,6 +5,13 @@ $light: #ffffff;
 $darkbg: #020e2a;
 $lightbg: #f2f2f2;
 
+.btnDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
 .btnType1 {
   padding: 0.5rem 1.5rem;
   color: white;

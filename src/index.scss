@@ -44,7 +44,7 @@ a {
 }
 
 // =======================================
-// STANDARDIZED SECTION STYLES (PLAIN BACKGROUND)
+// STANDARDIZED SECTION STYLES (PLAIN / GRADIENT BACKGROUND)
 // This is a standard style for all sections in the app that have either a light or dark background.
 // =======================================
 
@@ -58,6 +58,11 @@ a {
   color: $light;
 }
 
+.sectionDarkGradient {
+  background: #171e2f;
+  background: linear-gradient(180deg, $darkbg 0%, #1b022a 100%);
+}
+
 .sectionWrapper {
   display: flex;
   // flex-direction: row/column;  //Can be implemented in the class of the section itself if needed
@@ -65,10 +70,10 @@ a {
   // text-align: center/justify; //Can be implemented in the class of the section itself if needed
 
   height: 100vh; //Can be implemented in the class of the section itself if needed
-  // min-height: 800px; //This is needed in every section, but should be adjusted to accommodate the content size
+  min-height: fit-content; //This is needed in every section, but should be adjusted to accommodate the content size
   max-width: 1366px;
   margin: auto;
-  padding: 3rem 3rem;
+  padding: 5rem 3rem;
 
   @media screen and (max-width: 768px) {
     padding: 3rem 1rem;

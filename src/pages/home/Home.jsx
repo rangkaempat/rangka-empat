@@ -1,8 +1,10 @@
 import { React, useEffect } from "react";
 import { Outlet, Link } from "react-router";
 import "../../index.scss";
-import Hero from "./sections/Hero";
+import Hero from "./sections/hero/Hero";
 import Navbar from "../../components/navbar/Navbar";
+import HomeOurWork from "./sections/homeOurWork/HomeOurWork";
+import HomeOurPricing from "./sections/homeOurPricing/HomeOurPricing";
 
 export default function Home() {
   useEffect(() => {
@@ -29,9 +31,12 @@ export default function Home() {
       </div>
 
       {/* Example Standardized Section with Dark Background*/}
-      <div className="sectionDark">
+      {/* <div className="sectionDark">
         <div className="sectionWrapper">Our Work Section</div>
-      </div>
+      </div> */}
+
+      <HomeOurWork />
+      <HomeOurPricing />
     </>
   );
 }

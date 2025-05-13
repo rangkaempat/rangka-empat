@@ -1,0 +1,54 @@
+$primary: #0aaab8;
+$secondary: #0a6ab8;
+$dark: #323232;
+$light: #ffffff;
+$darkbg: #020e2a;
+$lightbg: #f2f2f2;
+
+.homeOurPricingGradient {
+  background: linear-gradient(180deg, #1b022a 0%, #100219 100%);
+
+  .homeOurPricingWrapper {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    gap: 5rem;
+
+    .homeOurPricingTextContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    h4 {
+      font-weight: 200;
+    }
+
+    .homeOurPricesCardContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 4rem;
+
+      .homeOurPricesCardWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 500px;
+        gap: 1rem;
+
+        border-radius: 15px;
+        border: 1px solid #515151;
+
+        h4 {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

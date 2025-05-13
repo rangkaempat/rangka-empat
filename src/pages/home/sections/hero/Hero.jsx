@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hero.scss";
 import { Link, Outlet } from "react-router";
-import Button from "../../../components/button/Button";
+import Button from "../../../../components/button/Button";
 import homeHeroBg from "/src/assets/home-hero-bg.webp";
 import { motion } from "framer-motion";
 

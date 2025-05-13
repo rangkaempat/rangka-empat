@@ -9,7 +9,11 @@ function Button({ name, type, link }) {
     // link = page address
     // name = button text
 
-    <motion.div initial={{ scale: 1 }} whileHover={{ scale: 1.02 }}>
+    <motion.div
+      className="btnDiv"
+      initial={{ scale: 1 }}
+      whileHover={{ scale: 1.02 }}
+    >
       <Link className={type} to={link}>
         {name}
       </Link>
