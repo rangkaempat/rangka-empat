@@ -5,6 +5,11 @@ $light: #ffffff;
 $darkbg: #020e2a;
 $lightbg: #f2f2f2;
 
+// =======================================
+// GLOBAL STYLES
+// This is a global style for the app. It includes font settings, background color, and other general styles.
+// =======================================
+
 :root {
   font-family: "Poppins", sans-serif;
   font-synthesis: none;
@@ -13,22 +18,13 @@ $lightbg: #f2f2f2;
   -moz-osx-font-smoothing: grayscale;
 }
 
-// GENERAL STYLES
-
 html {
   // scroll-behavior: smooth;
-  background-color: $lightbg;
+  background-color: $darkbg;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  color: $dark;
-}
-
-.mainWrapper {
-  max-width: 1366px;
-  display: flex;
-  margin: auto;
+  color: $light;
 }
 
 a {
@@ -47,7 +43,81 @@ a {
   box-sizing: border-box;
 }
 
-/* Mobile styles */
+// =======================================
+// STANDARDIZED SECTION STYLES (PLAIN BACKGROUND)
+// This is a standard style for all sections in the app that have either a light or dark background.
+// =======================================
+
+.sectionLight {
+  background-color: $lightbg;
+  color: $dark;
+}
+
+.sectionDark {
+  background-color: $darkbg;
+  color: $light;
+}
+
+.sectionWrapper {
+  display: flex;
+  // flex-direction: row/column;  //Can be implemented in the class of the section itself if needed
+  justify-content: center;
+  // text-align: center/justify; //Can be implemented in the class of the section itself if needed
+
+  height: 100vh; //Can be implemented in the class of the section itself if needed
+  // min-height: 800px; //This is needed in every section, but should be adjusted to accommodate the content size
+  max-width: 1366px;
+  margin: auto;
+  padding: 3rem 3rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 3rem 1rem;
+  }
+}
+
+// =======================================
+// STANDARDIZED SECTION STYLES (WITH BACKGROUND IMAGE AND BLUR EFFECT)
+// This is a standard style for all sections in the app that require a background image, a blur effect, and the section container/wrapper.
+// =======================================
+
+.sectionBackground {
+  // background-image: url("src/assets/home-hero-bg.webp");
+  background-attachment: fixed; // Fix the background image in place, so it doesn't scroll with the content. Can be changed to "scroll" in the section itself if needed.
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sectionBackgroundBlur {
+  backdrop-filter: blur(10px);
+}
+
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  // height: 100vh;  //Can be implemented in the class of the section itself if needed
+  min-height: 800px; //Depending on the design, this should be adjusted to accommodate the content
+  max-width: 1366px;
+
+  margin: auto;
+  padding: 10rem 3rem;
+
+  gap: 2rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 3rem 1rem;
+  }
+}
+
+// =======================================
+// FONT STYLES
+// This is a standard style for all font sizes in the app. It includes font sizes for headings and paragraphs, and it adjusts the font size based on the screen size.
+// =======================================
+
+// MOBILE FONT SIZES
 @media screen and (max-width: 480px) {
   h1 {
     font-size: 1.5rem;
@@ -72,7 +142,7 @@ a {
   } /* 16px */
 }
 
-/* Tablet styles */
+// TABLET FONT SIZES
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   h1 {
     font-size: 1.75rem;
@@ -97,7 +167,7 @@ a {
   } /* 18px */
 }
 
-/* Laptop and desktop styles */
+// LAPTOP AND DESKTOP FONT SIZES
 @media screen and (min-width: 1025px) and (max-width: 1680px) {
   h1 {
     font-size: 2rem;
@@ -122,7 +192,7 @@ a {
   } /* 18px */
 }
 
-/* Large desktop and TV styles */
+// LARGE DESKTOP AND TV FONT SIZES
 @media screen and (min-width: 1681px) {
   h1 {
     font-size: 2.25rem;

@@ -5,85 +5,57 @@ $light: #ffffff;
 $darkbg: #020e2a;
 $lightbg: #f2f2f2;
 
-.heroBackground {
-  // background-image: url("src/assets/home-hero-bg.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.heroTitle {
+  h1 {
+    color: white;
+    span {
+      font-weight: 400;
+      background-color: #0aaab8;
+      color: white;
 
-  .bgBlur {
-    backdrop-filter: blur(10px);
+      padding: 0 0.5rem;
+    }
+  }
+}
 
-    .heroContainer {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
+p {
+  width: 50%;
+  margin: 0 auto;
+  color: white;
+}
 
-      // height: 100vh;
-      min-height: 800px;
-      max-width: 1366px;
+.heroBtnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
 
-      margin: auto;
-      padding: 10rem 3rem;
+.heroTitle2 {
+  margin-top: 5rem;
+  color: white;
 
-      gap: 2rem;
+  span {
+    background: linear-gradient(to right, $primary, $secondary);
+    background-clip: $primary;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+}
 
-      .heroTitle {
-        h1 {
-          color: white;
-          span {
-            font-weight: 400;
-            background-color: #0aaab8;
-            color: white;
+.clientListContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 
-            padding: 0 0.5rem;
-          }
-        }
-      }
+  .clientListWrapper {
+    display: flex;
+    padding: 2rem 0 2rem 4rem;
+    gap: 5rem;
 
-      p {
-        width: 50%;
-        margin: 0 auto;
-        color: white;
-      }
-
-      .heroBtnContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-      }
-
-      .heroTitle2 {
-        margin-top: 5rem;
-        color: white;
-
-        span {
-          background: linear-gradient(to right, $primary, $secondary);
-          background-clip: $primary;
-          -webkit-text-fill-color: transparent;
-          -webkit-background-clip: text;
-        }
-      }
-
-      .clientListContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-
-        .clientListWrapper {
-          display: flex;
-          padding: 2rem 0 2rem 4rem;
-          gap: 5rem;
-
-          .clientLogo {
-            height: 80px;
-          }
-        }
-      }
+    .clientLogo {
+      height: 80px;
     }
   }
 }

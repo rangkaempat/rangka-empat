@@ -12,16 +12,14 @@ import clientLogo3 from "/src/assets/clientLogo3.webp";
 const clientLogos = [clientLogo1, clientLogo2, clientLogo3];
 
 export default function Hero() {
-  const wrapperCount = 3;
-
   return (
     <>
       <section
-        className="heroBackground"
+        className="sectionBackground"
         style={{ backgroundImage: `url(${homeHeroBg})` }}
       >
-        <div className="bgBlur">
-          <div className="heroContainer">
+        <div className="sectionBackgroundBlur">
+          <div className="sectionContainer">
             {/* Hero Title */}
             <div className="heroTitle">
               <h1>
@@ -49,7 +47,7 @@ export default function Hero() {
             </h2>
 
             <div className="clientListContainer">
-              {[...Array(wrapperCount)].map((_, i) => (
+              {[...Array(3)].map((_, i) => (
                 <motion.div
                   key={i}
                   className="clientListWrapper"

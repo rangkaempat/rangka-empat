@@ -14,7 +14,24 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-      <div>Hello</div>
+
+      {/* Check index.scss for all Standardized Section Styles, maybe we can move it to a separate dedicated file */}
+      {/* Example Standardized Section With Image Background */}
+      <div className="sectionBackground">
+        <div className="sectionBackgroundBlur">
+          <div className="sectionContainer">Who We Are Section</div>
+        </div>
+      </div>
+
+      {/* Example Standardized Section with Light Background*/}
+      <div className="sectionLight">
+        <div className="sectionWrapper">What We Offer Section</div>
+      </div>
+
+      {/* Example Standardized Section with Dark Background*/}
+      <div className="sectionDark">
+        <div className="sectionWrapper">Our Work Section</div>
+      </div>
     </>
   );
 }
