@@ -5,6 +5,11 @@ $light: #ffffff;
 $darkbg: #020e2a;
 $lightbg: #f2f2f2;
 
+.homeHeroContainer {
+  height: 100vh;
+  min-height: 1000px; //Depending on the design, this should be adjusted to accommodate the content
+}
+
 .heroTitle {
   h1 {
     color: white;

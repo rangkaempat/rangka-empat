@@ -19,7 +19,7 @@ export default function Hero() {
         style={{ backgroundImage: `url(${homeHeroBg})` }}
       >
         <div className="sectionBackgroundBlur">
-          <div className="sectionContainer">
+          <div className="sectionContainer homeHeroContainer">
             {/* Hero Title */}
             <div className="heroTitle">
               <h1>
