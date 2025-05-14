@@ -5,7 +5,7 @@ $light: #ffffff;
 $darkbg: #020e2a;
 $lightbg: #f2f2f2;
 
-.ourWorkImageWrapper {
+.workCardContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,19 +14,19 @@ $lightbg: #f2f2f2;
   gap: 1rem;
 
   &:hover {
-    .ourWorkImage {
+    .workImage {
       border: 2px solid $primary;
       box-shadow: 0px 0px 15px 2px $primary;
       transition: 0.3s;
     }
 
-    .ourWorkClient {
+    .workClient {
       color: $primary;
       transition: 0.3s;
     }
   }
 
-  .ourWorkImage {
+  .workImage {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

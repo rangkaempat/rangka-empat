@@ -13,42 +13,20 @@ $lightbg: #f2f2f2;
     justify-content: start;
     align-items: center;
     text-align: center;
-    gap: 5rem;
+    gap: 3rem;
 
-    .homeOurPricingTextContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    h4 {
+    .homeOurPricingType {
       font-weight: 200;
+      margin-bottom: 2rem;
     }
 
-    .homeOurPricesCardContainer {
+    .homeOurPricingCardContainer {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
       width: 100%;
       gap: 4rem;
-
-      .homeOurPricesCardWrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 300px;
-        height: 500px;
-        gap: 1rem;
-
-        border-radius: 15px;
-        border: 1px solid #515151;
-
-        h4 {
-          font-weight: 500;
-        }
-      }
     }
   }
 }

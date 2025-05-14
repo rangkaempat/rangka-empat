@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import clientLogo1 from "/src/assets/clientLogo1.webp";
 import clientLogo2 from "/src/assets/clientLogo2.webp";
 import clientLogo3 from "/src/assets/clientLogo3.webp";
+import { infiniteLoop } from "../../../../functions/motionUtils";
 
 const clientLogos = [clientLogo1, clientLogo2, clientLogo3];
 
@@ -51,14 +52,8 @@ export default function Hero() {
                 <motion.div
                   key={i}
                   className="clientListWrapper"
-                  initial={{ x: 0 }}
-                  animate={{ x: ["0%", "-100%"] }}
-                  transition={{
-                    duration: 20,
-                    ease: "linear",
-                    repeat: Infinity,
-                    repeatType: "loop",
-                  }}
+                  variants={infiniteLoop}
+                  animate="animate"
                 >
                   {clientLogos.concat(clientLogos).map((logo, index) => (
                     <motion.img

@@ -2,77 +2,41 @@ import React from "react";
 import Button from "../../../../components/button/Button";
 import "./HomeOurPricing.scss";
 import { Link } from "react-router";
+import PriceCard from "../../../../components/priceCard/PriceCard";
+import { webPriceCardItems } from "../../../../data/webPriceCardData";
+import { motion } from "framer-motion";
+import { fadeInUp, staggerContainer } from "../../../../functions/motionUtils";
 
 function HomeOurPricing() {
   return (
     <>
       <div className="sectionDarkGradient homeOurPricingGradient">
         <div className="sectionWrapper homeOurPricingWrapper">
-          <div className="homeOurPricingTextContainer">
-            <h2>Our Pricing.</h2>
+          <h2>Our Pricing.</h2>
+
+          <div>
+            <h4 className="homeOurPricingType">
+              Web Design & Development Packages
+            </h4>
+            <motion.div
+              className="homeOurPricingCardContainer"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={staggerContainer}
+            >
+              {webPriceCardItems.map((item) => (
+                <motion.div key={item.id} variants={fadeInUp}>
+                  <PriceCard
+                    name={item.name}
+                    price={item.price}
+                    details={item.details}
+                  />
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
 
-          <h4>Web Design & Development Packages</h4>
-
-          <div className="homeOurPricesCardContainer">
-            <div className="homeOurPricesCardWrapper">
-              <h4>Freelance</h4>
-              <h3>RM2,000</h3>
-              <Button
-                name="Book a Free Consultation"
-                type="btnType2"
-                link="#"
-              />
-
-              <ul>
-                <li>Custom Website Design</li>
-                <li>3-5 Pages</li>
-                <li>1 Revision</li>
-                <li>Basic SEO Setup</li>
-                <li>Basic Motion & Animations</li>
-              </ul>
-
-              <Link to="#">Learn More</Link>
-            </div>
-            <div className="homeOurPricesCardWrapper">
-              <h4>Business</h4>
-              <h3>RM3,500</h3>
-              <Button
-                name="Book a Free Consultation"
-                type="btnType2"
-                link="#"
-              />
-
-              <ul>
-                <li>Custom Website Design</li>
-                <li>3-5 Pages</li>
-                <li>1 Revision</li>
-                <li>Basic SEO Setup</li>
-                <li>Basic Motion & Animations</li>
-              </ul>
-
-              <Link to="#">Learn More</Link>
-            </div>
-            <div className="homeOurPricesCardWrapper">
-              <h4>Enterprise</h4>
-              <h3>RM5,000</h3>
-              <Button
-                name="Book a Free Consultation"
-                type="btnType2"
-                link="#"
-              />
-
-              <ul>
-                <li>Custom Website Design</li>
-                <li>3-5 Pages</li>
-                <li>1 Revision</li>
-                <li>Basic SEO Setup</li>
-                <li>Basic Motion & Animations</li>
-              </ul>
-
-              <Link to="#">Learn More</Link>
-            </div>
-          </div>
           <Button name="View All Prices" type="btnType2" link="#" />
         </div>
       </div>

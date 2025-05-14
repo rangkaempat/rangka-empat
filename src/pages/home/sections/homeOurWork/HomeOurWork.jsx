@@ -3,8 +3,10 @@ import { Link } from "react-router";
 
 import "./HomeOurWork.scss";
 import Button from "../../../../components/button/Button";
-import WorkCard from "../../../../components/workCards/WorkCard";
+import WorkCard from "../../../../components/workCard/WorkCard";
 import { workCardItems } from "../../../../data/workCardData";
+import { motion } from "framer-motion";
+import { fadeInUp, staggerContainer } from "../../../../functions/motionUtils";
 
 function HomeOurWork() {
   return (
@@ -23,11 +25,19 @@ function HomeOurWork() {
           </div>
 
           {/* Work Cards */}
-          <div className="ourWorkImageContainer">
+          <motion.div
+            className="ourWorkImageContainer"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={staggerContainer}
+          >
             {workCardItems.slice(0, 3).map((item) => (
-              <WorkCard key={item.id} image={item.image} client={item.client} />
+              <motion.div key={item.id} variants={fadeInUp}>
+                <WorkCard image={item.image} client={item.client} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           {/* CTA Button */}
           <Button name="View All Projects" type="btnType2" link="#" />

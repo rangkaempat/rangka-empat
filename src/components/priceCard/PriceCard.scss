@@ -1,0 +1,118 @@
+$primary: #0aaab8;
+$secondary: #0a6ab8;
+$dark: #323232;
+$light: #ffffff;
+$darkbg: #020e2a;
+$lightbg: #f2f2f2;
+
+.priceCardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+
+  border-radius: 15px;
+  border: 1px solid #515151;
+
+  height: 540px;
+  width: 350px;
+  padding: 2.5rem 1rem 2rem 1rem;
+
+  &.type2 {
+    border: 2px solid $primary;
+    will-change: box-shadow;
+    transition: box-shadow 0.3s ease-in-out;
+    animation: glowBreathing 3s ease-in-out infinite;
+
+    @keyframes glowBreathing {
+      0%,
+      100% {
+        box-shadow: 0px 0px 10px 2px #0aaab860, 0px 0px 20px 4px #0aaab860;
+      }
+      50% {
+        box-shadow: 0px 0px 15px 3px #0aaab860, 0px 0px 30px 6px #0aaab860;
+      }
+      30%,
+      70% {
+        box-shadow: 0px 0px 12px 2.5px #0aaab860, 0px 0px 25px 5px #0aaab860;
+      }
+    }
+  }
+
+  .priceCardPopular {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+
+    font-weight: 400;
+    font-size: 1rem;
+
+    border: 2px solid $primary;
+    border-radius: 0 15px 0 15px;
+    padding: 0.2rem 1.5rem;
+
+    background-color: #0aaab88c;
+  }
+
+  .priceCardContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.3rem;
+
+    h3 {
+      font-weight: 500;
+    }
+
+    .priceCardPrice {
+      font-weight: 600;
+      font-size: 3rem;
+
+      &.type1 {
+        background: linear-gradient(90deg, #f55b2c 0%, #f5c32c 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      &.type2 {
+        background: linear-gradient(90deg, #0a6ab8 0%, #0aaab8 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      &.type3 {
+        background: linear-gradient(90deg, #1c9f52 0%, #0ab8a9 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .priceCardDetails {
+      margin-top: 1rem;
+      li {
+        display: flex;
+        gap: 1rem;
+
+        text-align: start;
+        list-style-type: none;
+      }
+    }
+  }
+
+  .priceCardLinkWrapper {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+
+    .priceCardLink {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+}
