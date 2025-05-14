@@ -24,9 +24,13 @@ $lightbg: #f2f2f2;
 }
 
 p {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   color: white;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
 }
 
 .heroBtnContainer {
@@ -34,6 +38,10 @@ p {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .heroTitle2 {
