@@ -11,6 +11,7 @@ function HomeOurWork() {
     <>
       <div className="sectionDarkGradient">
         <div className="sectionWrapper ourWorkWrapper">
+          {/* Title & Description */}
           <div className="ourWorkTextContainer">
             <h2>Our Featured Work.</h2>
             <p>
@@ -21,15 +22,14 @@ function HomeOurWork() {
             </p>
           </div>
 
+          {/* Work Cards */}
           <div className="ourWorkImageContainer">
-            {workCardItems.slice(0, 3).map((item_) => (
-              <WorkCard
-                key={item_.id}
-                image={item_.image}
-                client={item_.client}
-              />
+            {workCardItems.slice(0, 3).map((item) => (
+              <WorkCard key={item.id} image={item.image} client={item.client} />
             ))}
           </div>
+
+          {/* CTA Button */}
           <Button name="View All Projects" type="btnType2" link="#" />
         </div>
       </div>
