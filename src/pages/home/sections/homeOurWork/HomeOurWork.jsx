@@ -1,7 +1,10 @@
 import React from "react";
-import Button from "../../../../components/button/Button";
-import "./HomeOurWork.scss";
 import { Link } from "react-router";
+
+import "./HomeOurWork.scss";
+import Button from "../../../../components/button/Button";
+import WorkCard from "../../../../components/workCards/WorkCard";
+import { workCardItems } from "../../../../data/workCardData";
 
 function HomeOurWork() {
   return (
@@ -17,43 +20,15 @@ function HomeOurWork() {
               code.
             </p>
           </div>
+
           <div className="ourWorkImageContainer">
-            <div className="ourWorkImageWrapper">
-              <Link className="ourWorkImage" to="#"></Link>
-              <Link className="ourWorkClient" to="#">
-                Client Name
-              </Link>
-            </div>
-            <div className="ourWorkImageWrapper">
-              <Link className="ourWorkImage" to="#"></Link>
-              <Link className="ourWorkClient" to="#">
-                Client Name
-              </Link>
-            </div>
-            <div className="ourWorkImageWrapper">
-              <Link className="ourWorkImage" to="#"></Link>
-              <Link className="ourWorkClient" to="#">
-                Client Name
-              </Link>
-            </div>
-            <div className="ourWorkImageWrapper">
-              <Link className="ourWorkImage" to="#"></Link>
-              <Link className="ourWorkClient" to="#">
-                Client Name
-              </Link>
-            </div>
-            <div className="ourWorkImageWrapper">
-              <Link className="ourWorkImage" to="#"></Link>
-              <Link className="ourWorkClient" to="#">
-                Client Name
-              </Link>
-            </div>
-            <div className="ourWorkImageWrapper">
-              <Link className="ourWorkImage" to="#"></Link>
-              <Link className="ourWorkClient" to="#">
-                Client Name
-              </Link>
-            </div>
+            {workCardItems.slice(0, 3).map((item_) => (
+              <WorkCard
+                key={item_.id}
+                image={item_.image}
+                client={item_.client}
+              />
+            ))}
           </div>
           <Button name="View All Projects" type="btnType2" link="#" />
         </div>
