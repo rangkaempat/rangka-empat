@@ -5,7 +5,11 @@ import { Link } from "react-router";
 import PriceCard from "../../../../components/priceCard/PriceCard";
 import { webPriceCardItems } from "../../../../data/PriceCardData";
 import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer } from "../../../../functions/motionUtils";
+import {
+  fadeInUp,
+  fadeInWithEase,
+  staggerContainer,
+} from "../../../../functions/motionUtils";
 
 function HomePricing() {
   return (
@@ -13,9 +17,21 @@ function HomePricing() {
       <section className="sectionDarkGradient homePricingGradient">
         <div className="sectionWrapper homePricingWrapper">
           <div className="sectionContent">
-            <h2>Our Pricing Plans.</h2>
+            <motion.div
+              className="homePricingTextContainer"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={staggerContainer}
+            >
+              <motion.h2 variants={fadeInWithEase}>
+                Our Pricing Plans.
+              </motion.h2>
+              <motion.h4 className="homePricingType" variants={fadeInWithEase}>
+                Web Design & Development Plans
+              </motion.h4>
+            </motion.div>
 
-            <h4 className="homePricingType">Web Design & Development Plans</h4>
             <motion.div
               className="homePricingCardContainer"
               initial="hidden"

@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 function PriceCard({ id, name, price, target, features }) {
   // Map names to their respective class types
   const typeClassMap = {
-    Starter: "type1",
-    Business: "type2",
-    Enterprise: "type3",
+    Starter: "priceType1",
+    Business: "priceType2",
+    Enterprise: "priceType3",
   };
 
   // Get the type class based on the name
@@ -31,7 +31,7 @@ function PriceCard({ id, name, price, target, features }) {
 
         {/* Price Card Content */}
         <div className="priceCardContent">
-          <h3>{name}</h3>
+          <h3 className={`priceCardName ${typeClass}`}>{name}</h3>
           <div>
             <p>Starts from</p>
             <h4 className={`priceCardPrice ${typeClass}`}>{price}</h4>

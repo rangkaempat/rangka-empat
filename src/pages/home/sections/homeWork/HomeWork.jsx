@@ -6,7 +6,11 @@ import Button from "../../../../components/button/Button";
 import WorkCard from "../../../../components/workCard/WorkCard";
 import { workCardItems } from "../../../../data/workCardData";
 import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer } from "../../../../functions/motionUtils";
+import {
+  fadeInUp,
+  fadeInWithEase,
+  staggerContainer,
+} from "../../../../functions/motionUtils";
 
 function HomeWork() {
   return (
@@ -15,15 +19,23 @@ function HomeWork() {
         <div className="sectionWrapper homeWorkWrapper">
           <div className="sectionContent">
             {/* Title & Description */}
-            <div className="homeWorkTextContainer">
-              <h2>Our Featured Work.</h2>
-              <p>
+            <motion.div
+              className="homeWorkTextContainer"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={staggerContainer}
+            >
+              <motion.h2 variants={fadeInWithEase}>
+                Our Featured Work.
+              </motion.h2>
+              <motion.p variants={fadeInWithEase}>
                 See what we've built for our amazing clients.
                 <br />
                 Every project is a unique story of collaboration, creativity,
                 and code.
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
 
             {/* Work Cards */}
             <motion.div

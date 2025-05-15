@@ -15,14 +15,14 @@ $lightbg: #f2f2f2;
 
   border-radius: 15px;
   border: 1px solid #515151;
-  padding: 2.5rem 1rem 2rem 1rem;
+  padding: 3rem 2rem;
 
   @media screen and (max-width: 768px) {
-    padding: 2.5rem 1rem 2rem 1rem;
+    padding: 3rem 1rem 2rem 1rem;
   }
 
   &.type2 {
-    border: 2px solid $primary;
+    border: 1px solid #0aaab8ce;
     will-change: box-shadow;
     transition: box-shadow 0.3s ease-in-out;
     animation: glowBreathing 3s ease-in-out infinite;
@@ -30,14 +30,14 @@ $lightbg: #f2f2f2;
     @keyframes glowBreathing {
       0%,
       100% {
-        box-shadow: 0px 0px 10px 2px #0aaab860, 0px 0px 20px 4px #0aaab860;
+        box-shadow: 0px 0px 10px 2px #0aaab84b, 0px 0px 20px 4px #0aaab84b;
       }
       50% {
-        box-shadow: 0px 0px 15px 3px #0aaab860, 0px 0px 30px 6px #0aaab860;
+        box-shadow: 0px 0px 15px 3px #0aaab84b, 0px 0px 30px 6px #0aaab84b;
       }
       30%,
       70% {
-        box-shadow: 0px 0px 12px 2.5px #0aaab860, 0px 0px 25px 5px #0aaab860;
+        box-shadow: 0px 0px 12px 2.5px #0aaab84b, 0px 0px 25px 5px #0aaab84b;
       }
     }
   }
@@ -49,7 +49,7 @@ $lightbg: #f2f2f2;
     font-weight: 400;
     font-size: 1rem;
 
-    border-bottom: 2px solid $primary;
+    border-bottom: 1px solid #0aaab8ce;
     border-radius: 15px 15px 0 0;
     padding: 0.2rem 1.5rem;
     width: 101%;
@@ -67,8 +67,28 @@ $lightbg: #f2f2f2;
     height: 500px;
     width: 280px;
 
-    h3 {
+    .priceCardName {
       font-weight: 500;
+      font-size: 2rem;
+
+      &.priceType1 {
+        background: linear-gradient(-90deg, #f55b2c 0%, #f5c32c 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      &.priceType2 {
+        background: linear-gradient(-90deg, #0a6ab8 0%, #0aaab8 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      &.priceType3 {
+        background: linear-gradient(-90deg, #1c9f52 0%, #0ab8a9 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
 
     .priceCardPrice {
@@ -79,20 +99,20 @@ $lightbg: #f2f2f2;
         font-size: 2.5rem;
       }
 
-      &.type1 {
-        background: linear-gradient(90deg, #f55b2c 0%, #f5c32c 100%);
+      &.priceType1 {
+        background: linear-gradient(-90deg, #f55b2c 0%, #f5c32c 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-      &.type2 {
-        background: linear-gradient(90deg, #0a6ab8 0%, #0aaab8 100%);
+      &.priceType2 {
+        background: linear-gradient(-90deg, #0a6ab8 0%, #0aaab8 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-      &.type3 {
-        background: linear-gradient(90deg, #1c9f52 0%, #0ab8a9 100%);
+      &.priceType3 {
+        background: linear-gradient(-90deg, #1c9f52 0%, #0ab8a9 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

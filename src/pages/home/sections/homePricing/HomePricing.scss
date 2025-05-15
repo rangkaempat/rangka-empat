@@ -15,9 +15,15 @@ $lightbg: #f2f2f2;
     text-align: center;
     gap: 3rem;
 
-    .homePricingType {
-      font-weight: 200;
-      margin-bottom: 2rem;
+    .homePricingTextContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .homePricingType {
+        font-weight: 200;
+        margin-top: 2rem;
+      }
     }
 
     .homePricingCardContainer {
