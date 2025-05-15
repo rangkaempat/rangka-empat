@@ -5,6 +5,7 @@ import HomeHero from "./sections/homeHero/HomeHero";
 import Navbar from "../../components/navbar/Navbar";
 import HomeWork from "./sections/homeWork/HomeWork";
 import HomePricing from "./sections/homePricing/HomePricing";
+import HomeCTA from "./sections/homeCTA/HomeCTA";
 
 export default function Home() {
   useEffect(() => {
@@ -43,6 +44,7 @@ export default function Home() {
 
       <HomeWork />
       <HomePricing />
+      <HomeCTA />
     </>
   );
 }

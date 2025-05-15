@@ -47,7 +47,11 @@ function HomeWork() {
             >
               {workCardItems.slice(0, 3).map((item) => (
                 <motion.div key={item.id} variants={fadeInUp}>
-                  <WorkCard image={item.image} client={item.client} />
+                  <WorkCard
+                    image={item.image}
+                    client={item.client}
+                    link={item.link}
+                  />
                 </motion.div>
               ))}
             </motion.div>

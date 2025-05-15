@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 function Button({ name, type, link }) {
   return (
-    // type = btnType1, btnType2
+    // type = btnType1, btnType2, btnType3
     // link = page address
     // name = button text
 

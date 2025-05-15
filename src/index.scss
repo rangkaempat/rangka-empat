@@ -113,7 +113,7 @@ a {
 
   overflow: hidden;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     padding: 3rem 1rem;
   }
 }
@@ -133,7 +133,7 @@ a {
 // This is a standard style for all font sizes in the app. It includes font sizes for headings and paragraphs, and it adjusts the font size based on the screen size.
 // =======================================
 
-// MOBILE FONT SIZES
+/* MOBILE FONT SIZES */
 @media screen and (max-width: 480px) {
   h1 {
     font-size: 1.5rem;
@@ -153,12 +153,21 @@ a {
   h6 {
     font-size: 0.75rem;
   } /* 12px */
-  p {
+  p,
+  li,
+  a,
+  button {
     font-size: 0.875rem;
   } /* 14px */
+  blockquote {
+    font-size: 1rem;
+  } /* 16px */
+  small {
+    font-size: 0.75rem;
+  } /* 12px */
 }
 
-// TABLET FONT SIZES
+/* TABLET FONT SIZES */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   h1 {
     font-size: 1.75rem;
@@ -178,12 +187,21 @@ a {
   h6 {
     font-size: 0.875rem;
   } /* 14px */
-  p {
+  p,
+  li,
+  a,
+  button {
     font-size: 1rem;
   } /* 16px */
+  blockquote {
+    font-size: 1.125rem;
+  } /* 18px */
+  small {
+    font-size: 0.875rem;
+  } /* 14px */
 }
 
-// LAPTOP AND DESKTOP FONT SIZES
+/* LAPTOP AND DESKTOP FONT SIZES */
 @media screen and (min-width: 1025px) and (max-width: 1680px) {
   h1 {
     font-size: 2rem;
@@ -203,12 +221,21 @@ a {
   h6 {
     font-size: 1rem;
   } /* 16px */
-  p {
+  p,
+  li,
+  a,
+  button {
     font-size: 1rem;
   } /* 16px */
+  blockquote {
+    font-size: 1.25rem;
+  } /* 20px */
+  small {
+    font-size: 0.875rem;
+  } /* 14px */
 }
 
-// LARGE DESKTOP AND TV FONT SIZES
+/* LARGE DESKTOP AND TV FONT SIZES */
 @media screen and (min-width: 1681px) {
   h1 {
     font-size: 2.25rem;
@@ -228,7 +255,16 @@ a {
   h6 {
     font-size: 1.125rem;
   } /* 18px */
-  p {
-    font-size: 1.125rem;
-  } /* 18px */
+  p,
+  li,
+  a,
+  button {
+    font-size: 1rem;
+  } /* 16px */
+  blockquote {
+    font-size: 1.5rem;
+  } /* 24px */
+  small {
+    font-size: 1rem;
+  } /* 16px */
 }
