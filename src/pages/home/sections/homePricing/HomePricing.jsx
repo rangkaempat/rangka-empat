@@ -1,25 +1,23 @@
 import React from "react";
 import Button from "../../../../components/button/Button";
-import "./HomeOurPricing.scss";
+import "./HomePricing.scss";
 import { Link } from "react-router";
 import PriceCard from "../../../../components/priceCard/PriceCard";
 import { webPriceCardItems } from "../../../../data/PriceCardData";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "../../../../functions/motionUtils";
 
-function HomeOurPricing() {
+function HomePricing() {
   return (
     <>
-      <div className="sectionDarkGradient homeOurPricingGradient">
-        <div className="sectionWrapper homeOurPricingWrapper">
+      <div className="sectionDarkGradient homePricingGradient">
+        <div className="sectionWrapper homePricingWrapper">
           <div className="sectionContent">
             <h2>Our Pricing Plans.</h2>
 
-            <h4 className="homeOurPricingType">
-              Web Design & Development Plans
-            </h4>
+            <h4 className="homePricingType">Web Design & Development Plans</h4>
             <motion.div
-              className="homeOurPricingCardContainer"
+              className="homePricingCardContainer"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
@@ -45,4 +43,4 @@ function HomeOurPricing() {
   );
 }
 
-export default HomeOurPricing;
+export default HomePricing;

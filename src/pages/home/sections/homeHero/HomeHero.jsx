@@ -1,5 +1,5 @@
 import React from "react";
-import "./Hero.scss";
+import "./HomeHero.scss";
 import { Link, Outlet } from "react-router";
 import Button from "../../../../components/button/Button";
 import homeHeroBg from "/src/assets/home-hero-bg.webp";
@@ -12,7 +12,7 @@ import { infiniteLoop } from "../../../../functions/motionUtils";
 
 const clientLogos = [clientLogo1, clientLogo2, clientLogo3];
 
-export default function Hero() {
+export default function HomeHero() {
   return (
     <>
       <section
@@ -23,7 +23,7 @@ export default function Hero() {
           <div className="sectionWrapper homeHeroWrapper">
             <div className="sectionContent">
               {/* Hero Title */}
-              <div className="heroTitle">
+              <div className="homeHeroTitle">
                 <h1>
                   We Design. <span>We Code.</span>
                   <br />
@@ -38,13 +38,13 @@ export default function Hero() {
               </p>
 
               {/* Hero Buttons */}
-              <div className="heroBtnContainer">
+              <div className="homeHeroBtnContainer">
                 <Button name="Start Your Project" type="btnType1" link="#" />
                 <Button name="View Our Work" type="btnType2" link="#" />
               </div>
 
               {/* Clientele Section */}
-              <h2 className="heroTitle2">
+              <h2 className="homeHeroTitle2">
                 <span>Trusted</span> by Our Clients.
               </h2>
 

@@ -1,10 +1,10 @@
 import { React, useEffect } from "react";
 import { Outlet, Link } from "react-router";
 import "../../index.scss";
-import Hero from "./sections/hero/Hero";
+import HomeHero from "./sections/homeHero/HomeHero";
 import Navbar from "../../components/navbar/Navbar";
-import HomeOurWork from "./sections/homeOurWork/HomeOurWork";
-import HomeOurPricing from "./sections/homeOurPricing/HomeOurPricing";
+import HomeWork from "./sections/homeWork/HomeWork";
+import HomePricing from "./sections/homePricing/HomePricing";
 
 export default function Home() {
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
+      <HomeHero />
 
       {/* Check index.scss for all Standardized Section Styles, maybe we can move it to a separate dedicated file */}
       {/* Example Standardized Section With Image Background */}
@@ -39,8 +39,8 @@ export default function Home() {
         <div className="sectionWrapper">Our Work Section</div>
       </div> */}
 
-      <HomeOurWork />
-      <HomeOurPricing />
+      <HomeWork />
+      <HomePricing />
     </>
   );
 }

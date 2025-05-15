@@ -1,21 +1,21 @@
 import React from "react";
 import { Link } from "react-router";
 
-import "./HomeOurWork.scss";
+import "./HomeWork.scss";
 import Button from "../../../../components/button/Button";
 import WorkCard from "../../../../components/workCard/WorkCard";
 import { workCardItems } from "../../../../data/workCardData";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "../../../../functions/motionUtils";
 
-function HomeOurWork() {
+function HomeWork() {
   return (
     <>
       <div className="sectionDarkGradient">
-        <div className="sectionWrapper ourWorkWrapper">
+        <div className="sectionWrapper homeWorkWrapper">
           <div className="sectionContent">
             {/* Title & Description */}
-            <div className="ourWorkTextContainer">
+            <div className="homeWorkTextContainer">
               <h2>Our Featured Work.</h2>
               <p>
                 See what we've built for our amazing clients.
@@ -27,7 +27,7 @@ function HomeOurWork() {
 
             {/* Work Cards */}
             <motion.div
-              className="ourWorkImageContainer"
+              className="homeWorkImageContainer"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
@@ -49,4 +49,4 @@ function HomeOurWork() {
   );
 }
 
-export default HomeOurWork;
+export default HomeWork;

@@ -5,7 +5,7 @@ $light: #ffffff;
 $darkbg: #020e2a;
 $lightbg: #f2f2f2;
 
-.ourWorkWrapper {
+.homeWorkWrapper {
   flex-direction: column;
   justify-content: start;
   align-items: center;
@@ -13,7 +13,7 @@ $lightbg: #f2f2f2;
   gap: 3rem;
   padding-bottom: 7rem;
 
-  .ourWorkTextContainer {
+  .homeWorkTextContainer {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -23,7 +23,7 @@ $lightbg: #f2f2f2;
     }
   }
 
-  .ourWorkImageContainer {
+  .homeWorkImageContainer {
     display: flex;
     justify-content: center;
     align-items: center;
