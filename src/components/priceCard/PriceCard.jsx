@@ -4,10 +4,10 @@ import { Link } from "react-router";
 import "./PriceCard.scss";
 import { motion } from "framer-motion";
 
-function PriceCard({ id, name, price, features }) {
+function PriceCard({ id, name, price, target, features }) {
   // Map names to their respective class types
   const typeClassMap = {
-    Freelance: "type1",
+    Starter: "type1",
     Business: "type2",
     Enterprise: "type3",
   };
@@ -35,12 +35,15 @@ function PriceCard({ id, name, price, features }) {
           <div>
             <p>Starts from</p>
             <h4 className={`priceCardPrice ${typeClass}`}>{price}</h4>
+            <p className="priceCardTarget">{target}</p>
           </div>
           {name === "Business" ? (
             <Button name="Book a Free Consultation" type="btnType1" link="#" />
           ) : (
             <Button name="Book a Free Consultation" type="btnType2" link="#" />
           )}
+
+          {/* Price Card Features */}
           <ul className="priceCardFeatures">
             {features.map((feature, index) => (
               <li key={index}>
@@ -67,7 +70,7 @@ function PriceCard({ id, name, price, features }) {
           </ul>
         </div>
 
-        <motion.div
+        {/* <motion.div
           className="priceCardLinkWrapper"
           initial={{ y: 0 }}
           whileHover={{ y: -2 }}
@@ -93,7 +96,7 @@ function PriceCard({ id, name, price, features }) {
               />
             </svg>
           </Link>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </>
   );

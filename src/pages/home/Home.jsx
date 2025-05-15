@@ -21,13 +21,17 @@ export default function Home() {
       {/* Example Standardized Section With Image Background */}
       <div className="sectionBackground">
         <div className="sectionBackgroundBlur">
-          <div className="sectionContainer">Who We Are Section</div>
+          <div className="sectionWrapper">
+            <div className="sectionContent">Who We Are Section</div>
+          </div>
         </div>
       </div>
 
       {/* Example Standardized Section with Light Background*/}
       <div className="sectionLight">
-        <div className="sectionWrapper">What We Offer Section</div>
+        <div className="sectionWrapper">
+          <div className="sectionContent">What We Offer Section</div>
+        </div>
       </div>
 
       {/* Example Standardized Section with Dark Background*/}

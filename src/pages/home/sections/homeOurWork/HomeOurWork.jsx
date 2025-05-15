@@ -13,34 +13,36 @@ function HomeOurWork() {
     <>
       <div className="sectionDarkGradient">
         <div className="sectionWrapper ourWorkWrapper">
-          {/* Title & Description */}
-          <div className="ourWorkTextContainer">
-            <h2>Our Featured Work.</h2>
-            <p>
-              See what we've built for our amazing clients.
-              <br />
-              Every project is a unique story of collaboration, creativity, and
-              code.
-            </p>
+          <div className="sectionContent">
+            {/* Title & Description */}
+            <div className="ourWorkTextContainer">
+              <h2>Our Featured Work.</h2>
+              <p>
+                See what we've built for our amazing clients.
+                <br />
+                Every project is a unique story of collaboration, creativity,
+                and code.
+              </p>
+            </div>
+
+            {/* Work Cards */}
+            <motion.div
+              className="ourWorkImageContainer"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={staggerContainer}
+            >
+              {workCardItems.slice(0, 3).map((item) => (
+                <motion.div key={item.id} variants={fadeInUp}>
+                  <WorkCard image={item.image} client={item.client} />
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* CTA Button */}
+            <Button name="View All Projects" type="btnType2" link="#" />
           </div>
-
-          {/* Work Cards */}
-          <motion.div
-            className="ourWorkImageContainer"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={staggerContainer}
-          >
-            {workCardItems.slice(0, 3).map((item) => (
-              <motion.div key={item.id} variants={fadeInUp}>
-                <WorkCard image={item.image} client={item.client} />
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {/* CTA Button */}
-          <Button name="View All Projects" type="btnType2" link="#" />
         </div>
       </div>
     </>

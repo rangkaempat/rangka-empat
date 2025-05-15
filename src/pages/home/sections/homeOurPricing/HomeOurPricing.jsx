@@ -3,7 +3,7 @@ import Button from "../../../../components/button/Button";
 import "./HomeOurPricing.scss";
 import { Link } from "react-router";
 import PriceCard from "../../../../components/priceCard/PriceCard";
-import { webPriceCardItems } from "../../../../data/webPriceCardData";
+import { webPriceCardItems } from "../../../../data/PriceCardData";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "../../../../functions/motionUtils";
 
@@ -12,11 +12,11 @@ function HomeOurPricing() {
     <>
       <div className="sectionDarkGradient homeOurPricingGradient">
         <div className="sectionWrapper homeOurPricingWrapper">
-          <h2>Our Pricing Plans.</h2>
+          <div className="sectionContent">
+            <h2>Our Pricing Plans.</h2>
 
-          <div>
             <h4 className="homeOurPricingType">
-              Web Design & Development Packages
+              Web Design & Development Plans
             </h4>
             <motion.div
               className="homeOurPricingCardContainer"
@@ -30,14 +30,15 @@ function HomeOurPricing() {
                   <PriceCard
                     name={item.name}
                     price={item.price}
+                    target={item.target}
                     features={item.features}
                   />
                 </motion.div>
               ))}
             </motion.div>
-          </div>
 
-          <Button name="View All Plans" type="btnType2" link="#" />
+            <Button name="View All Plans" type="btnType2" link="#" />
+          </div>
         </div>
       </div>
     </>

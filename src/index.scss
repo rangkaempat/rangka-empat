@@ -63,23 +63,6 @@ a {
   background: linear-gradient(180deg, $darkbg 0%, #1b022a 100%);
 }
 
-.sectionWrapper {
-  display: flex;
-  // flex-direction: row/column;  //Can be implemented in the class of the section itself if needed
-  justify-content: center;
-  // text-align: center/justify; //Can be implemented in the class of the section itself if needed
-
-  // height: 100vh; //Can be implemented in the class of the section itself if needed
-  min-height: fit-content; //This is needed in every section, but should be adjusted to accommodate the content size
-  max-width: 1366px;
-  margin: auto;
-  padding: 5rem 3rem;
-
-  @media screen and (max-width: 768px) {
-    padding: 3rem 1rem;
-  }
-}
-
 // =======================================
 // STANDARDIZED SECTION STYLES (WITH BACKGROUND IMAGE AND BLUR EFFECT)
 // This is a standard style for all sections in the app that require a background image, a blur effect, and the section container/wrapper.
@@ -114,25 +97,35 @@ a {
     z-index: -1;
   }
 }
+// =======================================
+// STANDARD SECTION WRAPPER & CONTENT STYLES
+// This is a standard style for all section wrapper & content
+// =======================================
 
-.sectionContainer {
+.sectionWrapper {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  text-align: center;
 
-  // height: 100vh;  //Can be implemented in the class of the section itself if needed
-  min-height: 800px; //Depending on the design, this should be adjusted to accommodate the content
+  min-height: fit-content; //This is needed in every section, but should be adjusted to accommodate the content size
   max-width: 1366px;
-
   margin: auto;
-  padding: 10rem 3rem;
+  padding: 5rem 3rem;
 
-  gap: 2rem;
+  overflow: hidden;
 
   @media screen and (max-width: 768px) {
     padding: 3rem 1rem;
   }
+}
+
+.sectionContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  gap: 2rem;
 }
 
 // =======================================
