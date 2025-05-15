@@ -10,7 +10,7 @@ import { fadeInUp, staggerContainer } from "../../../../functions/motionUtils";
 function HomePricing() {
   return (
     <>
-      <div className="sectionDarkGradient homePricingGradient">
+      <section className="sectionDarkGradient homePricingGradient">
         <div className="sectionWrapper homePricingWrapper">
           <div className="sectionContent">
             <h2>Our Pricing Plans.</h2>
@@ -38,7 +38,7 @@ function HomePricing() {
             <Button name="View All Plans" type="btnType2" link="#" />
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

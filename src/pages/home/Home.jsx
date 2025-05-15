@@ -19,25 +19,27 @@ export default function Home() {
 
       {/* Check index.scss for all Standardized Section Styles, maybe we can move it to a separate dedicated file */}
       {/* Example Standardized Section With Image Background */}
-      <div className="sectionBackground">
+      <section className="sectionBackground">
         <div className="sectionBackgroundBlur">
           <div className="sectionWrapper">
             <div className="sectionContent">Who We Are Section</div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Example Standardized Section with Light Background*/}
-      <div className="sectionLight">
+      <section className="sectionLight">
+        <div className="sectionWrapper">
+          <div className="sectionContent">Why Choose Us Section</div>
+        </div>
+      </section>
+
+      {/* Example Standardized Section with Light Background*/}
+      <section className="sectionLight">
         <div className="sectionWrapper">
           <div className="sectionContent">What We Offer Section</div>
         </div>
-      </div>
-
-      {/* Example Standardized Section with Dark Background*/}
-      {/* <div className="sectionDark">
-        <div className="sectionWrapper">Our Work Section</div>
-      </div> */}
+      </section>
 
       <HomeWork />
       <HomePricing />

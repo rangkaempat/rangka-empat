@@ -11,7 +11,7 @@ import { fadeInUp, staggerContainer } from "../../../../functions/motionUtils";
 function HomeWork() {
   return (
     <>
-      <div className="sectionDarkGradient">
+      <section className="sectionDarkGradient">
         <div className="sectionWrapper homeWorkWrapper">
           <div className="sectionContent">
             {/* Title & Description */}
@@ -44,7 +44,7 @@ function HomeWork() {
             <Button name="View All Projects" type="btnType2" link="#" />
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }
