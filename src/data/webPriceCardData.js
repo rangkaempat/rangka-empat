@@ -5,7 +5,7 @@ export const webPriceCardItems = [
     id: 1,
     name: "Freelance",
     price: "RM1,500",
-    details: [
+    features: [
       "Custom Website Design",
       "Up to 5 Pages",
       "1 Revision",
@@ -17,7 +17,7 @@ export const webPriceCardItems = [
     id: 2,
     name: "Business",
     price: "RM3,500",
-    details: [
+    features: [
       "Custom Website Design",
       "Up to 10 Pages",
       "3 Revisions",
@@ -29,7 +29,7 @@ export const webPriceCardItems = [
     id: 3,
     name: "Enterprise",
     price: "RM5,000",
-    details: [
+    features: [
       "Custom Website Design",
       "Up to 20 Pages",
       "5 Revisions",

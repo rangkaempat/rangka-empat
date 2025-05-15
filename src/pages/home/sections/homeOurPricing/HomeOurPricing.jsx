@@ -12,7 +12,7 @@ function HomeOurPricing() {
     <>
       <div className="sectionDarkGradient homeOurPricingGradient">
         <div className="sectionWrapper homeOurPricingWrapper">
-          <h2>Our Pricing.</h2>
+          <h2>Our Pricing Plans.</h2>
 
           <div>
             <h4 className="homeOurPricingType">
@@ -30,14 +30,14 @@ function HomeOurPricing() {
                   <PriceCard
                     name={item.name}
                     price={item.price}
-                    details={item.details}
+                    features={item.features}
                   />
                 </motion.div>
               ))}
             </motion.div>
           </div>
 
-          <Button name="View All Prices" type="btnType2" link="#" />
+          <Button name="View All Plans" type="btnType2" link="#" />
         </div>
       </div>
     </>

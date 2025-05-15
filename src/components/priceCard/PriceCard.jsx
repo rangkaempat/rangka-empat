@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import "./PriceCard.scss";
 import { motion } from "framer-motion";
 
-function PriceCard({ id, name, price, details }) {
+function PriceCard({ id, name, price, features }) {
   // Map names to their respective class types
   const typeClassMap = {
     Freelance: "type1",
@@ -24,9 +24,12 @@ function PriceCard({ id, name, price, details }) {
         whileHover={{ y: -5 }}
         transition={{ type: "spring", stiffness: 200 }}
       >
+        {/* Popular tag */}
         {name === "Business" ? (
           <h6 className="priceCardPopular">Most Popular</h6>
         ) : null}
+
+        {/* Price Card Content */}
         <div className="priceCardContent">
           <h3>{name}</h3>
           <div>
@@ -38,8 +41,8 @@ function PriceCard({ id, name, price, details }) {
           ) : (
             <Button name="Book a Free Consultation" type="btnType2" link="#" />
           )}
-          <ul className="priceCardDetails">
-            {details.map((detail, index) => (
+          <ul className="priceCardFeatures">
+            {features.map((feature, index) => (
               <li key={index}>
                 <svg
                   className="w-[20px] h-[20px] text-gray-800 dark:text-white"
@@ -58,7 +61,7 @@ function PriceCard({ id, name, price, details }) {
                     d="M5 11.917 9.724 16.5 19 7.5"
                   />
                 </svg>
-                {detail}
+                {feature}
               </li>
             ))}
           </ul>
