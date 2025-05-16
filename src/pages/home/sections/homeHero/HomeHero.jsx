@@ -50,8 +50,18 @@ export default function HomeHero() {
 
               {/* Hero Buttons */}
               <div className="homeHeroBtnContainer">
-                <Button name="Start Your Project" type="btnType1" link="#" />
-                <Button name="View Our Work" type="btnType2" link="#" />
+                <Button
+                  name="Start Your Project"
+                  type="btnType1"
+                  link="#"
+                  arrow={true}
+                />
+                <Button
+                  name="View Our Work"
+                  type="btnType2"
+                  link="#"
+                  arrow={true}
+                />
               </div>
 
               {/* Clientele Section */}

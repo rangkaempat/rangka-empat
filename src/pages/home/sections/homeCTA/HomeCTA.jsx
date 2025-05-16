@@ -90,8 +90,14 @@ function HomeCTA() {
                   name="Book a Free Consultation"
                   type="btnType1"
                   link="#"
+                  arrow={true}
                 />
-                <Button name="View Our Plans" type="btnType3" link="#" />
+                <Button
+                  name="View Our Plans"
+                  type="btnType3"
+                  link="#"
+                  arrow={true}
+                />
               </div>
 
               {/* Features */}

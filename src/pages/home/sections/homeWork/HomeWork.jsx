@@ -57,7 +57,12 @@ function HomeWork() {
             </motion.div>
 
             {/* CTA Button */}
-            <Button name="View All Projects" type="btnType2" link="#" />
+            <Button
+              name="View All Projects"
+              type="btnType2"
+              link="#"
+              arrow={true}
+            />
           </div>
         </div>
       </section>

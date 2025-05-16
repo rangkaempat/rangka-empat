@@ -9,16 +9,51 @@ $lightbg: #f2f2f2;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   width: fit-content;
 }
 
-.btnType1 {
+.btnType0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
   padding: 0.5rem 1.5rem;
   color: white;
   background: linear-gradient(to right, $primary, $secondary);
   border-radius: 30px;
   border: 2px solid $secondary;
   transition: 0.2s;
+
+  fill: white;
+
+  &:hover {
+    border: 2px solid $primary;
+    color: white;
+  }
+
+  &:active {
+    border: 2px solid $secondary;
+    color: white;
+  }
+}
+
+.btnType1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.5rem 1.5rem;
+  color: white;
+  background: linear-gradient(to right, $primary, $secondary);
+  border-radius: 30px;
+  border: 2px solid $secondary;
+  transition: 0.2s;
+  width: 280px;
+
+  fill: white;
 
   &:hover {
     border: 2px solid $primary;
@@ -32,37 +67,81 @@ $lightbg: #f2f2f2;
 }
 
 .btnType2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
   padding: 0.5rem 1.5rem;
   color: white;
   border: 2px solid white;
   border-radius: 30px;
   transition: 0.2s;
+  width: 280px;
+
+  fill: white;
 
   &:hover {
     border: 2px solid $primary;
     color: $primary;
+    fill: $primary;
   }
 
   &:active {
     border: 2px solid $secondary;
     color: $secondary;
+    fill: $secondary;
   }
 }
 
 .btnType3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
   padding: 0.5rem 1.5rem;
   color: $secondary;
   border: 2px solid $secondary;
   border-radius: 30px;
   transition: 0.2s;
+  width: 280px;
+
+  fill: $secondary;
 
   &:hover {
     border: 2px solid $primary;
     color: $primary;
+    fill: $primary;
   }
 
   &:active {
     border: 2px solid $secondary;
     color: $secondary;
+    fill: $secondary;
+  }
+}
+
+// TYPE 4
+.btnType4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.5rem 1.5rem;
+  color: white;
+  transition: 0.2s;
+
+  fill: white;
+
+  &:hover {
+    color: $primary;
+    fill: $primary;
+  }
+
+  &:active {
+    color: $secondary;
+    fill: $secondary;
   }
 }

@@ -51,7 +51,12 @@ function HomePricing() {
               ))}
             </motion.div>
 
-            <Button name="View All Plans" type="btnType2" link="#" />
+            <Button
+              name="View All Plans"
+              type="btnType2"
+              link="#"
+              arrow={true}
+            />
           </div>
         </div>
       </section>
