@@ -19,14 +19,6 @@ export default function Home() {
       <HomeHero />
 
       {/* Check index.scss for all Standardized Section Styles, maybe we can move it to a separate dedicated file */}
-      {/* Example Standardized Section With Image Background */}
-      <section className="sectionBackground">
-        <div className="sectionBackgroundBlur">
-          <div className="sectionWrapper">
-            <div className="sectionContent">Who We Are Section</div>
-          </div>
-        </div>
-      </section>
 
       {/* Example Standardized Section with Light Background*/}
       <section className="sectionLight">
@@ -44,6 +36,16 @@ export default function Home() {
 
       <HomeWork />
       <HomePricing />
+
+      {/* Example Standardized Section With Image Background */}
+      <section className="sectionBackground">
+        <div className="sectionBackgroundBlur">
+          <div className="sectionWrapper">
+            <div className="sectionContent">Who We Are Section</div>
+          </div>
+        </div>
+      </section>
+
       <HomeCTA />
     </>
   );

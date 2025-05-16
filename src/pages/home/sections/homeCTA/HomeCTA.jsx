@@ -81,7 +81,6 @@ function HomeCTA() {
                 <span> Next Level</span>?
               </motion.h2>
               <motion.p variants={fadeInWithEase}>
-                <br />
                 Let's turn your ideas into a powerful online experience.
               </motion.p>
 
