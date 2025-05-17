@@ -6,6 +6,7 @@ import Navbar from "../../components/navbar/Navbar";
 import HomeWork from "./sections/homeWork/HomeWork";
 import HomePricing from "./sections/homePricing/HomePricing";
 import HomeCTA from "./sections/homeCTA/HomeCTA";
+import Footer from "../../components/footer/Footer";
 
 export default function Home() {
   useEffect(() => {
@@ -45,6 +46,7 @@ export default function Home() {
       <HomeWork />
       <HomePricing />
       <HomeCTA />
+      <Footer />
     </>
   );
 }
