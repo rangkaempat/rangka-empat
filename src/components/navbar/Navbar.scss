@@ -10,7 +10,7 @@ $light: #f2f2f2;
   align-items: center;
 
   border-bottom: 1px solid rgba(10, 106, 184, 0.35);
-  background: #04060a;
+  background: $light;
   backdrop-filter: blur(12.5px);
 
   position: fixed;
@@ -44,7 +44,7 @@ $light: #f2f2f2;
 
   height: 55px;
   padding: 0 1rem;
-  color: #ffffff;
+  color: $dark;
   text-align: center;
 }
 
