@@ -11,6 +11,12 @@ import linkedinlogo from "/src/assets/logoLinkedin.webp";
 import tiktoklogo from "/src/assets/logoTiktok.webp";
 import homeHeroBg from "/src/assets/home-hero-bg.webp";
 import { fadeInWithEase, staggerContainer } from "../../functions/motionUtils";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  TikTokIcon,
+} from "../../data/socialLogos";
 
 const footerLinks = [
   { name: "Home", to: "/" },
@@ -21,26 +27,10 @@ const footerLinks = [
 ];
 
 const socialLinks = [
-  {
-    name: "Instagram",
-    to: "https://www.instagram.com/rangkaempatstudio",
-    logo: instagramlogo,
-  },
-  {
-    name: "Facebook",
-    to: "https://www.facebook.com/rangkaempatstudio",
-    logo: facebooklogo,
-  },
-  {
-    name: "TikTok",
-    to: "https://www.tiktok.com/rangkaempat",
-    logo: tiktoklogo,
-  },
-  {
-    name: "LinkedIn",
-    to: "https://www.linkedin.com/company/rangka-empat-studio",
-    logo: linkedinlogo,
-  },
+  { name: "Instagram", to: "https://www.instagram.com", icon: InstagramIcon },
+  { name: "Facebook", to: "https://www.facebook.com", icon: FacebookIcon },
+  { name: "TikTok", to: "https://www.tiktok.com", icon: TikTokIcon },
+  { name: "LinkedIn", to: "https://www.linkedin.com", icon: LinkedInIcon },
 ];
 
 export default function Footer() {
@@ -106,22 +96,25 @@ export default function Footer() {
                 viewport={{ once: true, amount: 0.2 }}
                 variants={staggerContainer}
               >
-                {socialLinks.map((link, index) => (
-                  <motion.div key={index} variants={fadeInWithEase}>
-                    <Link
-                      className="footerlink"
-                      to={link.to}
-                      target="_blank"
-                      rel="noopener"
+                {socialLinks.map((link, index) => {
+                  const Icon = link.icon;
+                  return (
+                    <motion.div
+                      key={index}
+                      variants={fadeInWithEase}
+                      whileHover={{ y: -5 }}
                     >
-                      <img
-                        className="footerlogo"
-                        src={link.logo}
-                        alt={`${link.name} Logo`}
-                      />
-                    </Link>
-                  </motion.div>
-                ))}
+                      <a
+                        className="footerlink"
+                        href={link.to}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Icon size={40} color="#ededed" />
+                      </a>
+                    </motion.div>
+                  );
+                })}
               </motion.div>
               {/* footer Logo */}
             </div>

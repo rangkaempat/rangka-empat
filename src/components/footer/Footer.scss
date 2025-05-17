@@ -77,6 +77,12 @@ $lightbg: #f2f2f2;
       padding: 0 1rem;
       color: #ffffff;
       text-align: center;
+
+      &:hover {
+        svg {
+          fill: $primary;
+        }
+      }
     }
   }
 
