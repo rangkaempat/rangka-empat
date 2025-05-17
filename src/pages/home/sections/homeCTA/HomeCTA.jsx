@@ -81,7 +81,6 @@ function HomeCTA() {
                 <span> Next Level</span>?
               </motion.h2>
               <motion.p variants={fadeInWithEase}>
-                <br />
                 Let's turn your ideas into a powerful online experience.
               </motion.p>
 
@@ -90,8 +89,14 @@ function HomeCTA() {
                   name="Book a Free Consultation"
                   type="btnType1"
                   link="#"
+                  arrow={true}
                 />
-                <Button name="View Our Plans" type="btnType3" link="#" />
+                <Button
+                  name="View Our Plans"
+                  type="btnType3"
+                  link="#"
+                  arrow={true}
+                />
               </div>
 
               {/* Features */}

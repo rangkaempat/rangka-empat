@@ -35,7 +35,10 @@ export default function Navbar() {
           </div>
 
           {/* Navbar Button */}
-          <Button name="Start Your Project" type="btnType1" link="#" />
+          <div className="navButtonContainer">
+            <Button name="Contact" type="btnType4" link="#" arrow="true" />
+            <Button name="Start Your Project" type="btnType0" link="#" />
+          </div>
         </div>
       </div>
 
