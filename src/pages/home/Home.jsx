@@ -6,6 +6,7 @@ import Navbar from "../../components/navbar/Navbar";
 import HomeWork from "./sections/homeWork/HomeWork";
 import HomePricing from "./sections/homePricing/HomePricing";
 import HomeCTA from "./sections/homeCTA/HomeCTA";
+import HomeForm from "./sections/homeForm/HomeForm";
 import Footer from "../../components/footer/Footer";
 
 export default function Home() {
@@ -48,6 +49,7 @@ export default function Home() {
       </section>
 
       <HomeCTA />
+      <HomeForm />
       <Footer />
     </>
   );

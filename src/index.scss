@@ -18,6 +18,23 @@ $lightbg: #f2f2f2;
   -moz-osx-font-smoothing: grayscale;
 }
 
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+select {
+  font-family: "Poppins", sans-serif;
+}
+
+textarea {
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  cursor : pointer
+}
+
 html {
   // scroll-behavior: smooth;
   background-color: $darkbg;
