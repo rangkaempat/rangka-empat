@@ -1,15 +1,8 @@
 import React from "react";
 import "./Footer.scss";
 import { Outlet, Link } from "react-router";
-import Button from "../button/Button";
 import { motion } from "framer-motion";
 import footerLogo from "/src/assets/rangka-empat-studio-logo-footer.webp";
-import logo from "/src/assets/rangka-empat-studio-logo.webp";
-import facebooklogo from "/src/assets/logoFacebook.webp";
-import instagramlogo from "/src/assets/logoInstagram.webp";
-import linkedinlogo from "/src/assets/logoLinkedin.webp";
-import tiktoklogo from "/src/assets/logoTiktok.webp";
-import homeHeroBg from "/src/assets/home-hero-bg.webp";
 import homeHeroBg2 from "/src/assets/home-hero-bg-2.webp";
 import { fadeInWithEase, staggerContainer } from "../../functions/motionUtils";
 import {
@@ -28,10 +21,26 @@ const footerLinks = [
 ];
 
 const socialLinks = [
-  { name: "Instagram", to: "https://www.instagram.com", icon: InstagramIcon },
-  { name: "Facebook", to: "https://www.facebook.com", icon: FacebookIcon },
-  { name: "TikTok", to: "https://www.tiktok.com", icon: TikTokIcon },
-  { name: "LinkedIn", to: "https://www.linkedin.com", icon: LinkedInIcon },
+  {
+    name: "Instagram",
+    to: "https://www.instagram.com/rangkaempatstudio",
+    icon: InstagramIcon,
+  },
+  {
+    name: "Facebook",
+    to: "https://www.facebook.com/rangkaempatstudio",
+    icon: FacebookIcon,
+  },
+  {
+    name: "TikTok",
+    to: "https://www.tiktok.com/@rangkaempat",
+    icon: TikTokIcon,
+  },
+  {
+    name: "LinkedIn",
+    to: "https://www.linkedin.com/company/rangka-empat-studio",
+    icon: LinkedInIcon,
+  },
 ];
 
 export default function Footer() {
