@@ -145,3 +145,27 @@ $lightbg: #f2f2f2;
     fill: $secondary;
   }
 }
+
+// TYPE 5
+.btnType5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.5rem 1.5rem;
+  color: $dark;
+  transition: 0.2s;
+
+  fill: $dark;
+
+  &:hover {
+    color: $primary;
+    fill: $primary;
+  }
+
+  &:active {
+    color: $secondary;
+    fill: $secondary;
+  }
+}

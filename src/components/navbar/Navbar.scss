@@ -9,9 +9,8 @@ $light: #f2f2f2;
   justify-content: center;
   align-items: center;
 
-  border-bottom: 1px solid rgba(10, 106, 184, 0.35);
-  background: #04060a;
-  backdrop-filter: blur(12.5px);
+  background: #f2f2f2ee;
+  backdrop-filter: blur(20px);
 
   position: fixed;
   top: 0;
@@ -44,7 +43,7 @@ $light: #f2f2f2;
 
   height: 55px;
   padding: 0 1rem;
-  color: #ffffff;
+  color: $dark;
   text-align: center;
 }
 
