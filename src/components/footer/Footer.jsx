@@ -10,6 +10,7 @@ import instagramlogo from "/src/assets/logoInstagram.webp";
 import linkedinlogo from "/src/assets/logoLinkedin.webp";
 import tiktoklogo from "/src/assets/logoTiktok.webp";
 import homeHeroBg from "/src/assets/home-hero-bg.webp";
+import homeHeroBg2 from "/src/assets/home-hero-bg-2.webp";
 import { fadeInWithEase, staggerContainer } from "../../functions/motionUtils";
 import {
   FacebookIcon,
@@ -37,11 +38,11 @@ export default function Footer() {
   return (
     <>
       <div
-        className="sectionBackground"
-        style={{ backgroundImage: `url(${homeHeroBg})` }}
+        className="sectionBackground footerBackground"
+        style={{ backgroundImage: `url(${homeHeroBg2})` }}
       >
-        <div className="sectionBackgroundBlur">
-          <div className="sectionWrapper">
+        <div className="sectionBackgroundBlur footerBackgroundGradient">
+          <div className="sectionWrapper footerWrapper">
             <div className="sectionContent footerContent">
               {/* Footer Links */}
               <motion.div
