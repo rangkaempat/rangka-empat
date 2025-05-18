@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.scss";
 import { Outlet, Link } from "react-router";
 import Button from "../button/Button";
@@ -7,15 +7,37 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     document.body.style.overflow = isOpen ? "auto" : "hidden";
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setShowNavbar(false); // Hide on scroll down
+      } else {
+        setShowNavbar(true); // Show on scroll up
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
     <>
-      <div className="navbarBackground">
+      <motion.div
+        className="navbarBackground"
+        initial={{ y: 0 }}
+        animate={{ y: showNavbar ? 0 : "-100%" }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+      >
         <div className="navbarContainer">
           {/* Navbar Logo */}
           <Link
@@ -90,7 +112,7 @@ export default function Navbar() {
             </AnimatePresence>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Modal for Nav Links */}
       <AnimatePresence>
