@@ -5,21 +5,53 @@ $light: #ffffff;
 $darkbg: #020e2a;
 $lightbg: #f2f2f2;
 
+.homeHeroBackground {
+  width: 99%;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 70px;
+  overflow: hidden;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
 .homeHeroBackgroundGradient {
-  background: linear-gradient(-145deg, #04060a00 0%, #050b19 100%);
+  // background: linear-gradient(-145deg, #04060a00 0%, #050b19 100%);
+  background: #050608ad;
 }
 
 .homeHeroWrapper {
-  padding-top: 10rem;
-  padding-bottom: 5rem;
+  flex-direction: column;
+  gap: 5rem;
+  height: calc(100vh - 80px);
+}
+
+.homeHeroContent {
+  flex-direction: row;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    padding: 5rem 0;
+  }
 }
 
 .homeHeroTitle {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
   gap: 2rem;
+  text-align: start;
+
+  @media screen and (max-width: 1024px) {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   h1 {
     color: white;
     span {
@@ -30,15 +62,37 @@ $lightbg: #f2f2f2;
       padding: 0 0.5rem;
     }
   }
+
+  p {
+    width: 80%;
+    color: white;
+  }
 }
 
-p {
-  width: 60%;
-  margin: 0 auto;
-  color: white;
+.homeCTAImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+
+  position: relative;
 
   @media screen and (max-width: 1024px) {
     width: 100%;
+  }
+
+  .homeCTAImage {
+    position: absolute;
+    bottom: -30px;
+    width: 50%;
+
+    @media screen and (max-width: 1024px) {
+      width: 300px;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 45%;
+    }
   }
 }
 
@@ -53,17 +107,14 @@ p {
   }
 }
 
-.homeHeroTitle2 {
-  margin-top: 5rem;
-  color: white;
-
-  span {
-    background: linear-gradient(to right, $primary, $secondary);
-    background-clip: $primary;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-  }
-}
+// .homeHeroTitle2 {
+//   span {
+//     background: linear-gradient(to right, $primary, $secondary);
+//     background-clip: $primary;
+//     -webkit-text-fill-color: transparent;
+//     -webkit-background-clip: text;
+//   }
+// }
 
 .clientListContainer {
   display: flex;
@@ -78,30 +129,36 @@ p {
     padding: 2rem 0 2rem 4rem;
     gap: 5rem;
 
+    @media screen and (max-width: 768px) {
+      padding: 1rem 0 1rem 2rem;
+      gap: 2rem;
+    }
+
     .clientLogo {
       height: 80px;
+      opacity: 20%;
     }
   }
 
   // Fading Effect
-  //   &::before,
-  //   &::after {
-  //     content: "";
-  //     position: absolute;
-  //     top: 0;
-  //     bottom: 0;
-  //     width: 150px;
-  //     z-index: 1;
-  //     pointer-events: none;
-  //   }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    z-index: 1;
+    pointer-events: none;
+  }
 
-  //   &::before {
-  //     left: 0;
-  //     background: linear-gradient(to right, $darkbg, rgba(255, 255, 255, 0));
-  //   }
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, $lightbg, rgba(255, 255, 255, 0));
+  }
 
-  //   &::after {
-  //     right: 0;
-  //     background: linear-gradient(to left, $darkbg, rgba(255, 255, 255, 0));
-  //   }
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, $lightbg, rgba(255, 255, 255, 0));
+  }
 }
