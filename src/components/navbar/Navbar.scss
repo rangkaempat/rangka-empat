@@ -1,7 +1,9 @@
 $primary: #0aaab8;
 $secondary: #0a6ab8;
 $dark: #323232;
-$light: #f2f2f2;
+$light: #ffffff;
+$darkbg: #020e2a;
+$lightbg: #f2f2f2;
 
 .navbarBackground {
   height: 70px;
@@ -18,43 +20,110 @@ $light: #f2f2f2;
   right: 0;
 
   z-index: 1000;
+
+  @media screen and (max-width: 1024px) {
+    height: 50px;
+  }
+
+  .navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1366px;
+    min-width: auto;
+    margin: auto;
+    display: flex;
+
+    @media screen and (max-width: 1024px) {
+      padding: 0 1rem;
+    }
+
+    .navlogo {
+      height: 40px;
+      display: block;
+    }
+
+    .navlinkContainer {
+      display: flex;
+      gap: 1rem;
+
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+
+      .navlink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 55px;
+        padding: 0 1rem;
+        color: $dark;
+        text-align: center;
+      }
+    }
+
+    .navButtonContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
+
+    .navMenuIcon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      svg {
+        &:hover {
+          fill: $primary;
+        }
+      }
+
+      @media screen and (min-width: 1025px) {
+        display: none;
+      }
+    }
+  }
 }
 
-.navbarContainer {
+.navModalLinkContainer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  // justify-content: center;
   align-items: center;
+  background-color: $lightbg;
+  z-index: 999;
+  padding: 5rem 2rem;
+  gap: 1.5rem;
+  height: 100dvh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 
-  width: 1366px;
-  min-width: auto;
-  margin: auto;
-  display: flex;
-}
+  .navModalLink {
+    font-size: 1.2rem;
+    color: $dark;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+    padding: 0.5rem 1.5rem;
 
-.navlogo {
-  height: 40px;
-  display: block;
-}
-
-.navlink {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 55px;
-  padding: 0 1rem;
-  color: $dark;
-  text-align: center;
-}
-
-.navlinkContainer {
-  display: flex;
-  gap: 1rem;
-}
-
-.navButtonContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+    &:hover {
+      color: $primary;
+      transform: scale(1.05);
+    }
+  }
 }

@@ -169,3 +169,56 @@ $lightbg: #f2f2f2;
     fill: $secondary;
   }
 }
+
+.btnType6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.5rem 1.5rem;
+  color: white;
+  background: linear-gradient(to right, $primary, $secondary);
+  border-radius: 30px;
+  border: 2px solid $secondary;
+  transition: 0.2s;
+  width: 280px;
+
+  font-size: 1.2rem;
+
+  fill: white;
+
+  &:hover {
+    border: 2px solid $primary;
+    color: white;
+  }
+
+  &:active {
+    border: 2px solid $secondary;
+    color: white;
+  }
+}
+
+.btnType7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.5rem 1.5rem;
+  color: $dark;
+  transition: 0.2s;
+
+  fill: $dark;
+  font-size: 1.2rem;
+
+  &:hover {
+    color: $primary;
+    fill: $primary;
+  }
+
+  &:active {
+    color: $secondary;
+    fill: $secondary;
+  }
+}
