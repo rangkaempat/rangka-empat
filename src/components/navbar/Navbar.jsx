@@ -123,8 +123,24 @@ export default function Navbar() {
             ))}
 
             {/* Navbar Button */}
-            <Button name="Contact" type="btnType7" link="#" />
-            <Button name="Start Your Project" type="btnType6" link="#" />
+            <Button
+              name="Contact"
+              type="btnType7"
+              link="#"
+              onClick={() => {
+                setIsOpen(false);
+                document.body.style.overflow = "auto";
+              }}
+            />
+            <Button
+              name="Start Your Project"
+              type="btnType6"
+              link="#"
+              onClick={() => {
+                setIsOpen(false);
+                document.body.style.overflow = "auto";
+              }}
+            />
           </motion.div>
         )}
       </AnimatePresence>

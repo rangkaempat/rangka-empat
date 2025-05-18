@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import "./Button.scss";
 import { motion } from "framer-motion";
 
-function Button({ name, type, link, arrow }) {
+function Button({ name, type, link, onClick, arrow }) {
   return (
     // type = btnType1, btnType2, btnType3
     // link = page address
@@ -19,7 +19,7 @@ function Button({ name, type, link, arrow }) {
       transition={{ type: "spring", stiffness: 200 }}
       viewport={{ once: true, amount: 0.2 }}
     >
-      <Link className={type} to={link}>
+      <Link className={type} to={link} onClick={onClick}>
         {name}
         {arrow && (
           <svg
