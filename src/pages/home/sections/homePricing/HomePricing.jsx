@@ -14,7 +14,7 @@ import {
 function HomePricing() {
   return (
     <>
-      <section className="sectionDarkGradient homePricingGradient">
+      <section className="sectionLight">
         <div className="sectionWrapper homePricingWrapper">
           <div className="sectionContent">
             <motion.div
@@ -53,7 +53,7 @@ function HomePricing() {
 
             <Button
               name="View All Plans"
-              type="btnType2"
+              type="btnType3"
               link="#"
               arrow={true}
             />

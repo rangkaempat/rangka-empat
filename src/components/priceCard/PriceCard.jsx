@@ -40,7 +40,7 @@ function PriceCard({ id, name, price, target, features }) {
           {name === "Business" ? (
             <Button name="Book a Free Consultation" type="btnType1" link="#" />
           ) : (
-            <Button name="Book a Free Consultation" type="btnType2" link="#" />
+            <Button name="Book a Free Consultation" type="btnType3" link="#" />
           )}
 
           {/* Price Card Features */}

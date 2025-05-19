@@ -5,34 +5,30 @@ $light: #ffffff;
 $darkbg: #020e2a;
 $lightbg: #f2f2f2;
 
-.homePricingGradient {
-  background: linear-gradient(-145deg, #04060a 0%, #050b19 100%);
+.homePricingWrapper {
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
 
-  .homePricingWrapper {
+  .homePricingTextContainer {
+    display: flex;
     flex-direction: column;
-    justify-content: start;
+    gap: 2rem;
+
+    .homePricingType {
+      font-weight: 200;
+      margin-top: 2rem;
+    }
+  }
+
+  .homePricingCardContainer {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    gap: 3rem;
-
-    .homePricingTextContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-
-      .homePricingType {
-        font-weight: 200;
-        margin-top: 2rem;
-      }
-    }
-
-    .homePricingCardContainer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      width: 100%;
-      gap: 4rem;
-    }
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 4rem;
   }
 }

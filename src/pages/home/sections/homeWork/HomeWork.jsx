@@ -15,7 +15,7 @@ import {
 function HomeWork() {
   return (
     <>
-      <section className="sectionDarkGradient">
+      <section className="sectionLight">
         <div className="sectionWrapper homeWorkWrapper">
           <div className="sectionContent">
             {/* Title & Description */}
@@ -59,7 +59,7 @@ function HomeWork() {
             {/* CTA Button */}
             <Button
               name="View All Projects"
-              type="btnType2"
+              type="btnType3"
               link="#"
               arrow={true}
             />
