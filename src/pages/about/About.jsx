@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Hero from "../../components/hero/Hero";
 import Footer from "../../components/footer/Footer";
 
 import aboutHeroBg from "/src/assets/about-bg.webp";
-
+import { ThemeContext } from "../../functions/themeContext";
 function About() {
   const { darkMode } = useContext(ThemeContext);
   useEffect(() => {
