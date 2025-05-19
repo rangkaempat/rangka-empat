@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./HomeCTA.scss";
 import WorkCard from "../../../../components/workCard/WorkCard";
 import { workCardItems } from "../../../../data/workCardData";
@@ -9,7 +9,7 @@ import {
   staggerContainer,
 } from "../../../../functions/motionUtils";
 import Button from "../../../../components/button/Button";
-
+import { ThemeContext } from "../../../../functions/themeContext";
 const features = [
   "Fully Custom Website",
   "Fast Loading",
@@ -20,9 +20,11 @@ const features = [
 ];
 
 function HomeCTA() {
+  const { darkMode } = useContext(ThemeContext);
+
   return (
     <>
-      <section className="sectionLight">
+      <section className={darkMode ? "sectionDark" : "sectionLight"}>
         <div className="sectionWrapper">
           <div className="sectionContent homeCTAContent">
             {/* Images */}

@@ -6,6 +6,7 @@ import Footer from "../../components/footer/Footer";
 import aboutHeroBg from "/src/assets/about-bg.webp";
 
 function About() {
+  const { darkMode } = useContext(ThemeContext);
   useEffect(() => {
     document.title = "Rangka Empat Studio | Who We Are.";
   }, []);
@@ -19,7 +20,7 @@ function About() {
         desc="We’re Rangka Empat Studio – a passionate team of creators, developers, and problem-solvers, united by a shared love for crafting meaningful digital experiences."
         background={aboutHeroBg}
       />
-      <section className="sectionLight">
+      <section className={darkMode ? "sectionDark" : "sectionLight"}>
         <div className="sectionWrapper">
           <div className="sectionContent">About Us Section</div>
         </div>

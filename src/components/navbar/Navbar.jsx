@@ -4,8 +4,11 @@ import { Outlet, Link } from "react-router";
 import Button from "../button/Button";
 import navLogo from "/src/assets/rangka-empat-studio-logo-2.webp";
 import { motion, AnimatePresence } from "framer-motion";
+import { useContext } from "react";
+import { ThemeContext } from "../../functions/themeContext";
 
 export default function Navbar() {
+  const { darkMode, toggleMode } = useContext(ThemeContext);
   const [isOpen, setIsOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -38,6 +41,9 @@ export default function Navbar() {
         animate={{ y: showNavbar ? 0 : "-100%" }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
+        <button onClick={toggleMode}>
+          {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+        </button>
         <div className="navbarContainer">
           {/* Navbar Logo */}
           <Link

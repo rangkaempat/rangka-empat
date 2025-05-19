@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./HomeForm.scss";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
@@ -10,6 +10,7 @@ import {
 } from "../../../../functions/motionUtils";
 import ButtonForm from "../../../../components/button/ButtonForm";
 import { useForm } from "react-hook-form";
+import { ThemeContext } from "../../../../functions/themeContext";
 
 const features = [
   "Fully Custom Website",
@@ -21,6 +22,8 @@ const features = [
 ];
 
 function HomeForm() {
+  const { darkMode } = useContext(ThemeContext);
+
   const {
     register,
     handleSubmit,
@@ -33,7 +36,7 @@ function HomeForm() {
 
   return (
     <>
-      <section className="sectionLight">
+      <section className={darkMode ? "sectionDark" : "sectionLight"}>
         <div className="sectionWrapper">
           <div className="sectionContent homeFormContent">
             {/* Title & Description */}

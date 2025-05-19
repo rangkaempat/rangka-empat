@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "../../../../components/button/Button";
 import "./HomePricing.scss";
 import { Link } from "react-router";
@@ -10,11 +10,14 @@ import {
   fadeInWithEase,
   staggerContainer,
 } from "../../../../functions/motionUtils";
+import { ThemeContext } from "../../../../functions/themeContext";
 
 function HomePricing() {
+  const { darkMode } = useContext(ThemeContext);
+
   return (
     <>
-      <section className="sectionLight">
+      <section className={darkMode ? "sectionDark" : "sectionLight"}>
         <div className="sectionWrapper homePricingWrapper">
           <div className="sectionContent">
             <motion.div

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./HomeHero.scss";
 import { Link, Outlet } from "react-router";
 import Button from "../../../../components/button/Button";
@@ -16,10 +16,13 @@ import {
   staggerContainer,
 } from "../../../../functions/motionUtils";
 import { workCardItems } from "../../../../data/workCardData";
+import { ThemeContext } from "../../../../functions/themeContext";
 
 const clientLogos = [clientLogo1, clientLogo2, clientLogo3];
 
 export default function HomeHero() {
+  const { darkMode } = useContext(ThemeContext);
+
   return (
     <>
       <section
@@ -110,7 +113,7 @@ export default function HomeHero() {
         </div>
       </section>
 
-      <section className="sectionLight">
+      <section className={darkMode ? "sectionDark" : "sectionLight"}>
         <div className="sectionBackgroundBlurt">
           <div className="sectionWrapper">
             <div className="sectionContent">
