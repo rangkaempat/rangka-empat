@@ -3,6 +3,11 @@ import Button from "../button/Button";
 import { Link } from "react-router";
 import "./PriceCard.scss";
 import { motion } from "framer-motion";
+import {
+  fadeInUp,
+  fadeInWithEase,
+  staggerContainer,
+} from "../../functions/motionUtils";
 
 function PriceCard({ id, name, price, target, features }) {
   // Map names to their respective class types
@@ -44,9 +49,15 @@ function PriceCard({ id, name, price, target, features }) {
           )}
 
           {/* Price Card Features */}
-          <ul className="priceCardFeatures">
+          <motion.ul
+            className="priceCardFeatures"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={staggerContainer}
+          >
             {features.map((feature, index) => (
-              <li key={index}>
+              <motion.li key={index} variants={fadeInWithEase}>
                 <svg
                   className="w-[20px] h-[20px] text-gray-800 dark:text-white"
                   aria-hidden="true"
@@ -65,9 +76,9 @@ function PriceCard({ id, name, price, target, features }) {
                   />
                 </svg>
                 {feature}
-              </li>
+              </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         </div>
 
         {/* <motion.div

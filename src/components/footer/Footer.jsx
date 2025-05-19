@@ -91,11 +91,11 @@ export default function Footer() {
                     />
                   </Link>
                 </motion.div>
-                <motion.h1 className="footerh1" variants={fadeInWithEase}>
+                <motion.h2 className="footerh2" variants={fadeInWithEase}>
                   We Design. <span>We Code.</span>
                   <br />
                   We Deliver. <span>We Care.</span>
-                </motion.h1>
+                </motion.h2>
               </motion.div>
 
               {/* Footer Socials */}
