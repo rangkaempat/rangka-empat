@@ -9,7 +9,7 @@ import {
   staggerContainer,
 } from "../../functions/motionUtils";
 
-function PriceCard({ id, name, price, target, features }) {
+function PriceCard({ id, name, starting, price, target, features }) {
   // Map names to their respective class types
   const typeClassMap = {
     Starter: "priceType1",
@@ -38,7 +38,7 @@ function PriceCard({ id, name, price, target, features }) {
         <div className="priceCardContent">
           <h3 className={`priceCardName ${typeClass}`}>{name}</h3>
           <div>
-            <p>Starts from</p>
+            <p>{starting}</p>
             <h4 className={`priceCardPrice ${typeClass}`}>{price}</h4>
             <p className="priceCardTarget">{target}</p>
           </div>
