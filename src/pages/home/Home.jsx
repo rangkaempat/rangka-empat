@@ -10,9 +10,11 @@ import HomeForm from "./sections/homeForm/HomeForm";
 import Footer from "../../components/footer/Footer";
 import { ThemeContext } from "../../functions/themeContext";
 import HomeUSP from "./sections/homeUSP/HomeUSP";
+import HomeServices from "./sections/homeServices/HomeServices";
 
 export default function Home() {
   const { darkMode } = useContext(ThemeContext);
+
   useEffect(() => {
     document.title =
       "Rangka Empat Studio | We Design. We Code. We Deliver. We Care."; // Quick solution
@@ -23,14 +25,7 @@ export default function Home() {
       <Navbar />
       <HomeHero />
       <HomeUSP />
-
-      {/* Example Standardized Section with Light Background*/}
-      <section className={darkMode ? "sectionDark" : "sectionLight"}>
-        <div className="sectionWrapper">
-          <div className="sectionContent">What We Offer Section</div>
-        </div>
-      </section>
-
+      <HomeServices />
       <HomeWork />
       <HomePricing />
 

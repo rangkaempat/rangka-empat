@@ -1,0 +1,156 @@
+$primary: #0aaab8;
+$secondary: #0a6ab8;
+$dark: #323232;
+$light: #ffffff;
+$darkbg: #000000;
+$lightbg: #f2f2f2;
+
+.homeServicesWrapper {
+  overflow: visible;
+}
+
+.homeServicesContent {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+  overflow: visible;
+  position: relative;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  .homeServicesHeading {
+    top: 5rem;
+    position: sticky;
+    width: 40%;
+    text-align: justify;
+
+    @media screen and (max-width: 1024px) {
+      width: 35%;
+    }
+
+    @media screen and (max-width: 768px) {
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      position: static;
+    }
+
+    h2 {
+      text-align: start;
+      margin-bottom: 2rem;
+
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
+    }
+  }
+
+  .homeServicesCardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 60%;
+
+    @media screen and (max-width: 1024px) {
+      width: 65%;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+
+    .servicesCard {
+      flex: 0 0 auto;
+      height: 400px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid rgba(122, 122, 122, 0);
+      border-radius: 30px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+        z-index: 1;
+      }
+
+      @media screen and (max-width: 425px) {
+        height: 500px;
+      }
+
+      &:hover {
+        border: 1px solid $primary;
+        box-shadow: 0px 0px 15px 2px $primary;
+        transition: 0.3s;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .servicesCardDetails {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 2rem;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 2rem;
+        color: $light;
+        z-index: 2; // ensure text stays above gradient
+        text-align: justify;
+
+        h5 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: start;
+          gap: 1rem;
+
+          svg {
+            fill: $light;
+          }
+        }
+
+        .servicesCardTagContainer {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+
+          li {
+            list-style-type: none;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            background: rgba(242, 242, 242, 0.3);
+            width: max-content;
+            font-size: 0.8rem;
+
+            &:hover {
+              background: $primary;
+              transition: 0.3s;
+            }
+
+            @media screen and (max-width: 425px) {
+              font-size: 0.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
