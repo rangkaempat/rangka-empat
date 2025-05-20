@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { Outlet, Link } from "react-router";
 import "./HomeServices.scss";
 import { ThemeContext } from "../../../../functions/themeContext";
 import { motion } from "framer-motion";

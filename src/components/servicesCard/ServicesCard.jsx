@@ -2,6 +2,7 @@ import React from "react";
 import { fadeInWithEase } from "../../functions/motionUtils";
 import { Link } from "react-router";
 import { motion } from "framer-motion";
+import "./ServicesCard.scss";
 
 function ServicesCard({ image, title, description, tags }) {
   return (
@@ -13,6 +14,7 @@ function ServicesCard({ image, title, description, tags }) {
         transition={{ type: "spring", stiffness: 200 }}
       >
         <img src={image} alt={title} />
+        <div className="servicesCardGradient" />
         <div className="servicesCardDetails">
           <h5>
             {title}

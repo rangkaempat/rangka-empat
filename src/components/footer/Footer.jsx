@@ -3,7 +3,7 @@ import "./Footer.scss";
 import { Outlet, Link } from "react-router";
 import { motion } from "framer-motion";
 import footerLogo from "/src/assets/rangka-empat-studio-logo-footer.webp";
-import homeHeroBg2 from "/src/assets/home-hero-bg-2.webp";
+import homeHeroBg4 from "/src/assets/home-hero-bg-4.webp";
 import { fadeInWithEase, staggerContainer } from "../../functions/motionUtils";
 import {
   FacebookIcon,
@@ -48,7 +48,7 @@ export default function Footer() {
     <>
       <div
         className="sectionBackground footerBackground"
-        style={{ backgroundImage: `url(${homeHeroBg2})` }}
+        style={{ backgroundImage: `url(${homeHeroBg4})` }}
       >
         <div className="sectionBackgroundBlur footerBackgroundGradient">
           <div className="sectionWrapper footerWrapper">

@@ -4,6 +4,8 @@ import { Link, Outlet } from "react-router";
 import Button from "../../../../components/button/Button";
 import homeHeroBg from "/src/assets/home-hero-bg.webp";
 import homeHeroBg2 from "/src/assets/home-hero-bg-2.webp";
+import homeHeroBg3 from "/src/assets/home-hero-bg-3.webp";
+import homeHeroBg4 from "/src/assets/home-hero-bg-4.webp";
 import { motion } from "framer-motion";
 
 import clientLogo1Light from "/src/assets/clientLogo1Light.webp";
@@ -33,7 +35,7 @@ export default function HomeHero() {
     <>
       <section
         className="sectionBackground homeHeroBackground"
-        style={{ backgroundImage: `url(${homeHeroBg2})` }}
+        style={{ backgroundImage: `url(${homeHeroBg4})` }}
       >
         <div className="sectionBackgroundBlur homeHeroBackgroundGradient">
           <div className="sectionWrapper homeHeroWrapper">
