@@ -11,9 +11,6 @@ $lightbg: #f2f2f2;
   justify-content: center;
   align-items: center;
 
-  background: #f2f2f2ee;
-  backdrop-filter: blur(20px);
-
   position: fixed;
   top: 0;
   left: 0;
@@ -59,7 +56,6 @@ $lightbg: #f2f2f2;
 
         height: 55px;
         padding: 0 1rem;
-        color: $dark;
         text-align: center;
       }
     }
@@ -94,6 +90,15 @@ $lightbg: #f2f2f2;
         display: none;
       }
     }
+
+    .navMenuIconDark {
+      svg {
+        fill: $light;
+        &:hover {
+          fill: $primary;
+        }
+      }
+    }
   }
 }
 
@@ -106,7 +111,6 @@ $lightbg: #f2f2f2;
   flex-direction: column;
   // justify-content: center;
   align-items: center;
-  background-color: $lightbg;
   z-index: 999;
   padding: 5rem 2rem;
   gap: 1.5rem;
@@ -116,7 +120,6 @@ $lightbg: #f2f2f2;
 
   .navModalLink {
     font-size: 1.2rem;
-    color: $dark;
     text-decoration: none;
     transition: color 0.3s, transform 0.3s;
     padding: 0.5rem 1.5rem;
@@ -124,6 +127,22 @@ $lightbg: #f2f2f2;
     &:hover {
       color: $primary;
       transform: scale(1.05);
+    }
+  }
+}
+
+// Light and Dark Mode Button
+.themeButton {
+  background-color: none;
+  background: none;
+  border: none;
+  padding: 1rem;
+
+  svg {
+    display: block;
+
+    &:hover {
+      fill: $primary;
     }
   }
 }

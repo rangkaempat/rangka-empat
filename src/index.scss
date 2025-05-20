@@ -2,7 +2,7 @@ $primary: #0aaab8;
 $secondary: #0a6ab8;
 $dark: #323232;
 $light: #ffffff;
-$darkbg: #020e2a;
+$darkbg: #000000;
 $lightbg: #f2f2f2;
 
 // =======================================
@@ -35,10 +35,10 @@ button {
   cursor: pointer;
 }
 
-html {
-  // scroll-behavior: smooth;
-  background-color: $lightbg;
-}
+// html {
+// scroll-behavior: smooth;
+// background-color: $lightbg;
+// }
 
 body {
   color: $light;
@@ -68,11 +68,13 @@ a {
 .sectionLight {
   background-color: $lightbg;
   color: $dark;
+  transition: 0.5s;
 }
 
 .sectionDark {
   background-color: $darkbg;
   color: $light;
+  transition: 0.5s;
 }
 
 .sectionDarkGradient {
@@ -93,6 +95,8 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
+  color: $light;
 
   @media screen and (max-width: 1024px) {
     background-attachment: scroll;

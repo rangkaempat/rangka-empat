@@ -6,9 +6,14 @@ import homeHeroBg from "/src/assets/home-hero-bg.webp";
 import homeHeroBg2 from "/src/assets/home-hero-bg-2.webp";
 import { motion } from "framer-motion";
 
-import clientLogo1 from "/src/assets/clientLogo1.webp";
-import clientLogo2 from "/src/assets/clientLogo2.webp";
-import clientLogo3 from "/src/assets/clientLogo3.webp";
+import clientLogo1Light from "/src/assets/clientLogo1Light.webp";
+import clientLogo2Light from "/src/assets/clientLogo2Light.webp";
+import clientLogo3Light from "/src/assets/clientLogo3Light.webp";
+
+import clientLogo1Dark from "/src/assets/clientLogo1Dark.webp";
+import clientLogo2Dark from "/src/assets/clientLogo2Dark.webp";
+import clientLogo3Dark from "/src/assets/clientLogo3Dark.webp";
+
 import {
   fadeInUp,
   fadeInWithEase,
@@ -18,7 +23,8 @@ import {
 import { workCardItems } from "../../../../data/workCardData";
 import { ThemeContext } from "../../../../functions/themeContext";
 
-const clientLogos = [clientLogo1, clientLogo2, clientLogo3];
+const clientLogosDark = [clientLogo1Dark, clientLogo2Dark, clientLogo3Dark];
+const clientLogosLight = [clientLogo1Light, clientLogo2Light, clientLogo3Light];
 
 export default function HomeHero() {
   const { darkMode } = useContext(ThemeContext);
@@ -129,29 +135,58 @@ export default function HomeHero() {
                 </motion.h2>
 
                 <motion.div
-                  className="clientListContainer"
+                  className={
+                    darkMode
+                      ? "clientListContainer clientListContainerDark"
+                      : "clientListContainer"
+                  }
                   variants={fadeInWithEase}
                 >
-                  {[...Array(3)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      className="clientListWrapper"
-                      variants={infiniteLoop}
-                      animate="animate"
-                    >
-                      {clientLogos.concat(clientLogos).map((logo, index) => (
-                        <motion.img
-                          key={`${i}-${index}`}
-                          className="clientLogo"
-                          src={logo}
-                          alt="Client Logo"
-                          whileHover={{ y: -10, opacity: 0.5 }}
-                          whileTap={{ y: -10, opacity: 0.5 }}
-                          transition={{ type: "spring", stiffness: 200 }}
-                        />
+                  {darkMode
+                    ? [...Array(3)].map((_, i) => (
+                        <motion.div
+                          key={i}
+                          className="clientListWrapper"
+                          variants={infiniteLoop}
+                          animate="animate"
+                        >
+                          {clientLogosDark
+                            .concat(clientLogosDark)
+                            .map((logo, index) => (
+                              <motion.img
+                                key={`${i}-${index}`}
+                                className="clientLogo"
+                                src={logo}
+                                alt="Client Logo"
+                                whileHover={{ y: -10, opacity: 0.5 }}
+                                whileTap={{ y: -10, opacity: 0.5 }}
+                                transition={{ type: "spring", stiffness: 200 }}
+                              />
+                            ))}
+                        </motion.div>
+                      ))
+                    : [...Array(3)].map((_, i) => (
+                        <motion.div
+                          key={i}
+                          className="clientListWrapper"
+                          variants={infiniteLoop}
+                          animate="animate"
+                        >
+                          {clientLogosLight
+                            .concat(clientLogosLight)
+                            .map((logo, index) => (
+                              <motion.img
+                                key={`${i}-${index}`}
+                                className="clientLogo"
+                                src={logo}
+                                alt="Client Logo"
+                                whileHover={{ y: -10, opacity: 0.5 }}
+                                whileTap={{ y: -10, opacity: 0.5 }}
+                                transition={{ type: "spring", stiffness: 200 }}
+                              />
+                            ))}
+                        </motion.div>
                       ))}
-                    </motion.div>
-                  ))}
                 </motion.div>
               </motion.div>
             </div>

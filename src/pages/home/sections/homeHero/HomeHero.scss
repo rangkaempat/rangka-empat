@@ -2,7 +2,7 @@ $primary: #0aaab8;
 $secondary: #0a6ab8;
 $dark: #323232;
 $light: #ffffff;
-$darkbg: #020e2a;
+$darkbg: #000000;
 $lightbg: #f2f2f2;
 
 .homeHeroBackground {
@@ -174,5 +174,29 @@ $lightbg: #f2f2f2;
   &::after {
     right: 0;
     background: linear-gradient(to left, $lightbg, rgba(255, 255, 255, 0));
+  }
+}
+
+.clientListContainerDark {
+  // Fading Effect
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, $darkbg, rgba(0, 0, 0, 0));
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, $darkbg, rgba(0, 0, 0, 0));
   }
 }
