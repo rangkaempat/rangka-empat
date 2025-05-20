@@ -9,6 +9,7 @@ import HomeCTA from "./sections/homeCTA/HomeCTA";
 import HomeForm from "./sections/homeForm/HomeForm";
 import Footer from "../../components/footer/Footer";
 import { ThemeContext } from "../../functions/themeContext";
+import HomeUSP from "./sections/homeUSP/HomeUSP";
 
 export default function Home() {
   const { darkMode } = useContext(ThemeContext);
@@ -21,15 +22,7 @@ export default function Home() {
     <>
       <Navbar />
       <HomeHero />
-
-      {/* Check index.scss for all Standardized Section Styles, maybe we can move it to a separate dedicated file */}
-
-      {/* Example Standardized Section with Light Background*/}
-      <section className={darkMode ? "sectionDark" : "sectionLight"}>
-        <div className="sectionWrapper">
-          <div className="sectionContent">Why Choose Us Section</div>
-        </div>
-      </section>
+      <HomeUSP />
 
       {/* Example Standardized Section with Light Background*/}
       <section className={darkMode ? "sectionDark" : "sectionLight"}>
