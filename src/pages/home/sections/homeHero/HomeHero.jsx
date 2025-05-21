@@ -20,6 +20,7 @@ import phone1 from "/src/assets/phone1.webp";
 import phone2 from "/src/assets/phone2.webp";
 import phone3 from "/src/assets/phone3.webp";
 import phone4 from "/src/assets/phone4.webp";
+import phone1v3 from "/src/assets/phone1-v3.webp";
 
 import {
   fadeInUp,
@@ -90,7 +91,7 @@ export default function HomeHero() {
                 whileTap={{ y: -10 }}
               >
                 <motion.img
-                  src={phone1}
+                  src={phone1v3}
                   alt="Phone 1"
                   variants={fadeInWithEase}
                 />
