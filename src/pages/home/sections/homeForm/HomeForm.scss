@@ -19,24 +19,12 @@ $lightbg: #f2f2f2;
 
   .homeFormImageContainer {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    width: 50%;
-
     position: relative;
-
-    @media screen and (max-width: 1024px) {
-      width: 100%;
-    }
 
     .homeFormImage {
       position: absolute;
-      bottom: -30px;
-
-      @media screen and (max-width: 768px) {
-        width: 45%;
-      }
+      top: 0;
+      right: 0;
     }
   }
 

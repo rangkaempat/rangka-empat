@@ -16,6 +16,11 @@ import clientLogo1Dark from "/src/assets/clientLogo1Dark.webp";
 import clientLogo2Dark from "/src/assets/clientLogo2Dark.webp";
 import clientLogo3Dark from "/src/assets/clientLogo3Dark.webp";
 
+import phone1 from "/src/assets/phone1.webp";
+import phone2 from "/src/assets/phone2.webp";
+import phone3 from "/src/assets/phone3.webp";
+import phone4 from "/src/assets/phone4.webp";
+
 import {
   fadeInUp,
   fadeInWithEase,
@@ -55,7 +60,7 @@ export default function HomeHero() {
                 </motion.h1>
                 <motion.p variants={fadeInWithEase}>
                   Crafting custom, beautiful, high-converting SEO-Optimized
-                  digital experiences that connect brands with their audiences.
+                  digital experiences that connect you with your audience.
                 </motion.p>
 
                 {/* Hero Buttons */}
@@ -76,45 +81,51 @@ export default function HomeHero() {
               </motion.div>
 
               <motion.div
-                className="homeCTAImageContainer"
+                className="homeHeroImageContainer"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
                 variants={staggerContainer}
+                whileHover={{ y: -10 }}
+                whileTap={{ y: -10 }}
               >
-                <motion.div
-                  className="workCardContainer "
-                  key={workCardItems[0].id}
+                <motion.img
+                  src={phone1}
+                  alt="Phone 1"
                   variants={fadeInWithEase}
-                >
-                  <img
-                    className="workImage"
-                    src={workCardItems[0].image}
-                    alt={`${workCardItems[0].client} Image`}
-                  />
-                </motion.div>
-                <motion.div
-                  className="workCardContainer"
-                  key={workCardItems[1].id}
+                />
+                <motion.img
+                  src={phone2}
+                  alt="Phone 2"
+                  className="homeHeroImage"
                   variants={fadeInWithEase}
-                >
-                  <img
-                    className="workImage"
-                    src={workCardItems[1].image}
-                    alt={`${workCardItems[1].client} Image`}
-                  />
-                </motion.div>
-                <motion.div
-                  className="workCardContainer homeCTAImage"
-                  key={workCardItems[2].id}
+                  whileHover={{
+                    y: -5,
+                    scale: 1.03,
+                  }}
+                />
+                <motion.img
+                  src={phone3}
+                  alt="Phone 3"
+                  className="homeHeroImage"
                   variants={fadeInWithEase}
-                >
-                  <img
-                    className="workImage"
-                    src={workCardItems[2].image}
-                    alt={`${workCardItems[2].client} Image`}
-                  />
-                </motion.div>
+                  whileHover={{
+                    y: -5,
+                    scale: 1.03,
+                    transition: { delay: 0.2 },
+                  }}
+                />
+                <motion.img
+                  src={phone4}
+                  alt="Phone 4"
+                  className="homeHeroImage"
+                  variants={fadeInWithEase}
+                  whileHover={{
+                    y: -5,
+                    scale: 1.03,
+                    transition: { delay: 0.4 },
+                  }}
+                />
               </motion.div>
             </div>
           </div>

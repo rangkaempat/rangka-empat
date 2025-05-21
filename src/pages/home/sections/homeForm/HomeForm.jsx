@@ -1,9 +1,6 @@
 import React, { useContext } from "react";
 import "./HomeForm.scss";
 import { motion } from "framer-motion";
-import { Link } from "react-router";
-import homeFormImage from "/src/assets/homeFormImage.webp";
-import homeFormBG from "/src/assets/homeFormBG.webp";
 import {
   fadeInWithEase,
   staggerContainer,
@@ -11,6 +8,12 @@ import {
 import ButtonForm from "../../../../components/button/ButtonForm";
 import { useForm } from "react-hook-form";
 import { ThemeContext } from "../../../../functions/themeContext";
+
+import CTAform1 from "/src/assets/CTAform1.webp";
+import CTAform2 from "/src/assets/CTAform2.webp";
+import CTAform3 from "/src/assets/CTAform3.webp";
+import CTAform4 from "/src/assets/CTAform4.webp";
+import CTAform5 from "/src/assets/CTAform5.webp";
 
 const features = [
   "Fully Custom Website",
@@ -61,15 +64,66 @@ function HomeForm() {
                 needs.
               </motion.p>
 
-              <div className="homeFormBtnContainer">
-                <motion.div
-                  className="workCardContainer"
+              <motion.div
+                className="homeFormImageContainer"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={staggerContainer}
+                whileHover={{ y: -10 }}
+                whileTap={{ y: -10 }}
+              >
+                <motion.img
+                  src={CTAform1}
+                  alt="CTA Form 1"
                   variants={fadeInWithEase}
-                >
-                  <img src={homeFormImage} alt={`Form Image`} />
-                </motion.div>
-              </div>
+                />
+                <motion.img
+                  src={CTAform2}
+                  alt="CTA Form 2"
+                  className="homeFormImage"
+                  variants={fadeInWithEase}
+                  whileHover={{
+                    y: -5,
+                    scale: 1.03,
+                  }}
+                />
+                <motion.img
+                  src={CTAform3}
+                  alt="CTA Form 3"
+                  className="homeFormImage"
+                  variants={fadeInWithEase}
+                  whileHover={{
+                    y: -5,
+                    scale: 1.03,
+                    transition: { delay: 0.2 },
+                  }}
+                />
+                <motion.img
+                  src={CTAform4}
+                  alt="CTA Form 4"
+                  className="homeFormImage"
+                  variants={fadeInWithEase}
+                  whileHover={{
+                    y: -5,
+                    scale: 1.03,
+                    transition: { delay: 0.4 },
+                  }}
+                />
+                <motion.img
+                  src={CTAform5}
+                  alt="CTA Form 5"
+                  className="homeFormImage"
+                  variants={fadeInWithEase}
+                  whileHover={{
+                    y: -5,
+                    scale: 1.03,
+                    transition: { delay: 0.6 },
+                  }}
+                />
+              </motion.div>
             </motion.div>
+
             <motion.div
               className="homeFormTextContainer"
               initial="hidden"
