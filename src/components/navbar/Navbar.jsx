@@ -68,7 +68,7 @@ export default function Navbar() {
             <Link className="navlink" to="/about">
               About
             </Link>
-            <Link className="navlink" to="#">
+            <Link className="navlink" to="/services">
               Services
             </Link>
             <Link className="navlink" to="#">
@@ -171,7 +171,7 @@ export default function Navbar() {
           >
             {[
               { to: "/about", label: "About" },
-              { to: "#", label: "Services" },
+              { to: "/services", label: "Services" },
               { to: "#", label: "Our Work" },
               { to: "#", label: "Pricing" },
             ].map((link, index) => (

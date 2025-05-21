@@ -41,6 +41,7 @@ $lightbg: #f2f2f2;
 
 .heroContent {
   flex-direction: row;
+  justify-content: start;
 
   @media screen and (max-width: 1024px) {
     flex-direction: column;
@@ -55,15 +56,16 @@ $lightbg: #f2f2f2;
   align-items: start;
   gap: 2rem;
   text-align: start;
+  width: 50%;
 
   @media screen and (max-width: 1024px) {
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100%;
   }
 
-  h2 {
-    color: white;
+  h1 {
     span {
       font-weight: 400;
       background-color: #0aaab8;
@@ -74,11 +76,6 @@ $lightbg: #f2f2f2;
   }
 
   p {
-    width: 80%;
-    color: white;
-
-    @media screen and (max-width: 1024px) {
-      width: 100%;
-    }
+    text-align: justify;
   }
 }

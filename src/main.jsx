@@ -5,13 +5,14 @@ import ScrollToTop from "./functions/scrollToTop.jsx";
 import "./index.scss";
 import Home from "./pages/home/Home.jsx";
 import About from "./pages/about/About.jsx";
+import Services from "./pages/services/Services.jsx";
 import ThemeProvider from "./functions/themeContext.jsx";
+
 export default function App() {
   return (
     <ThemeProvider>
       <HashRouter>
         {/* Function to Scroll To Top of Page for React-Router when changing pages */}
-
         <ScrollToTop />
 
         <Routes>
@@ -20,6 +21,9 @@ export default function App() {
 
           {/* About Route */}
           <Route path="about" element={<About />} />
+
+          {/* Services Route */}
+          <Route path="services" element={<Services />} />
         </Routes>
       </HashRouter>
     </ThemeProvider>

@@ -34,9 +34,9 @@ function Hero({ title, titleSpan, desc, background }) {
                 viewport={{ once: true, amount: 0.2 }}
                 variants={staggerContainer}
               >
-                <motion.h2 variants={fadeInWithEase}>
+                <motion.h1 variants={fadeInWithEase}>
                   {title} <span>{titleSpan}</span>
-                </motion.h2>
+                </motion.h1>
                 <motion.p variants={fadeInWithEase}>{desc}</motion.p>
               </motion.div>
             </div>
