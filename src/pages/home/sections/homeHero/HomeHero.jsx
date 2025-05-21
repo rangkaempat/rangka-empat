@@ -160,8 +160,8 @@ export default function HomeHero() {
                                 className="clientLogo"
                                 src={logo}
                                 alt="Client Logo"
-                                whileHover={{ y: -10, opacity: 0.5 }}
-                                whileTap={{ y: -10, opacity: 0.5 }}
+                                whileHover={{ y: -10, opacity: 1 }}
+                                whileTap={{ y: -10, opacity: 1 }}
                                 transition={{ type: "spring", stiffness: 200 }}
                               />
                             ))}
@@ -182,8 +182,8 @@ export default function HomeHero() {
                                 className="clientLogo"
                                 src={logo}
                                 alt="Client Logo"
-                                whileHover={{ y: -10, opacity: 0.5 }}
-                                whileTap={{ y: -10, opacity: 0.5 }}
+                                whileHover={{ y: -10, opacity: 1 }}
+                                whileTap={{ y: -10, opacity: 1 }}
                                 transition={{ type: "spring", stiffness: 200 }}
                               />
                             ))}
