@@ -11,75 +11,126 @@ $lightbg: #f2f2f2;
   align-items: center;
   text-align: center;
   width: fit-content;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
 }
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.3rem 1.2rem;
+  border-radius: 30px;
+  transition: 0.2s;
+}
+
+// TYPE 0
+// Gradient Blue Accent Background
+// No set Width
 
 .btnType0 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-
-  padding: 0.5rem 1.5rem;
-  color: white;
-  background: linear-gradient(to right, $primary, $secondary);
-  border-radius: 30px;
-  border: 2px solid $secondary;
-  transition: 0.2s;
-
-  fill: white;
+  color: $primary;
+  border: 2px solid $primary;
 
   &:hover {
-    border: 2px solid $primary;
-    color: white;
+    border: 2px solid $secondary;
+    color: $secondary;
   }
 
   &:active {
-    border: 2px solid $secondary;
-    color: white;
+    border: 2px solid $primary;
+    color: $primary;
   }
 }
 
-.btnType1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+// TYPE 0 Mobile Nav
+// Gradient Blue Accent Background
+// Set Width
 
-  padding: 0.5rem 1.5rem;
+.btnType0-mobile {
+  color: $primary;
+  border: 2px solid $primary;
+  transition: 0.2s;
+  width: 260px;
+  font-size: 1.2rem;
+
+  &:hover {
+    border: 2px solid $secondary;
+    color: $secondary;
+  }
+
+  &:active {
+    border: 2px solid $primary;
+    color: $primary;
+  }
+}
+
+// TYPE 1
+// Primary Blue Background
+// Set Width
+.btnType1 {
   color: white;
-  background: linear-gradient(to right, $primary, $secondary);
-  border-radius: 30px;
-  border: 2px solid $secondary;
+  fill: white;
+  // background: linear-gradient(to right, $primary, $secondary);
+  background-color: $primary;
+  border: 2px solid $primary;
   transition: 0.2s;
   width: 280px;
 
-  fill: white;
-
   &:hover {
-    border: 2px solid $primary;
+    background-color: $secondary;
+    border: 2px solid $secondary;
     color: white;
   }
 
   &:active {
-    border: 2px solid $secondary;
+    border: 2px solid $primary;
     color: white;
   }
 }
+
+// TYPE 1 Form
+// Primary Blue Background
+// Set Width
+.btnType1-form {
+  color: white;
+  fill: white;
+  // background: linear-gradient(to right, $primary, $secondary);
+  background-color: $primary;
+  border: 2px solid $primary;
+  transition: 0.2s;
+  width: 280px;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: $secondary;
+    border: 2px solid $secondary;
+    color: white;
+  }
+
+  &:active {
+    border: 2px solid $primary;
+    color: white;
+  }
+}
+
+// TYPE 2
+// White Border, No Background
+// Set Width
 
 .btnType2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-
-  padding: 0.5rem 1.5rem;
   color: white;
+  fill: white;
   border: 2px solid white;
-  border-radius: 30px;
   transition: 0.2s;
   width: 280px;
-
-  fill: white;
 
   &:hover {
     border: 2px solid $primary;
@@ -94,20 +145,16 @@ $lightbg: #f2f2f2;
   }
 }
 
-.btnType3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+// TYPE 3
+// Blue Primary Border, No Background
+// Set Width
 
-  padding: 0.5rem 1.5rem;
-  color: $secondary;
-  border: 2px solid $secondary;
-  border-radius: 30px;
+.btnType3 {
+  color: $primary;
+  fill: $primary;
+  border: 2px solid $primary;
   transition: 0.2s;
   width: 280px;
-
-  fill: $secondary;
 
   &:hover {
     border: 2px solid $primary;
@@ -123,41 +170,13 @@ $lightbg: #f2f2f2;
 }
 
 // TYPE 4
+// No Border, No Background
+// Set Width
+
 .btnType4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-
-  padding: 0.5rem 1.5rem;
-  color: white;
-  transition: 0.2s;
-
-  fill: white;
-
-  &:hover {
-    color: $primary;
-    fill: $primary;
-  }
-
-  &:active {
-    color: $secondary;
-    fill: $secondary;
-  }
-}
-
-// TYPE 5
-.btnType5 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-
-  padding: 0.5rem 1.5rem;
   color: $dark;
-  transition: 0.2s;
-
   fill: $dark;
+  transition: 0.2s;
 
   &:hover {
     color: $primary;
@@ -170,94 +189,44 @@ $lightbg: #f2f2f2;
   }
 }
 
-.btnType6 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-
-  padding: 0.5rem 1.5rem;
-  color: white;
-  background: linear-gradient(to right, $primary, $secondary);
-  border-radius: 30px;
-  border: 2px solid $secondary;
-  transition: 0.2s;
-  width: 280px;
-
-  font-size: 1.2rem;
-
-  fill: white;
-
-  &:hover {
-    border: 2px solid $primary;
-    color: white;
-  }
-
-  &:active {
-    border: 2px solid $secondary;
-    color: white;
-  }
-}
-
-.btnType7 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-
-  padding: 0.5rem 1.5rem;
-  color: $dark;
-  transition: 0.2s;
-
-  fill: $dark;
-  font-size: 1.2rem;
-
-  &:hover {
-    color: $primary;
-    fill: $primary;
-  }
-
-  &:active {
-    color: $secondary;
-    fill: $secondary;
-  }
-}
-
-.btnType7Dark {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-
-  padding: 0.5rem 1.5rem;
+.btnType4-dark {
   color: $light;
-  transition: 0.2s;
-
-  fill: $dark;
-  font-size: 1.2rem;
-
-  &:hover {
-    color: $primary;
-    fill: $primary;
-  }
-
-  &:active {
-    color: $secondary;
-    fill: $secondary;
-  }
-}
-
-.btnType8 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-
-  padding: 0.5rem 1.5rem;
-  color: $light;
-  transition: 0.2s;
-
   fill: $light;
+  transition: 0.2s;
+
+  &:hover {
+    color: $primary;
+    fill: $primary;
+  }
+
+  &:active {
+    color: $secondary;
+    fill: $secondary;
+  }
+}
+
+.btnType4-mobile {
+  color: $dark;
+  fill: $dark;
+  transition: 0.2s;
+  font-size: 1.2rem;
+
+  &:hover {
+    color: $primary;
+    fill: $primary;
+  }
+
+  &:active {
+    color: $secondary;
+    fill: $secondary;
+  }
+}
+
+.btnType4-mobile-dark {
+  color: $light;
+  fill: $light;
+  transition: 0.2s;
+  font-size: 1.2rem;
 
   &:hover {
     color: $primary;

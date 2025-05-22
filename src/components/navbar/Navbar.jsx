@@ -106,7 +106,7 @@ export default function Navbar() {
             </button>
             <Button
               name="Contact"
-              type={darkMode ? "btnType8" : "btnType5"}
+              type={darkMode ? "btnType4-dark" : "btnType4"}
               link="#"
               arrow="true"
             />
@@ -191,7 +191,7 @@ export default function Navbar() {
             {/* Navbar Button */}
             <Button
               name="Contact"
-              type={darkMode ? "btnType7Dark" : "btnType7"}
+              type={darkMode ? "btnType4-mobile-dark" : "btnType4-mobile"}
               link="#"
               onClick={() => {
                 setIsOpen(false);
@@ -200,7 +200,7 @@ export default function Navbar() {
             />
             <Button
               name="Start Your Project"
-              type="btnType6"
+              type="btnType0-mobile"
               link="#"
               onClick={() => {
                 setIsOpen(false);

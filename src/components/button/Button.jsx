@@ -19,7 +19,7 @@ function Button({ name, type, link, onClick, arrow }) {
       transition={{ type: "spring", stiffness: 200 }}
       viewport={{ once: true, amount: 0.2 }}
     >
-      <Link className={type} to={link} onClick={onClick}>
+      <Link className={`btn ${type}`} to={link} onClick={onClick}>
         {name}
         {arrow && (
           <svg

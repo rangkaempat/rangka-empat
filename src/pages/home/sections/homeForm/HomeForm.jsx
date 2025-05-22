@@ -195,7 +195,7 @@ function HomeForm() {
                 </div>
 
                 <div className="ButtonContainer">
-                  <ButtonForm name="Send Message" type="btnType0" />
+                  <ButtonForm name="Send Message" type="btnType1-form" />
                 </div>
               </form>
             </motion.div>

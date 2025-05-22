@@ -12,7 +12,7 @@ function ButtonForm({ name, type, arrow }) {
       transition={{ type: "spring", stiffness: 200 }}
       viewport={{ once: true, amount: 0.2 }}
     >
-      <button className={type} type="submit">
+      <button className={`btn ${type}`} type="submit">
         {name}
         {arrow && (
           <svg
