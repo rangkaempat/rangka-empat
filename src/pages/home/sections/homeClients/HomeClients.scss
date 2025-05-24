@@ -1,0 +1,90 @@
+$primary: #0aaab8;
+$secondary: #0a6ab8;
+$dark: #323232;
+$light: #ffffff;
+$medium: #707070;
+$darkbg: #000000;
+$lightbg: #f2f2f2;
+
+.homeClientsTitle {
+  span {
+    font-weight: 200;
+    color: $medium;
+  }
+}
+
+.clientListContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-width: 100%;
+  position: relative;
+
+  .clientListWrapper {
+    display: flex;
+    padding: 2rem 0 2rem 4rem;
+    gap: 5rem;
+
+    @media screen and (max-width: 768px) {
+      padding: 1rem 0 1rem 2rem;
+      gap: 2rem;
+    }
+
+    .clientLogo {
+      height: 80px;
+      opacity: 50%;
+    }
+
+    .clientLogoDark {
+      height: 80px;
+      opacity: 50%;
+    }
+  }
+
+  // Fading Effect
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, $lightbg, rgba(255, 255, 255, 0));
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, $lightbg, rgba(255, 255, 255, 0));
+  }
+}
+
+.clientListContainerDark {
+  // Fading Effect
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, $darkbg, rgba(0, 0, 0, 0));
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, $darkbg, rgba(0, 0, 0, 0));
+  }
+}

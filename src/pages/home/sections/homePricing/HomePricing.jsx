@@ -58,7 +58,7 @@ function HomePricing() {
               ))}
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               className="homePricingTextContainer"
               initial="hidden"
               whileInView="visible"
@@ -88,7 +88,7 @@ function HomePricing() {
                   />
                 </motion.div>
               ))}
-            </motion.div>
+            </motion.div> */}
 
             <Button
               name="View All Plans"

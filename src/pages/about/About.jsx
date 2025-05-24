@@ -4,6 +4,7 @@ import Hero from "../../components/hero/Hero";
 import Footer from "../../components/footer/Footer";
 import background from "/src/assets/about-bg-2.webp";
 import { ThemeContext } from "../../functions/themeContext";
+import Navbar2 from "../../components/navbar2/Navbar2";
 
 function About() {
   const { darkMode } = useContext(ThemeContext);
@@ -13,7 +14,7 @@ function About() {
 
   return (
     <>
-      <Navbar />
+      <Navbar2 />
       <Hero
         title="Turning Coffee & Conversations into"
         titleSpan="Ideas That Move"

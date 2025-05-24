@@ -8,12 +8,14 @@ import HomePricing from "../home/sections/homePricing/HomePricing";
 import HomeCTA from "../home/sections/homeCTA/HomeCTA";
 import HomeForm from "../home/sections/homeForm/HomeForm";
 import Footer from "../../components/footer/Footer";
+import HomeClients from "../home/sections/homeClients/HomeClients";
 
 function Home2() {
   return (
     <>
       <Navbar2 />
       <HomeHero2 />
+      <HomeClients />
       <HomeUSP />
       <HomeServices />
       <HomeWork />

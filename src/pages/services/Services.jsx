@@ -4,6 +4,7 @@ import Hero from "../../components/hero/Hero";
 import Footer from "../../components/footer/Footer";
 import background from "/src/assets/services-bg.webp";
 import { ThemeContext } from "../../functions/themeContext";
+import Navbar2 from "../../components/navbar2/Navbar2";
 
 function Services() {
   const { darkMode } = useContext(ThemeContext);
@@ -13,7 +14,7 @@ function Services() {
 
   return (
     <>
-      <Navbar />
+      <Navbar2 />
       <Hero
         title="A Plethora of Services to"
         titleSpan="Elevate Your Entire Digital Presence"
