@@ -1,0 +1,220 @@
+$primary: #0aaab8;
+$secondary: #0a6ab8;
+$dark: #323232;
+$light: #ffffff;
+$darkbg: #020e2a;
+$lightbg: #f2f2f2;
+
+.navbar2Background {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1000;
+  background: none;
+
+  @media screen and (max-width: 1024px) {
+    height: 50px;
+  }
+
+  .navbar2Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1366px;
+    min-width: auto;
+    margin: auto;
+    display: flex;
+
+    @media screen and (max-width: 1024px) {
+      padding: 0 1rem;
+    }
+
+    .nav2logo {
+      height: 40px;
+      display: block;
+    }
+
+    .nav2linkContainer {
+      display: flex;
+      gap: 1rem;
+
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+
+      .nav2link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 55px;
+        padding: 0 1rem;
+        text-align: center;
+      }
+    }
+
+    .navButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      border: none;
+      background: none;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+
+      &:hover {
+        svg {
+          fill: $primary;
+          transition: 0.3s;
+        }
+
+        h6 {
+          color: $primary;
+          display: block;
+        }
+      }
+
+      h6 {
+        display: none;
+
+        font-size: 18px;
+        width: max-content;
+        background: rgba(244, 244, 244, 0.8);
+        backdrop-filter: blur(7.5px);
+        border-radius: 30px;
+        font-weight: 300;
+        position: absolute;
+        right: 0;
+        padding: 0.3rem 3rem 0.3rem 1rem;
+        transition: 0.3s;
+      }
+
+      .navIcon2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: rgba(244, 244, 244, 0.8);
+        backdrop-filter: blur(7.5px);
+        padding: 0.4rem;
+        flex-shrink: 0;
+      }
+    }
+
+    .nav2ButtonContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      .navButtonMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border: none;
+        background: none;
+
+        &:hover {
+          h6 {
+            color: $primary;
+            transition: 0.3s;
+          }
+
+          svg {
+            fill: $primary;
+            transition: 0.3s;
+          }
+        }
+
+        h6 {
+          font-size: 19px;
+          width: max-content;
+          background: rgba(244, 244, 244, 0.8);
+          backdrop-filter: blur(7.5px);
+          border-radius: 30px;
+          font-weight: 300;
+          padding: 0.3rem 3rem 0.3rem 1rem;
+        }
+
+        .navIcon2 {
+          position: absolute;
+          right: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          background: rgba(244, 244, 244, 0.8);
+          backdrop-filter: blur(7.5px);
+          padding: 0.4rem;
+          flex-shrink: 0;
+        }
+      }
+    }
+
+    .nav2MenuIconDark {
+      svg {
+        fill: $light;
+        &:hover {
+          fill: $primary;
+        }
+      }
+    }
+  }
+}
+
+.nav2ModalLinkContainer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 5rem 2rem;
+  gap: 1.5rem;
+  height: 100dvh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+
+  .nav2ModalLink {
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+    padding: 0.5rem 1.5rem;
+
+    &:hover {
+      color: $primary;
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Light and Dark Mode Button
+.themeButton {
+  background-color: none;
+  background: none;
+  border: none;
+  padding: 1rem;
+
+  svg {
+    display: block;
+
+    &:hover {
+      fill: $primary;
+    }
+  }
+}

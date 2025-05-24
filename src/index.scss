@@ -138,12 +138,12 @@ a {
   min-height: fit-content; //This is needed in every section, but should be adjusted to accommodate the content size
   max-width: 1366px;
   margin: auto;
-  padding: 5rem 3rem;
+  padding: 10rem 3rem;
 
   overflow: hidden;
 
   @media screen and (max-width: 1024px) {
-    padding: 3rem 1rem;
+    padding: 5rem 1rem;
   }
 }
 

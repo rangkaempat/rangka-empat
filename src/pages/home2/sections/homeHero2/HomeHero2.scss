@@ -1,0 +1,89 @@
+.home2HeroContent {
+  flex-direction: row;
+  gap: 0;
+  overflow: hidden;
+  height: fit-content;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  .home2HeroTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    min-height: 700px;
+
+    padding: 8rem 1rem 5rem 1rem;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      padding: 5rem 1rem;
+    }
+
+    .home2HeroTitle {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      gap: 3rem;
+      width: 100%;
+
+      h1 {
+        width: min-content;
+        text-align: start;
+        font-size: 90px;
+        line-height: 70px;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 64px;
+        }
+
+        span {
+          font-size: 80px;
+          font-weight: 200;
+
+          @media screen and (max-width: 1024px) {
+            font-size: 54px;
+          }
+        }
+      }
+
+      .homeHeroBtnContainer {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+    }
+
+    h2 {
+      margin-top: 2rem;
+      font-size: 48px;
+      line-height: 48px;
+      width: 100%;
+      text-align: end;
+
+      @media screen and (max-width: 1024px) {
+        font-size: 32px;
+      }
+
+      span {
+        font-weight: 200;
+      }
+    }
+  }
+
+  .home2HeroBackground {
+    width: 50%;
+    height: 100vh;
+    min-height: 700px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}

@@ -145,6 +145,26 @@ $lightbg: #f2f2f2;
   }
 }
 
+.btnType2-light {
+  color: black;
+  fill: black;
+  border: 2px solid black;
+  transition: 0.2s;
+  width: 280px;
+
+  &:hover {
+    border: 2px solid $primary;
+    color: $primary;
+    fill: $primary;
+  }
+
+  &:active {
+    border: 2px solid $secondary;
+    color: $secondary;
+    fill: $secondary;
+  }
+}
+
 // TYPE 3
 // Blue Primary Border, No Background
 // Set Width
