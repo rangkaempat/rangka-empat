@@ -1,3 +1,11 @@
+$primary: #0aaab8;
+$secondary: #0a6ab8;
+$dark: #323232;
+$light: #ffffff;
+$medium: #707070;
+$darkbg: #000000;
+$lightbg: #f2f2f2;
+
 .home2HeroContent {
   flex-direction: row;
   gap: 0;
@@ -39,6 +47,7 @@
 
         @media screen and (max-width: 1024px) {
           font-size: 64px;
+          line-height: 54px;
         }
 
         span {
@@ -61,18 +70,15 @@
     }
 
     h2 {
-      margin-top: 2rem;
-      font-size: 48px;
-      line-height: 48px;
-      width: 100%;
-      text-align: end;
+      margin: 2rem 0;
+      font-weight: 200;
+      font-size: 32px;
+      line-height: 32px;
+      color: $medium;
 
       @media screen and (max-width: 1024px) {
-        font-size: 32px;
-      }
-
-      span {
-        font-weight: 200;
+        font-size: 24px;
+        line-height: 24px;
       }
     }
   }
@@ -84,6 +90,70 @@
 
     @media screen and (max-width: 768px) {
       width: 100%;
+    }
+
+    .home2HeroBackgroundBlur {
+      display: flex;
+      height: 100%;
+    }
+
+    .sectionContent {
+      h2 {
+        margin-top: 2rem;
+        font-size: 48px;
+        line-height: 48px;
+        // width: 100%;
+        // text-align: end;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 32px;
+          line-height: 32px;
+        }
+
+        span {
+          font-weight: 200;
+        }
+      }
+    }
+  }
+}
+
+.homeHeroDragWrapper {
+  width: 100%;
+  overflow: hidden;
+  padding-block: 2rem;
+  margin-bottom: 2rem;
+
+  .homeHeroCardContainer {
+    display: flex;
+    gap: 2rem;
+    padding: 0 2rem;
+
+    @media screen and (max-width: 768px) {
+      padding: 0 1rem;
+    }
+
+    .homeHeroCard {
+      flex: 0 0 auto;
+      width: 400px;
+      height: 650px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      cursor: grab;
+      object-fit: cover;
+
+      @media screen and (max-width: 768px) {
+        width: 300px;
+        height: 550px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
     }
   }
 }
