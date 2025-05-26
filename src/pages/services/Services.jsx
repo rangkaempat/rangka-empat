@@ -5,6 +5,7 @@ import Footer from "../../components/footer/Footer";
 import background from "/src/assets/services-bg.webp";
 import { ThemeContext } from "../../functions/themeContext";
 import Navbar2 from "../../components/navbar2/Navbar2";
+import Footer2 from "../../components/footer2/Footer2";
 
 function Services() {
   const { darkMode } = useContext(ThemeContext);
@@ -26,7 +27,7 @@ function Services() {
           <div className="sectionContent">Services Section</div>
         </div>
       </section>
-      <Footer />
+      <Footer2 />
     </>
   );
 }

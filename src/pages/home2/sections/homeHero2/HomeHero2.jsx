@@ -54,16 +54,16 @@ function HomeHero2() {
 
               <div className="homeHeroBtnContainer">
                 <Button
-                  name="Start Your Project"
+                  name="START YOUR PROJECT"
                   type="btnType1"
                   link="#"
-                  arrow={true}
+                  arrow="rocket"
                 />
                 <Button
-                  name="View Our Work"
+                  name="VIEW OUR WORK"
                   type={darkMode ? "btnType2" : "btnType2-light"}
                   link="#"
-                  arrow={true}
+                  arrow="code"
                 />
               </div>
             </div>

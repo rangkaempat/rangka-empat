@@ -7,8 +7,8 @@ import HomeWork from "../home/sections/homeWork/HomeWork";
 import HomePricing from "../home/sections/homePricing/HomePricing";
 import HomeCTA from "../home/sections/homeCTA/HomeCTA";
 import HomeForm from "../home/sections/homeForm/HomeForm";
-import Footer from "../../components/footer/Footer";
 import HomeClients from "../home/sections/homeClients/HomeClients";
+import Footer2 from "../../components/footer2/Footer2";
 
 function Home2() {
   return (
@@ -22,7 +22,7 @@ function Home2() {
       <HomePricing />
       <HomeCTA />
       <HomeForm />
-      <Footer />
+      <Footer2 />
     </>
   );
 }
