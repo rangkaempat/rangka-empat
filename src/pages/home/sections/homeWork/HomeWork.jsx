@@ -49,11 +49,16 @@ function HomeWork() {
               variants={staggerContainer}
             >
               {workCardItems.slice(0, 3).map((item) => (
-                <motion.div key={item.id} variants={fadeInUp}>
+                <motion.div
+                  className="homeWorkImageWrapper"
+                  key={item.id}
+                  variants={fadeInWithEase}
+                >
                   <WorkCard
                     image={item.image}
                     client={item.client}
                     link={item.link}
+                    type={item.type}
                   />
                 </motion.div>
               ))}
