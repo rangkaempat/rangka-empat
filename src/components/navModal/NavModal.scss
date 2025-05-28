@@ -1,0 +1,127 @@
+$primary: #0aaab8;
+$secondary: #0a6ab8;
+$dark: #323232;
+$light: #ffffff;
+$medium: #707070;
+$darkbg: #000000;
+$lightbg: #f2f2f2;
+
+.navModalContainer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100dvh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  z-index: 999;
+
+  .navModalWrapper {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: start;
+    padding: 5rem 2rem;
+    gap: 1rem;
+
+    max-width: 1366px;
+    margin: auto;
+    height: 100%;
+
+    .navModalLink {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: color 0.3s, transform 0.3s;
+      padding: 0.5rem 1.5rem;
+
+      svg {
+        flex-shrink: 0;
+      }
+
+      &:hover {
+        svg {
+          fill: $primary;
+          transition: fill 0.3s;
+        }
+      }
+    }
+
+    .navModalServicesLinks {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+      color: $medium;
+      gap: 1rem;
+
+      .navModalLink {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        font-size: 1rem;
+
+        svg {
+          fill: $medium;
+          flex-shrink: 0;
+        }
+
+        &:hover {
+          svg {
+            fill: $primary;
+            transition: fill 0.3s;
+          }
+        }
+      }
+    }
+
+    .navModalBottom {
+      padding: 3rem 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      align-items: center;
+      width: 100%;
+
+      flex-wrap: wrap;
+    }
+  }
+}
+
+// Light and Dark Mode Button
+.themeButton {
+  background: none;
+  border: none;
+  padding: 1rem;
+  color: black;
+
+  svg {
+    display: block;
+  }
+
+  &:hover {
+    color: $primary;
+
+    svg {
+      fill: $primary;
+    }
+  }
+}
+
+.themeButton-dark {
+  background: none;
+  border: none;
+  padding: 1rem;
+  color: white;
+  fill: white;
+
+  &:hover {
+    color: $primary;
+
+    svg {
+      fill: $primary;
+    }
+  }
+}

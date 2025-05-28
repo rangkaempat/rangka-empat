@@ -1,0 +1,64 @@
+$primary: #0aaab8;
+$secondary: #0a6ab8;
+$dark: #323232;
+$light: #ffffff;
+$medium: #707070;
+$darkbg: #000000;
+$lightbg: #f2f2f2;
+
+.navButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
+  &:hover {
+    svg {
+      fill: $primary;
+      transition: 0.3s;
+    }
+
+    h6 {
+      color: $primary;
+      display: block;
+    }
+  }
+
+  h6 {
+    display: none;
+
+    font-size: 18px;
+    width: max-content;
+    background: rgba(244, 244, 244, 0.8);
+    backdrop-filter: blur(7.5px);
+    border-radius: 30px;
+    font-weight: 300;
+    position: absolute;
+    right: 0;
+    box-shadow: 0px 0px 1px 2px #6868681f;
+    // padding: 0.3rem 0.7rem;
+    padding: 0.3rem 3rem 0.3rem 1rem;
+
+    transition: 0.3s;
+    color: black;
+  }
+
+  .navIcon2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(244, 244, 244, 0.8);
+    backdrop-filter: blur(7.5px);
+    box-shadow: 0px 0px 1px 2px #6868681f;
+    padding: 0.4rem;
+    flex-shrink: 0;
+  }
+}
