@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router";
-import "./workCard.scss";
+import "./WorkCard.scss";
 import { motion } from "framer-motion";
 
 import favicontest from "/rangka-empat.svg";
