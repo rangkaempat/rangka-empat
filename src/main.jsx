@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { HashRouter, Routes, Route } from "react-router";
+import { BrowserRouter, HashRouter, Routes, Route } from "react-router";
 import ScrollToTop from "./functions/scrollToTop.jsx";
 import "./index.scss";
 import Home from "./pages/home/Home.jsx";
@@ -12,7 +12,7 @@ import Home2 from "./pages/home2/Home2.jsx";
 export default function App() {
   return (
     <ThemeProvider>
-      <HashRouter>
+      <BrowserRouter>
         {/* Function to Scroll To Top of Page for React-Router when changing pages */}
         <ScrollToTop />
 
@@ -28,7 +28,7 @@ export default function App() {
 
           <Route path="home2" element={<Home2 />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
