@@ -1,9 +1,9 @@
-name: 🚀 Deploy React App to Hostinger via FTP
+name: 🚀 Deploy React App to Hostinger via SFTP
 
 on:
   push:
     branches:
-      - main # Use your default branch name
+      - main # Use your default branch
 
 jobs:
   build-and-deploy:
@@ -19,11 +19,12 @@ jobs:
       - name: 🏗️ Build React app
         run: npm run build
 
-      - name: 🚚 Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: 🚚 Deploy via SFTP
+        uses: AEnterprise/sftp-deploy@v2.0.0
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/
-          server-dir: ${{ secrets.FTP_TARGET_DIR }}
+          server: ${{ secrets.SFTP_SERVER }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: 22
+          local_path: ./dist/*
+          remote_path: ${{ secrets.SFTP_TARGET_DIR }}
