@@ -1,6 +1,27 @@
 // Motions for animations
 
 // ===========================
+// Section Content Parent and Child -> This enables each child div to animate after one another
+// ===========================
+
+export const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 1.2,
+    },
+  },
+};
+
+export const childVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: 0.5 },
+  },
+};
+
+// ===========================
 // Infinite Looping Animation
 // ===========================
 
@@ -44,7 +65,7 @@ export const fadeInWithEase = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 1.5,
       ease: [0.25, 0.8, 0.25, 1],
     },
   },

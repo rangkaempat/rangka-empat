@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext } from "react";
 import "./HomeHero2.scss";
 
 import homebg from "/src/assets/home-bg.webp";
@@ -9,32 +9,9 @@ import { Typewriter } from "react-simple-typewriter";
 import {
   fadeInWithEase,
   staggerContainer,
+  containerVariants,
+  childVariants,
 } from "../../../../functions/motionUtils";
-
-const letterVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.05, duration: 0.5 },
-  }),
-};
-
-const AnimatedWord = ({ text }) => (
-  <div>
-    {text.split("").map((char, i) => (
-      <motion.span
-        key={i}
-        custom={i}
-        initial="hidden"
-        animate="visible"
-        variants={letterVariants}
-      >
-        {char}
-      </motion.span>
-    ))}
-  </div>
-);
 
 function HomeHero2() {
   const { darkMode } = useContext(ThemeContext);
@@ -42,17 +19,67 @@ function HomeHero2() {
   return (
     <>
       <div className={darkMode ? "sectionDark" : "sectionLight"}>
-        <div className="sectionContent home2HeroContent">
-          <div className="home2HeroTextContainer">
+        <motion.div
+          className="sectionContent home2HeroContent"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div
+            className="home2HeroTextContainer"
+            variants={childVariants}
+          >
             <div className="home2HeroTitle">
               <h1>
-                RANGKA
-                <br />
-                EMPAT
-                <AnimatedWord text="STUDIO" />
+                <div className="text-overflow">
+                  <motion.div
+                    initial={{ y: 200, opacity: 0, scale: 0.95 }}
+                    animate={{ y: 0, opacity: 1, scale: 1 }}
+                    transition={{
+                      duration: 0.6,
+                      ease: [0.25, 0.46, 0.45, 0.94], // easeOutBack-like bezier
+                    }}
+                  >
+                    RANGKA
+                  </motion.div>
+                </div>
+
+                <div className="text-overflow">
+                  <motion.div
+                    initial={{ x: -300, opacity: 0, scale: 0.95 }}
+                    animate={{ x: 0, opacity: 1, scale: 1 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 0.3,
+                      ease: [0.25, 0.46, 0.45, 0.94],
+                    }}
+                  >
+                    EMPAT
+                  </motion.div>
+                </div>
+
+                <div className="text-overflow">
+                  <motion.div
+                    className="h1-light"
+                    initial={{ y: 200, opacity: 0, scale: 0.95 }}
+                    animate={{ y: 0, opacity: 1, scale: 1 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 0.6,
+                      ease: [0.25, 0.46, 0.45, 0.94],
+                    }}
+                  >
+                    STUDIO
+                  </motion.div>
+                </div>
               </h1>
 
-              <div className="homeHeroBtnContainer">
+              <motion.div
+                className="homeHeroBtnContainer"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2 }}
+              >
                 <Button
                   name="START YOUR PROJECT"
                   type="btnType1"
@@ -65,10 +92,14 @@ function HomeHero2() {
                   link="#"
                   arrow="code"
                 />
-              </div>
+              </motion.div>
             </div>
 
-            <div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2 }}
+            >
               <h2>Custom Web Applications & Digital Solutions</h2>
 
               <motion.svg
@@ -88,20 +119,21 @@ function HomeHero2() {
               >
                 <path d="M213.66,130.34a8,8,0,0,1,0,11.32l-80,80a8,8,0,0,1-11.32,0l-80-80a8,8,0,0,1,11.32-11.32L128,204.69l74.34-74.35A8,8,0,0,1,213.66,130.34Zm-91.32,11.32a8,8,0,0,0,11.32,0l80-80a8,8,0,0,0-11.32-11.32L128,124.69,53.66,50.34A8,8,0,0,0,42.34,61.66Z"></path>
               </motion.svg>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Hero Cards Section */}
-          <div
+          <motion.div
             className="sectionBackground home2HeroBackground"
             style={{ backgroundImage: `url(${homebg})` }}
+            variants={childVariants}
           >
             <div className="sectionBackgroundBlur home2HeroBackgroundBlur">
               <div className="sectionContent">
                 <h2>
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                   >
                     We Design.
@@ -109,7 +141,7 @@ function HomeHero2() {
 
                   <motion.span
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.3 }}
                   >
                     <Typewriter
@@ -125,7 +157,7 @@ function HomeHero2() {
 
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.7 }}
                   >
                     We Deliver.
@@ -133,7 +165,7 @@ function HomeHero2() {
 
                   <motion.span
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: 1 }}
                   >
                     We Care.
@@ -141,8 +173,8 @@ function HomeHero2() {
                 </h2>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </>
   );
