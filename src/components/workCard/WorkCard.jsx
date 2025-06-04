@@ -3,7 +3,6 @@ import { Link } from "react-router";
 import "./WorkCard.scss";
 import { motion } from "framer-motion";
 
-import favicontest from "/rangka-empat.svg";
 import { ThemeContext } from "../../functions/themeContext";
 
 function WorkCard({ id, image, client, link, type }) {
@@ -22,7 +21,7 @@ function WorkCard({ id, image, client, link, type }) {
       </Link>
       <Link className="workClient" to="#">
         <div className="workClientFavicon">
-          <img src={favicontest} alt={`${client} Image`} />
+          {/* <img src={favicontest} alt={`${client} Image`} /> */}
         </div>
         <div className="workClientName">{client}</div>
       </Link>
