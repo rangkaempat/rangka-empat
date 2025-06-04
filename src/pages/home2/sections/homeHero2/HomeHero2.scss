@@ -7,7 +7,8 @@ $darkbg: #000000;
 $lightbg: #f2f2f2;
 
 .home2HeroContent {
-  flex-direction: row;
+  // flex-direction: row;
+  flex-direction: column;
   gap: 0;
   overflow: hidden;
   height: fit-content;
@@ -21,50 +22,32 @@ $lightbg: #f2f2f2;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
-    height: 100vh;
+    // width: 50%;
+    width: 100%;
+    height: 90vh;
     min-height: 700px;
 
     padding: 8rem 1rem 5rem 1rem;
 
-    @media screen and (max-width: 768px) {
-      width: 100%;
-      padding: 5rem 1rem;
-    }
+    // @media screen and (max-width: 768px) {
+    //   width: 100%;
+    // }
 
     .home2HeroTitle {
       display: flex;
       flex-direction: column;
       justify-content: start;
+      align-items: center;
       gap: 3rem;
       width: 100%;
+
+      // @media screen and (max-width: 768px) {
+      //   align-items: center;
+      // }
 
       h1 {
         width: min-content;
         text-align: start;
-        font-size: 130px;
-        line-height: 100px;
-
-        @media screen and (max-width: 1024px) {
-          font-size: 80px;
-          line-height: 60px;
-        }
-
-        @media screen and (max-width: 768px) {
-          font-size: 64px;
-          line-height: 50px;
-        }
-
-        .h1-light {
-          font-size: 100px;
-          line-height: 80px;
-          font-weight: 200;
-
-          @media screen and (max-width: 1024px) {
-            font-size: 54px;
-            line-height: 44px;
-          }
-        }
       }
 
       .homeHeroBtnContainer {
@@ -78,15 +61,7 @@ $lightbg: #f2f2f2;
 
     h2 {
       margin: 2rem 0;
-      font-weight: 200;
-      font-size: 32px;
-      line-height: 32px;
       color: $medium;
-
-      @media screen and (max-width: 1024px) {
-        font-size: 24px;
-        line-height: 24px;
-      }
     }
   }
 
@@ -95,7 +70,7 @@ $lightbg: #f2f2f2;
     height: 100vh;
     min-height: 700px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       width: 100%;
     }
 
@@ -115,24 +90,7 @@ $lightbg: #f2f2f2;
 
       h2 {
         margin-top: 2rem;
-        font-size: 80px;
-        line-height: 80px;
-        // width: 100%;
         text-align: end;
-
-        @media screen and (max-width: 1024px) {
-          font-size: 64px;
-          line-height: 64px;
-        }
-
-        @media screen and (max-width: 768px) {
-          font-size: 40px;
-          line-height: 40px;
-        }
-
-        span {
-          font-weight: 200;
-        }
       }
     }
   }

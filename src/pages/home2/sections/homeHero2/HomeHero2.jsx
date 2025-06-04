@@ -19,32 +19,24 @@ function HomeHero2() {
   return (
     <>
       <div className={darkMode ? "sectionDark" : "sectionLight"}>
-        <motion.div
-          className="sectionContent home2HeroContent"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.div
-            className="home2HeroTextContainer"
-            variants={childVariants}
-          >
+        <motion.div className="sectionContent home2HeroContent">
+          <motion.div className="home2HeroTextContainer">
             <div className="home2HeroTitle">
-              <h1>
-                <div className="text-overflow">
+              <h1 className="textXXXL">
+                <div className="textOverflow">
                   <motion.div
                     initial={{ y: 200, opacity: 0, scale: 0.95 }}
                     animate={{ y: 0, opacity: 1, scale: 1 }}
                     transition={{
                       duration: 0.6,
-                      ease: [0.25, 0.46, 0.45, 0.94], // easeOutBack-like bezier
+                      ease: [0.25, 0.46, 0.45, 0.94],
                     }}
                   >
                     RANGKA
                   </motion.div>
                 </div>
 
-                <div className="text-overflow">
+                <div className="textOverflow">
                   <motion.div
                     initial={{ x: -300, opacity: 0, scale: 0.95 }}
                     animate={{ x: 0, opacity: 1, scale: 1 }}
@@ -58,9 +50,9 @@ function HomeHero2() {
                   </motion.div>
                 </div>
 
-                <div className="text-overflow">
+                <div className="textOverflow">
                   <motion.div
-                    className="h1-light"
+                    className="textXXL textLight"
                     initial={{ y: 200, opacity: 0, scale: 0.95 }}
                     animate={{ y: 0, opacity: 1, scale: 1 }}
                     transition={{
@@ -73,11 +65,17 @@ function HomeHero2() {
                   </motion.div>
                 </div>
               </h1>
+            </div>
 
+            <motion.div
+              className="homeHeroBtnContainer"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2 }}
+            >
               <motion.div
-                className="homeHeroBtnContainer"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2 }}
               >
                 <Button
@@ -86,6 +84,12 @@ function HomeHero2() {
                   link="#"
                   arrow="rocket"
                 />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.4 }}
+              >
                 <Button
                   name="VIEW OUR WORK"
                   type={darkMode ? "btnType2" : "btnType2-light"}
@@ -93,14 +97,16 @@ function HomeHero2() {
                   arrow="code"
                 />
               </motion.div>
-            </div>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1.2 }}
+              transition={{ delay: 1.6 }}
             >
-              <h2>Custom Web Applications & Digital Solutions</h2>
+              <h2 className="textLight textM">
+                Custom Web Applications & Digital Solutions
+              </h2>
 
               <motion.svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -126,23 +132,28 @@ function HomeHero2() {
           <motion.div
             className="sectionBackground home2HeroBackground"
             style={{ backgroundImage: `url(${homebg})` }}
-            variants={childVariants}
           >
             <div className="sectionBackgroundBlur home2HeroBackgroundBlur">
               <div className="sectionContent">
-                <h2>
+                <h2 className="textOverflow textXXL">
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      duration: 0.6,
+                      ease: [0.25, 0.46, 0.45, 0.94],
+                    }}
+                    viewport={{ once: true, amount: 0.2 }}
                   >
                     We Design.
                   </motion.div>
 
                   <motion.span
+                    className="textLight"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.3 }}
+                    viewport={{ once: true, amount: 0.2 }}
                   >
                     <Typewriter
                       words={["We Code."]}
@@ -156,17 +167,27 @@ function HomeHero2() {
                   </motion.span>
 
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.7 }}
+                    initial={{ opacity: 0, x: 200 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 0.6,
+                      ease: [0.25, 0.46, 0.45, 0.94],
+                    }}
                   >
                     We Deliver.
                   </motion.div>
 
                   <motion.span
+                    className="textLight"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 1 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 1,
+                      ease: [0.25, 0.46, 0.45, 0.94],
+                    }}
+                    viewport={{ once: true, amount: 0.2 }}
                   >
                     We Care.
                   </motion.span>

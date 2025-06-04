@@ -71,6 +71,18 @@ export const fadeInWithEase = {
   },
 };
 
+export const fadeInWithEase2 = {
+  hidden: { opacity: 0, y: 200 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.5,
+      ease: [0.25, 0.8, 0.25, 1],
+    },
+  },
+};
+
 export const fadeInLeft = {
   hidden: { opacity: 0, x: -50 },
   visible: {
@@ -78,6 +90,17 @@ export const fadeInLeft = {
     x: 0,
     transition: {
       duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
+export const scale1 = {
+  hidden: { scale: 0 },
+  visible: {
+    scale: 1,
+    transition: {
+      duration: 1,
       ease: "easeOut",
     },
   },
