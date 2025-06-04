@@ -1,0 +1,16 @@
+.scroll-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.scroll-text {
+  position: sticky;
+  top: 400px;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}

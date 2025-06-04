@@ -8,6 +8,7 @@ import About from "./pages/about/About.jsx";
 import Services from "./pages/services/Services.jsx";
 import ThemeProvider from "./functions/themeContext.jsx";
 import Home2 from "./pages/home2/Home2.jsx";
+import ScrollTest from "./components/scrollTest/ScrollTest.jsx";
 
 export default function App() {
   return (
@@ -27,6 +28,8 @@ export default function App() {
           <Route path="services" element={<Services />} />
 
           <Route path="home2" element={<Home2 />} />
+
+          <Route path="scrollTest" element={<ScrollTest />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
