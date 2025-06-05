@@ -6,15 +6,34 @@ import background from "/src/assets/services-bg.webp";
 import { ThemeContext } from "../../functions/themeContext";
 import Navbar2 from "../../components/navbar2/Navbar2";
 import Footer2 from "../../components/footer2/Footer2";
+import Seo from "../../components/Seo";
 
 function Services() {
   const { darkMode } = useContext(ThemeContext);
-  useEffect(() => {
-    document.title = "Rangka Empat Studio | Who We Are.";
-  }, []);
 
   return (
     <>
+      <Seo
+        title="Web Design & Development Services | Rangka Empat Studio, Malaysia"
+        description="Explore our full suite of services including custom web design, development, web apps, and digital solutions tailored for businesses in Malaysia and beyond."
+        image="https://rangkaempat.com/og-images/home.jpg" //Change ref when image is done
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          serviceType: "Web Design & Development",
+          provider: {
+            "@type": "Organization",
+            name: "Rangka Empat Studio",
+            url: "https://rangkaempat.com/services",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "Malaysia",
+          },
+          description:
+            "We offer web design, web development, and digital services tailored for Malaysian businesses.",
+        }}
+      />
       <Navbar2 />
       <Hero
         title="A Plethora of Services to"

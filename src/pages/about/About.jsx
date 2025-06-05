@@ -6,15 +6,32 @@ import background from "/src/assets/about-bg-2.webp";
 import { ThemeContext } from "../../functions/themeContext";
 import Navbar2 from "../../components/navbar2/Navbar2";
 import Footer2 from "../../components/footer2/Footer2";
+import Seo from "../../components/Seo";
 
 function About() {
   const { darkMode } = useContext(ThemeContext);
-  useEffect(() => {
-    document.title = "Rangka Empat Studio | Who We Are.";
-  }, []);
 
   return (
     <>
+      <Seo
+        title="About Us | Rangka Empat Studio – Kuala Lumpur Web Design & Digital Experts"
+        description="Learn about Rangka Empat Studio, a web design and development studio based in Kuala Lumpur. We combine creativity and code to deliver impactful digital solutions."
+        image="https://rangkaempat.com/og-images/home.jpg" //Change ref when image is done
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Rangka Empat Studio",
+          url: "https://rangkaempat.com/about",
+          logo: "https://rangkaempat.com/logo.png",
+          description:
+            "Web design and development studio in Malaysia offering digital solutions.",
+          sameAs: [
+            "https://twitter.com/rangkaempat",
+            "https://linkedin.com/company/rangka-empat-studio",
+          ],
+        }}
+      />
+
       <Navbar2 />
       <Hero
         title="Turning Coffee & Conversations into"
