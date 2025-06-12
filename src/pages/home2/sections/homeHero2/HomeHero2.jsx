@@ -13,6 +13,14 @@ import {
   childVariants,
 } from "../../../../functions/motionUtils";
 
+import testWork from "/src/assets/testWork.webp";
+import testWork2 from "/src/assets/testWork2.webp";
+import testWork3 from "/src/assets/testWork3.webp";
+import testWork4 from "/src/assets/testWork4.webp";
+import testWork5 from "/src/assets/testWork5.webp";
+import testWork6 from "/src/assets/testWork6.webp";
+import { Link } from "react-router";
+
 function HomeHero2() {
   const { darkMode } = useContext(ThemeContext);
 
@@ -20,7 +28,7 @@ function HomeHero2() {
     <>
       <div className={darkMode ? "sectionDark" : "sectionLight"}>
         <motion.div className="sectionContent home2HeroContent">
-          <motion.div className="home2HeroTextContainer">
+          <motion.div className="homeHeroSectionContainer left">
             <div className="home2HeroTitle">
               <h1 className="textXXXL">
                 <div className="textOverflow">
@@ -65,133 +73,183 @@ function HomeHero2() {
                   </motion.div>
                 </div>
               </h1>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2 }}
+              >
+                <h2 className="textLight textS">
+                  Custom Web Applications & Digital Solutions
+                </h2>
+              </motion.div>
             </div>
 
             <motion.div
-              className="homeHeroBtnContainer"
+              className="home2HeroBtnContainer"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1.2 }}
+              transition={{ delay: 1.6 }}
             >
               <motion.div
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.2 }}
+                transition={{ delay: 1.6 }}
               >
                 <Button
                   name="START YOUR PROJECT"
-                  type="btnType1"
-                  link="#"
+                  type={darkMode ? "btnType1" : "btnType1-light"}
+                  link="/start-your-project"
                   arrow="rocket"
                 />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.4 }}
+                transition={{ delay: 1.8 }}
               >
                 <Button
-                  name="VIEW OUR WORK"
-                  type={darkMode ? "btnType2" : "btnType2-light"}
-                  link="#"
-                  arrow="code"
+                  name="GET IN TOUCH"
+                  type={darkMode ? "btnType4-dark" : "btnType4"}
+                  link="/contact"
+                  arrow="contact"
                 />
               </motion.div>
             </motion.div>
-
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.6 }}
+              className="workCardWrapper"
+              initial={{ opacity: 0, y: 5 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
             >
-              <h2 className="textLight textM">
-                Custom Web Applications & Digital Solutions
-              </h2>
-
-              <motion.svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="56"
-                height="56"
-                fill={darkMode ? "#ffffff" : "#000000"}
-                viewBox="0 0 256 256"
-                initial={{ opacity: 0, y: -15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  ease: "easeInOut",
-                }}
-              >
-                <path d="M213.66,130.34a8,8,0,0,1,0,11.32l-80,80a8,8,0,0,1-11.32,0l-80-80a8,8,0,0,1,11.32-11.32L128,204.69l74.34-74.35A8,8,0,0,1,213.66,130.34Zm-91.32,11.32a8,8,0,0,0,11.32,0l80-80a8,8,0,0,0-11.32-11.32L128,124.69,53.66,50.34A8,8,0,0,0,42.34,61.66Z"></path>
-              </motion.svg>
+              <div className="workCardContent">
+                <h3>01</h3>
+                <Link to="/work/amachi's-palagaram">
+                  <img src={testWork} alt="Amachi's Palagaram" />
+                </Link>
+                <h4 className="textXXS textRegular">Amachi's Palagaram</h4>
+                <h5 className="textXXS textLight">F&B</h5>
+              </div>
+              <div className="workCardContent">
+                <h3>02</h3>
+                <Link to="/work/property-geek">
+                  <img src={testWork2} alt="Property Geek" />
+                </Link>
+                <h4 className="textXXS textRegular">Property Geek</h4>
+                <h5 className="textXXS textLight">Real Estate</h5>
+              </div>
             </motion.div>
+
+            <hr className="homeHeroTagline" />
+
+            <h2 className="textOverflow textL homeHeroTagline">
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.6,
+                  ease: [0.25, 0.46, 0.45, 0.94],
+                }}
+                viewport={{ once: true, amount: 0.2 }}
+              >
+                We Design.
+              </motion.div>
+
+              <motion.span
+                className="textLight"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+                viewport={{ once: true, amount: 0.2 }}
+              >
+                <Typewriter
+                  words={["We Code."]}
+                  loop={0}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={5000}
+                />
+              </motion.span>
+
+              <motion.div
+                initial={{ opacity: 0, x: 200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.6,
+                  ease: [0.25, 0.46, 0.45, 0.94],
+                }}
+                viewport={{ once: true, amount: 0.2 }}
+              >
+                We Deliver.
+              </motion.div>
+
+              <motion.span
+                className="textLight"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{
+                  duration: 0.6,
+                  delay: 1,
+                  ease: [0.25, 0.46, 0.45, 0.94],
+                }}
+                viewport={{ once: true, amount: 0.2 }}
+              >
+                We Care.
+              </motion.span>
+            </h2>
           </motion.div>
 
-          {/* Hero Cards Section */}
           <motion.div
-            className="sectionBackground home2HeroBackground"
-            style={{ backgroundImage: `url(${homebg})` }}
+            className="homeHeroSectionContainer right"
+            initial={{ opacity: 0, y: 5 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
           >
-            <div className="sectionBackgroundBlur home2HeroBackgroundBlur">
-              <div className="sectionContent">
-                <h2 className="textOverflow textXXL">
-                  <motion.div
-                    initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{
-                      duration: 0.6,
-                      ease: [0.25, 0.46, 0.45, 0.94],
-                    }}
-                    viewport={{ once: true, amount: 0.2 }}
-                  >
-                    We Design.
-                  </motion.div>
+            <div className="homeHeroWorkButton">
+              <Button
+                name="VIEW OUR WORK"
+                type={darkMode ? "btnType5-dark" : "btnType5"}
+                link="/work"
+              />
+            </div>
+            <div className="workCardWrapper">
+              <div className="workCardContent">
+                <h3>03</h3>
+                <Link to="/work/harappan-investments">
+                  <img src={testWork3} alt="Harappan Investments" />
+                </Link>
+                <h4 className="textXXS textRegular">Harappan Investments</h4>
+                <h5 className="textXXS textLight">Investment</h5>
+              </div>
+              <div className="workCardContent">
+                <h3>04</h3>
+                <Link to="/work/face-by-aisya">
+                  <img src={testWork4} alt="Face by Aisya" />
+                </Link>
+                <h4 className="textXXS textRegular">Face by Aisya</h4>
+                <h5 className="textXXS textLight">Beauty</h5>
+              </div>
+            </div>
 
-                  <motion.span
-                    className="textLight"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.3 }}
-                    viewport={{ once: true, amount: 0.2 }}
-                  >
-                    <Typewriter
-                      words={["We Code."]}
-                      loop={0}
-                      cursor
-                      cursorStyle="|"
-                      typeSpeed={70}
-                      deleteSpeed={50}
-                      delaySpeed={5000}
-                    />
-                  </motion.span>
-
-                  <motion.div
-                    initial={{ opacity: 0, x: 200 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{
-                      duration: 0.6,
-                      delay: 0.6,
-                      ease: [0.25, 0.46, 0.45, 0.94],
-                    }}
-                  >
-                    We Deliver.
-                  </motion.div>
-
-                  <motion.span
-                    className="textLight"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{
-                      duration: 0.6,
-                      delay: 1,
-                      ease: [0.25, 0.46, 0.45, 0.94],
-                    }}
-                    viewport={{ once: true, amount: 0.2 }}
-                  >
-                    We Care.
-                  </motion.span>
-                </h2>
+            <div className="workCardWrapper">
+              <div className="workCardContent">
+                <h3>05</h3>
+                <Link to="/work/stacked-burgers">
+                  <img src={testWork5} alt="Stacked Burgers" />
+                </Link>
+                <h4 className="textXXS textRegular">Stacked Burgers</h4>
+                <h5 className="textXXS textLight">F&B</h5>
+              </div>
+              <div className="workCardContent">
+                <h3>06</h3>
+                <Link to="/work/hyrax-oil">
+                  <img src={testWork6} alt="Hyrax Oil" />
+                </Link>
+                <h4 className="textXXS textRegular">Hyrax Oil</h4>
+                <h5 className="textXXS textLight">Oil & Gas</h5>
               </div>
             </div>
           </motion.div>

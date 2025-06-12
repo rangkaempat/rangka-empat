@@ -37,9 +37,6 @@ function Home2() {
       <HomeClients />
       <HomeUSP />
       <HomeServices />
-      <HomeWork />
-      <HomePricing />
-      <HomeCTA />
       <HomeForm />
       <Footer2 />
     </>
