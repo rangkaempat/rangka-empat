@@ -32,10 +32,10 @@ function HomeHero() {
 
   return (
     <>
-      <div className={darkMode ? "sectionDark" : "sectionLight"}>
-        <motion.div className="sectionContent home2HeroContent">
+      <section className={darkMode ? "sectionDark" : "sectionLight"}>
+        <motion.div className="sectionContent homeHeroContent">
           <motion.div className="homeHeroSectionContainer left">
-            <div className="home2HeroTitle">
+            <div className="homeHeroTitle">
               <h1 className="textXXXL">
                 <div className="textOverflow">
                   <motion.div
@@ -92,7 +92,7 @@ function HomeHero() {
             </div>
 
             <motion.div
-              className="home2HeroBtnContainer"
+              className="homeHeroBtnContainer"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.6 }}
@@ -315,7 +315,7 @@ function HomeHero() {
             </div>
           </motion.div>
         </motion.div>
-      </div>
+      </section>
     </>
   );
 }

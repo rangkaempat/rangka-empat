@@ -38,6 +38,13 @@ function Contact() {
       />
 
       <Navbar />
+      <Hero
+        title1="GET IN"
+        title2="TOUCH"
+        subTitle="Reach out to us, we'll handle the rest."
+        button="START YOUR PROJECT"
+        link="/start-your-project"
+      />
       <section className={darkMode ? "sectionDark" : "sectionLight"}>
         <div className="sectionWrapper">
           <div className="sectionContent">Contact Us Section</div>

@@ -6,7 +6,7 @@ $medium: #707070;
 $darkbg: #000000;
 $lightbg: #f2f2f2;
 
-.home2HeroContent {
+.homeHeroContent {
   flex-direction: row;
   align-items: start;
   gap: 0;
@@ -51,7 +51,7 @@ $lightbg: #f2f2f2;
       }
     }
 
-    .home2HeroTitle {
+    .homeHeroTitle {
       display: flex;
       flex-direction: column;
       justify-content: start;
@@ -78,7 +78,7 @@ $lightbg: #f2f2f2;
       }
     }
 
-    .home2HeroBtnContainer {
+    .homeHeroBtnContainer {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
@@ -146,36 +146,6 @@ $lightbg: #f2f2f2;
     .homeHeroWorkButton {
       @media screen and (max-width: 1024px) {
         display: none;
-      }
-    }
-  }
-
-  .home2HeroBackground {
-    width: 50%;
-    height: 100vh;
-    min-height: 700px;
-
-    @media screen and (max-width: 1024px) {
-      width: 100%;
-    }
-
-    .home2HeroBackgroundBlur {
-      display: flex;
-      height: 100%;
-    }
-
-    .sectionContent {
-      justify-content: start;
-      align-items: end;
-      padding: 5rem 2rem 0 0;
-
-      @media screen and (max-width: 768px) {
-        padding: 1rem 2rem 0 0;
-      }
-
-      h2 {
-        margin-top: 2rem;
-        text-align: end;
       }
     }
   }

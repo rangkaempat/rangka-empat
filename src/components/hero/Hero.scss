@@ -5,77 +5,27 @@ $light: #ffffff;
 $darkbg: #020e2a;
 $lightbg: #f2f2f2;
 
-.heroBackground {
-  width: 99%;
-  border-radius: 25px;
-  margin: auto;
-  margin-top: 70px;
-  overflow: hidden;
-
-  @media screen and (max-width: 1024px) {
-    margin-top: 50px;
-  }
-
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    border-radius: 0;
-  }
-}
-
-.heroBackgroundGradient {
-  // background: linear-gradient(-145deg, #04060a00 0%, #050b19 100%);
-  background: #050608ad;
-}
-
-.heroWrapper {
-  flex-direction: column;
-  gap: 5rem;
-
-  @media screen and (min-width: 1025px) {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-  }
-
-  // height: calc(100vh - 80px);
-}
-
 .heroContent {
   flex-direction: row;
-  justify-content: start;
-
-  @media screen and (max-width: 1024px) {
-    flex-direction: column;
-    padding: 5rem 0;
-  }
-}
-
-.heroTitle {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
   align-items: start;
-  gap: 2rem;
-  text-align: start;
-  width: 50%;
+  gap: 0;
+  overflow: hidden;
+  height: fit-content;
 
-  @media screen and (max-width: 1024px) {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  .heroSectionContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
     width: 100%;
-  }
+    gap: 3rem;
 
-  h1 {
-    span {
-      font-weight: 400;
-      background-color: #0aaab8;
-      color: white;
+    padding: 8rem 1rem 5rem 1rem;
+    text-align: start;
 
-      padding: 0 0.5rem;
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      align-items: center;
     }
-  }
-
-  p {
-    text-align: justify;
   }
 }

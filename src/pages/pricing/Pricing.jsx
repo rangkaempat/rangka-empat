@@ -38,6 +38,13 @@ function Pricing() {
       />
 
       <Navbar />
+      <Hero
+        title1="OUR"
+        title2="PLANS"
+        subTitle="Find the plan that suits your needs."
+        button="GET STARTED"
+        link="/start-your-project"
+      />
       <section className={darkMode ? "sectionDark" : "sectionLight"}>
         <div className="sectionWrapper">
           <div className="sectionContent">Pricing Section</div>

@@ -43,6 +43,13 @@ function StartYourProject() {
       />
 
       <Navbar />
+      <Hero
+        title1="START YOUR"
+        title2="PROJECT"
+        subTitle="Hey there! Ready to get started?"
+        button="PRICING"
+        link="/pricing"
+      />
       <section className={darkMode ? "sectionDark" : "sectionLight"}>
         <div className="sectionWrapper">
           <div className="sectionContent">StartYourProject Section</div>

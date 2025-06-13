@@ -38,6 +38,13 @@ function Work() {
       />
 
       <Navbar />
+      <Hero
+        title1="OUR"
+        title2="WORK"
+        subTitle="A collection of projects we're proud to call ours."
+        button="WHAT WE DO"
+        link="/services"
+      />
       <section className={darkMode ? "sectionDark" : "sectionLight"}>
         <div className="sectionWrapper">
           <div className="sectionContent">Work Section</div>

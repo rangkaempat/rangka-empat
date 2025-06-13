@@ -1,45 +1,63 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Hero.scss";
 import { Link, Outlet } from "react-router";
 import { motion } from "framer-motion";
 import { fadeInWithEase, staggerContainer } from "../../functions/motionUtils";
+import { ThemeContext } from "../../functions/themeContext";
+import Button from "../button/Button";
 
-function Hero({ title, titleSpan, desc, background }) {
-  // Hero Component for Pages
-  // Titles = title + titleSpan
-  // Description = desc
-  // Background Image = background
+function Hero({ title1, title2, subTitle, button, link }) {
+  const { darkMode } = useContext(ThemeContext);
 
-  // Example Use Case
-  // <Hero
-  //     title="About"
-  //     titleSpan="Us."
-  //     desc="We’re Rangka Empat Studio – a passionate team of creators, developers, and problem-solvers, united by a shared love for crafting meaningful digital experiences."
-  //     background={homeHeroBg2}
-  //   />
   return (
     <>
-      <section
-        className="sectionBackground heroBackground"
-        style={{ backgroundImage: `url(${background})` }}
-      >
-        <div className="sectionBackgroundBlur heroBackgroundGradient">
-          <div className="sectionWrapper heroWrapper">
-            <div className="sectionContent heroContent">
-              {/* Hero Title */}
+      <section className={darkMode ? "sectionDark" : "sectionLight"}>
+        <div className="sectionContent heroContent">
+          <div className="heroSectionContainer">
+            <div className="heroTitle">
+              <h1 className="textXXXL">
+                <div className="textOverflow">
+                  <motion.div
+                    initial={{ y: 200, opacity: 0, scale: 0.95 }}
+                    animate={{ y: 0, opacity: 1, scale: 1 }}
+                    transition={{
+                      duration: 0.6,
+                      ease: [0.25, 0.46, 0.45, 0.94],
+                    }}
+                  >
+                    {title1}
+                  </motion.div>
+                </div>
+
+                <div className="textOverflow">
+                  <motion.div
+                    initial={{ y: 200, opacity: 0, scale: 0.95 }}
+                    animate={{ y: 0, opacity: 1, scale: 1 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 0.3,
+                      ease: [0.25, 0.46, 0.45, 0.94],
+                    }}
+                  >
+                    {title2}
+                  </motion.div>
+                </div>
+              </h1>
+
               <motion.div
-                className="heroTitle"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={staggerContainer}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2 }}
               >
-                <motion.h1 variants={fadeInWithEase}>
-                  {title} <span>{titleSpan}</span>
-                </motion.h1>
-                <motion.p variants={fadeInWithEase}>{desc}</motion.p>
+                <h2 className="textLight textM">{subTitle}</h2>
               </motion.div>
             </div>
+
+            <Button
+              name={button}
+              type={darkMode ? "btnType5-dark" : "btnType5"}
+              link={link}
+            />
           </div>
         </div>
       </section>

@@ -34,10 +34,11 @@ function Services() {
       />
       <Navbar />
       <Hero
-        title="A Plethora of Services to"
-        titleSpan="Elevate Your Entire Digital Presence"
-        desc="Built on four core pillars, our offerings are tailored to help your business stand out, scale up, and succeed online. Whether you're building a brand from scratch or refining your digital strategy, we bring creativity, strategy, and technical expertise together to make your vision a reality."
-        background={background}
+        title1="OUR"
+        title2="SERVICES"
+        subTitle="From branding to launch, we handle it all."
+        button="WHO WE ARE"
+        link="/about"
       />
       <section className={darkMode ? "sectionDark" : "sectionLight"}>
         <div className="sectionWrapper">

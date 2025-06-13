@@ -32,10 +32,11 @@ function About() {
 
       <Navbar />
       <Hero
-        title="Turning Coffee & Conversations into"
-        titleSpan="Ideas That Move"
-        desc="We’re Rangka Empat Studio – a passionate team of creators, developers, and problem-solvers, united by a shared love for crafting meaningful digital experiences."
-        background={background}
+        title1="ABOUT"
+        title2="US"
+        subTitle="Designers, Developers & Problem-Thinkers."
+        button="VIEW OUR WORK"
+        link="/work"
       />
       <section className={darkMode ? "sectionDark" : "sectionLight"}>
         <div className="sectionWrapper">
