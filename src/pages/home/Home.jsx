@@ -1,46 +1,46 @@
-import { React, useContext, useEffect } from "react";
-import { Outlet, Link } from "react-router";
-import "../../index.scss";
-import HomeHero from "./sections/homeHero/HomeHero";
+import { useEffect } from "react";
 import Navbar from "../../components/navbar/Navbar";
+import HomeUSP from "./sections/homeUSP/HomeUSP";
+import HomeHero from "./sections/homeHero/HomeHero";
+import HomeServices from "./sections/homeServices/HomeServices";
 import HomeWork from "./sections/homeWork/HomeWork";
 import HomePricing from "./sections/homePricing/HomePricing";
 import HomeCTA from "./sections/homeCTA/HomeCTA";
 import HomeForm from "./sections/homeForm/HomeForm";
+import HomeClients from "./sections/homeClients/HomeClients";
 import Footer from "../../components/footer/Footer";
-import { ThemeContext } from "../../functions/themeContext";
-import HomeUSP from "./sections/homeUSP/HomeUSP";
-import HomeServices from "./sections/homeServices/HomeServices";
+import Seo from "../../components/Seo";
 
-export default function Home() {
-  const { darkMode } = useContext(ThemeContext);
-
-  useEffect(() => {
-    document.title =
-      "Rangka Empat Studio | We Design. We Code. We Deliver. We Care."; // Quick solution
-  }, []);
-
+function Home2() {
   return (
     <>
+      <Seo
+        title="Rangka Empat Studio | We Design. We Code. We Deliver. We Care."
+        description="Malaysia Custom Web Design, Web Development, Web Applications & Digital Solutions."
+        image="https://rangkaempat.com/og-images/home.jpg"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Rangka Empat Studio",
+          url: "https://rangkaempat.com/",
+          logo: "https://rangkaempat.com/logo.png",
+          description:
+            "Web design and development studio in Malaysia offering digital solutions.",
+          sameAs: [
+            "https://twitter.com/rangkaempat",
+            "https://linkedin.com/company/rangka-empat-studio",
+          ],
+        }}
+      />
       <Navbar />
       <HomeHero />
+      <HomeClients />
       <HomeUSP />
       <HomeServices />
-      <HomeWork />
-      <HomePricing />
-
-      {/* Example Standardized Section With Image Background */}
-      <section className="sectionBackground">
-        <div className="sectionBackgroundBlur">
-          <div className="sectionWrapper">
-            <div className="sectionContent">Who We Are Section</div>
-          </div>
-        </div>
-      </section>
-
-      <HomeCTA />
       <HomeForm />
       <Footer />
     </>
   );
 }
+
+export default Home2;

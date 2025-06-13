@@ -1,0 +1,51 @@
+import React, { useEffect, useContext } from "react";
+import Navbar from "../../components/navbar/Navbar";
+import Hero from "../../components/hero/Hero";
+import Footer from "../../components/footer/Footer";
+import { ThemeContext } from "../../functions/themeContext";
+import Seo from "../../components/Seo";
+
+function Work() {
+  const { darkMode } = useContext(ThemeContext);
+
+  return (
+    <>
+      <Seo
+        title="Our Work | Rangka Empat Studio – Kuala Lumpur Web Design & Digital Experts"
+        description="Explore our portfolio of custom web design and development projects by Rangka Empat Studio. See how we bring creative digital solutions to life."
+        image="https://rangkaempat.com/og-images/work.jpg" // Update when image is ready
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Our Work – Rangka Empat Studio",
+          url: "https://rangkaempat.com/work",
+          description:
+            "A showcase of completed web design and development projects by Rangka Empat Studio.",
+          publisher: {
+            "@type": "Organization",
+            name: "Rangka Empat Studio",
+            url: "https://rangkaempat.com",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://rangkaempat.com/logo.png",
+            },
+            sameAs: [
+              "https://twitter.com/rangkaempat",
+              "https://linkedin.com/company/rangka-empat-studio",
+            ],
+          },
+        }}
+      />
+
+      <Navbar />
+      <section className={darkMode ? "sectionDark" : "sectionLight"}>
+        <div className="sectionWrapper">
+          <div className="sectionContent">Work Section</div>
+        </div>
+      </section>
+      <Footer />
+    </>
+  );
+}
+
+export default Work;

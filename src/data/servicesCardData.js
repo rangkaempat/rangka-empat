@@ -1,7 +1,7 @@
-import ServicesCard1 from "/src/assets/ServicesCard1.webp";
-import ServicesCard2 from "/src/assets/ServicesCard2.webp";
-import ServicesCard3 from "/src/assets/ServicesCard3.webp";
-import ServicesCard4 from "/src/assets/ServicesCard4.webp";
+import ServicesCard1 from "/src/assets/servicesCard/ServicesCard1.webp";
+import ServicesCard2 from "/src/assets/servicesCard/ServicesCard2.webp";
+import ServicesCard3 from "/src/assets/servicesCard/ServicesCard3.webp";
+import ServicesCard4 from "/src/assets/servicesCard/ServicesCard4.webp";
 
 export const servicesCards = [
   {

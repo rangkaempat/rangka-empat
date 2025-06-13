@@ -1,7 +1,7 @@
-import USPCard1 from "/src/assets/USPCard1.webp";
-import USPCard2 from "/src/assets/USPCard2.webp";
-import USPCard3 from "/src/assets/USPCard3.webp";
-import USPCard4 from "/src/assets/USPCard4.webp";
+import USPCard1 from "/src/assets/uspCard/USPCard1.webp";
+import USPCard2 from "/src/assets/uspCard/USPCard2.webp";
+import USPCard3 from "/src/assets/uspCard/USPCard3.webp";
+import USPCard4 from "/src/assets/uspCard/USPCard4.webp";
 
 export const uspCards = [
   {

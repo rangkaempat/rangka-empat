@@ -42,39 +42,59 @@ function NavModal({ setIsOpen, darkMode, toggleMode }) {
           </Link>
 
           <div className="navModalServicesLinks">
-            <Link className="navModalLink" to="#" onClick={closeModal}>
+            <Link
+              className="navModalLink"
+              to="/services#branding"
+              onClick={closeModal}
+            >
               {Branding}
               BRANDING & IDENTITY
             </Link>
 
-            <Link className="navModalLink" to="#" onClick={closeModal}>
+            <Link
+              className="navModalLink"
+              to="/services#web-design"
+              onClick={closeModal}
+            >
               {WebDesign}
               WEB DESIGN & USER EXPERIENCE &#40;UI/UX&#41;
             </Link>
 
-            <Link className="navModalLink" to="#" onClick={closeModal}>
+            <Link
+              className="navModalLink"
+              to="/services#web-development"
+              onClick={closeModal}
+            >
               {WebDev}
               WEB DEVELOPMENT & DIGITAL SOLUTIONS
             </Link>
 
-            <Link className="navModalLink" to="#" onClick={closeModal}>
+            <Link
+              className="navModalLink"
+              to="/services#SEO"
+              onClick={closeModal}
+            >
               {SEO}
               DIGITAL MARKETING & SEO
             </Link>
           </div>
           <hr />
 
-          <Link className="navModalLink" to="#" onClick={closeModal}>
+          <Link className="navModalLink" to="/work" onClick={closeModal}>
             WORK
           </Link>
           <hr />
-          <Link className="navModalLink" to="#" onClick={closeModal}>
+          <Link className="navModalLink" to="/pricing" onClick={closeModal}>
             PRICING
           </Link>
 
           <hr />
           <div className="navModalBottom">
-            <Link className="navModalLink" to="#" onClick={closeModal}>
+            <Link
+              className="navModalLink"
+              to="/start-your-project"
+              onClick={closeModal}
+            >
               START YOUR PROJECT
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +107,7 @@ function NavModal({ setIsOpen, darkMode, toggleMode }) {
               </svg>
             </Link>
 
-            <Link className="navModalLink" to="#" onClick={closeModal}>
+            <Link className="navModalLink" to="/contact" onClick={closeModal}>
               CONTACT
               <svg
                 xmlns="http://www.w3.org/2000/svg"

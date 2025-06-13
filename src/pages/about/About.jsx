@@ -4,8 +4,6 @@ import Hero from "../../components/hero/Hero";
 import Footer from "../../components/footer/Footer";
 import background from "/src/assets/about-bg-2.webp";
 import { ThemeContext } from "../../functions/themeContext";
-import Navbar2 from "../../components/navbar2/Navbar2";
-import Footer2 from "../../components/footer2/Footer2";
 import Seo from "../../components/Seo";
 
 function About() {
@@ -32,7 +30,7 @@ function About() {
         }}
       />
 
-      <Navbar2 />
+      <Navbar />
       <Hero
         title="Turning Coffee & Conversations into"
         titleSpan="Ideas That Move"
@@ -44,7 +42,7 @@ function About() {
           <div className="sectionContent">About Us Section</div>
         </div>
       </section>
-      <Footer2 />
+      <Footer />
     </>
   );
 }

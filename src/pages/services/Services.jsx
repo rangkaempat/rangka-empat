@@ -4,8 +4,6 @@ import Hero from "../../components/hero/Hero";
 import Footer from "../../components/footer/Footer";
 import background from "/src/assets/services-bg.webp";
 import { ThemeContext } from "../../functions/themeContext";
-import Navbar2 from "../../components/navbar2/Navbar2";
-import Footer2 from "../../components/footer2/Footer2";
 import Seo from "../../components/Seo";
 
 function Services() {
@@ -34,7 +32,7 @@ function Services() {
             "We offer web design, web development, and digital services tailored for Malaysian businesses.",
         }}
       />
-      <Navbar2 />
+      <Navbar />
       <Hero
         title="A Plethora of Services to"
         titleSpan="Elevate Your Entire Digital Presence"
@@ -46,7 +44,7 @@ function Services() {
           <div className="sectionContent">Services Section</div>
         </div>
       </section>
-      <Footer2 />
+      <Footer />
     </>
   );
 }

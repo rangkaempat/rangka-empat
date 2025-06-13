@@ -7,8 +7,12 @@ import Home from "./pages/home/Home.jsx";
 import About from "./pages/about/About.jsx";
 import Services from "./pages/services/Services.jsx";
 import ThemeProvider from "./functions/themeContext.jsx";
-import Home2 from "./pages/home2/Home2.jsx";
 import ScrollTest from "./components/scrollTest/ScrollTest.jsx";
+import Contact from "./pages/contact/Contact.jsx";
+import Work from "./pages/work/Work.jsx";
+import Pricing from "./pages/pricing/Pricing.jsx";
+import StartYourProject from "./pages/startYourProject/StartYourProject.jsx";
+import PrivacyPolicy from "./pages/privacyPolicy/PrivacyPolicy.jsx";
 
 export default function App() {
   return (
@@ -18,17 +22,14 @@ export default function App() {
         <ScrollToTop />
 
         <Routes>
-          {/* Home Route */}
-          <Route index element={<Home2 />} />
-
-          {/* About Route */}
+          <Route index element={<Home />} />
           <Route path="about" element={<About />} />
-
-          {/* Services Route */}
           <Route path="services" element={<Services />} />
-
-          <Route path="home2" element={<Home2 />} />
-
+          <Route path="work" element={<Work />} />
+          <Route path="pricing" element={<Pricing />} />
+          <Route path="start-your-project" element={<StartYourProject />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="scrollTest" element={<ScrollTest />} />
         </Routes>
       </BrowserRouter>

@@ -8,15 +8,36 @@ import {
   staggerContainer,
 } from "../../../../functions/motionUtils";
 import { workCardItems } from "../../../../data/workCardData";
-import clientLogo1Light from "/src/assets/clientLogo1Light.webp";
-import clientLogo2Light from "/src/assets/clientLogo2Light.webp";
-import clientLogo3Light from "/src/assets/clientLogo3Light.webp";
+import clientLogo1Light from "/src/assets/clientLogos/clientLogo1Light.webp";
+import clientLogo2Light from "/src/assets/clientLogos/clientLogo2Light.webp";
+import clientLogo3Light from "/src/assets/clientLogos/clientLogo3Light.webp";
+import clientLogo4Light from "/src/assets/clientLogos/clientLogo4Light.webp";
+import clientLogo5Light from "/src/assets/clientLogos/clientLogo5Light.webp";
+import clientLogo6Light from "/src/assets/clientLogos/clientLogo6Light.webp";
 
-import clientLogo1Dark from "/src/assets/clientLogo1Dark.webp";
-import clientLogo2Dark from "/src/assets/clientLogo2Dark.webp";
-import clientLogo3Dark from "/src/assets/clientLogo3Dark.webp";
-const clientLogosDark = [clientLogo1Dark, clientLogo2Dark, clientLogo3Dark];
-const clientLogosLight = [clientLogo1Light, clientLogo2Light, clientLogo3Light];
+import clientLogo1Dark from "/src/assets/clientLogos/clientLogo1Dark.webp";
+import clientLogo2Dark from "/src/assets/clientLogos/clientLogo2Dark.webp";
+import clientLogo3Dark from "/src/assets/clientLogos/clientLogo3Dark.webp";
+import clientLogo4Dark from "/src/assets/clientLogos/clientLogo4Dark.webp";
+import clientLogo5Dark from "/src/assets/clientLogos/clientLogo5Dark.webp";
+import clientLogo6Dark from "/src/assets/clientLogos/clientLogo6Dark.webp";
+
+const clientLogosDark = [
+  clientLogo1Dark,
+  clientLogo2Dark,
+  clientLogo3Dark,
+  clientLogo4Dark,
+  clientLogo5Dark,
+  clientLogo6Dark,
+];
+const clientLogosLight = [
+  clientLogo1Light,
+  clientLogo2Light,
+  clientLogo3Light,
+  clientLogo4Light,
+  clientLogo5Light,
+  clientLogo6Light,
+];
 
 function HomeClients() {
   const { darkMode } = useContext(ThemeContext);

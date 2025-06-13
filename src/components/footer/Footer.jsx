@@ -1,173 +1,211 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Footer.scss";
-import { Outlet, Link } from "react-router";
+import { Link } from "react-router";
+import { ThemeContext } from "../../functions/themeContext";
 import { motion } from "framer-motion";
-import footerLogo from "/src/assets/rangka-empat-studio-logo-footer.webp";
-import homeHeroBg4 from "/src/assets/home-hero-bg-4.webp";
-import { fadeInWithEase, staggerContainer } from "../../functions/motionUtils";
+import { Typewriter } from "react-simple-typewriter";
 import {
-  FacebookIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  TikTokIcon,
-} from "../../data/socialLogos";
+  fadeInWithEase,
+  fadeInWithEase2,
+  scale1,
+  staggerContainer,
+} from "../../functions/motionUtils";
 
-const footerLinks = [
-  { name: "Home", to: "/" },
-  { name: "About", to: "/about" },
-  { name: "Services", to: "/services" },
-  { name: "Our Work", to: "/our-work" },
-  { name: "Pricing", to: "/pricing" },
-];
+function Footer() {
+  const { darkMode } = useContext(ThemeContext);
 
-const socialLinks = [
-  {
-    name: "Instagram",
-    to: "https://www.instagram.com/rangkaempatstudio",
-    icon: InstagramIcon,
-  },
-  {
-    name: "Facebook",
-    to: "https://www.facebook.com/rangkaempatstudio",
-    icon: FacebookIcon,
-  },
-  {
-    name: "TikTok",
-    to: "https://www.tiktok.com/@rangkaempat",
-    icon: TikTokIcon,
-  },
-  {
-    name: "LinkedIn",
-    to: "https://www.linkedin.com/company/rangka-empat-studio",
-    icon: LinkedInIcon,
-  },
-];
-
-export default function Footer() {
   return (
     <>
-      <div
-        className="sectionBackground footerBackground"
-        style={{ backgroundImage: `url(${homeHeroBg4})` }}
-      >
-        <div className="sectionBackgroundBlur footerBackgroundGradient">
-          <div className="sectionWrapper footerWrapper">
-            <div className="sectionContent footerContent">
-              {/* Footer Links */}
-              <motion.div
-                className="footerlinkContainer"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={staggerContainer}
-              >
-                <motion.h5 className="footerlink" variants={fadeInWithEase}>
-                  Quick Links
-                </motion.h5>
+      <div className={darkMode ? "sectionDark" : "sectionLight"}>
+        <div className="sectionWrapper footerWrapper">
+          <div className="sectionContent footerContent2">
+            <motion.hr
+              initial="hidden"
+              whileInView="visible"
+              variants={scale1}
+            />
+            <motion.ul
+              className="footerTopContainer textOverflow"
+              initial="hidden"
+              whileInView="visible"
+              variants={staggerContainer}
+            >
+              <motion.li variants={fadeInWithEase2}>
+                <Link to="/about" className="footerLink">
+                  ABOUT
+                </Link>
+              </motion.li>
+              <motion.li variants={fadeInWithEase2}>
+                <Link to="/services" className="footerLink">
+                  SERVICES
+                </Link>
+              </motion.li>
+              <motion.li variants={fadeInWithEase2}>
+                <Link to="/work" className="footerLink">
+                  WORK
+                </Link>
+              </motion.li>
+              <motion.li variants={fadeInWithEase2}>
+                <Link to="/pricing" className="footerLink">
+                  PRICING
+                </Link>
+              </motion.li>
+            </motion.ul>
 
-                {footerLinks.map((link, index) => (
-                  <motion.div key={index} variants={fadeInWithEase}>
-                    <Link className="footerlink" to={link.to}>
-                      {link.name}
-                    </Link>
-                  </motion.div>
-                ))}
-              </motion.div>
+            <motion.ul
+              className="footerSocialsContainer textOverflow"
+              initial="hidden"
+              whileInView="visible"
+              variants={staggerContainer}
+            >
+              <motion.li variants={fadeInWithEase2}>
+                <Link
+                  to="https://www.instagram.com/rangkaempatstudio"
+                  className="footerLink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill={darkMode ? "#ffffff" : "#000000"}
+                    viewBox="0 0 256 256"
+                  >
+                    <path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path>
+                  </svg>
+                </Link>
+              </motion.li>
+              <motion.li variants={fadeInWithEase2}>
+                <Link
+                  to="https://www.facebook.com/rangkaempatstudio"
+                  className="footerLink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill={darkMode ? "#ffffff" : "#000000"}
+                    viewBox="0 0 256 256"
+                  >
+                    <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path>
+                  </svg>
+                </Link>
+              </motion.li>
+              <motion.li variants={fadeInWithEase2}>
+                <Link
+                  to="https://www.tiktok.com/@rangkaempat"
+                  className="footerLink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill={darkMode ? "#ffffff" : "#000000"}
+                    viewBox="0 0 256 256"
+                  >
+                    <path d="M224,72a48.05,48.05,0,0,1-48-48,8,8,0,0,0-8-8H128a8,8,0,0,0-8,8V156a20,20,0,1,1-28.57-18.08A8,8,0,0,0,96,130.69V88a8,8,0,0,0-9.4-7.88C50.91,86.48,24,119.1,24,156a76,76,0,0,0,152,0V116.29A103.25,103.25,0,0,0,224,128a8,8,0,0,0,8-8V80A8,8,0,0,0,224,72Zm-8,39.64a87.19,87.19,0,0,1-43.33-16.15A8,8,0,0,0,160,102v54a60,60,0,0,1-120,0c0-25.9,16.64-49.13,40-57.6v27.67A36,36,0,1,0,136,156V32h24.5A64.14,64.14,0,0,0,216,87.5Z"></path>
+                  </svg>
+                </Link>
+              </motion.li>
+              <motion.li variants={fadeInWithEase2}>
+                <Link
+                  to="https://www.linkedin.com/company/rangka-empat-studio"
+                  className="footerLink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill={darkMode ? "#ffffff" : "#000000"}
+                    viewBox="0 0 256 256"
+                  >
+                    <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
+                  </svg>
+                </Link>
+              </motion.li>
+            </motion.ul>
 
-              {/* Footer Centre */}
-              <motion.div
-                className="footerCentre"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={staggerContainer}
-              >
-                <motion.div variants={fadeInWithEase}>
-                  <Link to="/">
-                    <img
-                      className="footerlogo"
-                      src={footerLogo}
-                      alt="Rangka Empat Studio Logo"
-                    />
-                  </Link>
+            <div className="footerTopContainer">
+              <h2 className="textOverflow">
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                  We Design.
                 </motion.div>
-                <motion.h2 className="footerh2" variants={fadeInWithEase}>
-                  We Design. <span>We Code.</span>
-                  <br />
-                  We Deliver. <span>We Care.</span>
-                </motion.h2>
-              </motion.div>
 
-              {/* Footer Socials */}
-              <motion.div
-                className="footerlinkContainerLogo"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={staggerContainer}
-              >
-                {socialLinks.map((link, index) => {
-                  const Icon = link.icon;
-                  return (
-                    <motion.div
-                      key={index}
-                      variants={fadeInWithEase}
-                      whileHover={{ y: -5 }}
-                    >
-                      <a
-                        className="footerlink"
-                        href={link.to}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Icon size={40} color="#ededed" />
-                      </a>
-                    </motion.div>
-                  );
-                })}
-              </motion.div>
-              {/* footer Logo */}
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  <Typewriter
+                    words={["We Code."]}
+                    loop={0}
+                    cursor
+                    cursorStyle="|"
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={5000}
+                  />
+                </motion.span>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.7 }}
+                >
+                  We Deliver.
+                </motion.div>
+
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 1 }}
+                >
+                  We Care.
+                </motion.span>
+              </h2>
             </div>
-          </div>
-          <div className="sectionWrapper">
-            <div className="sectionContent footerContent">
-              <motion.div
-                className="footerlinkBottom"
+
+            <motion.hr
+              initial="hidden"
+              whileInView="visible"
+              variants={scale1}
+            />
+
+            <div className="footerBottomContainer">
+              <motion.ul
+                className="footerBottomLinks textOverflow"
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
                 variants={staggerContainer}
               >
-                <motion.div variants={fadeInWithEase}>
-                  <Link className="footerlink" to="/sitemap">
-                    Sitemap
+                <motion.li variants={fadeInWithEase2}>
+                  <Link to="/sitemap.xml" className="footerLink">
+                    SITEMAP
                   </Link>
-                </motion.div>
-                <span>•</span>
-                <motion.div variants={fadeInWithEase}>
-                  <Link className="footerlink" to="/privacy-policy">
-                    Privacy Policy
+                </motion.li>
+                <motion.li variants={fadeInWithEase2}>
+                  <Link to="/privacy-policy" className="footerLink">
+                    PRIVACY POLICY
                   </Link>
-                </motion.div>
-                <span>•</span>
-                <motion.div variants={fadeInWithEase}>
-                  <Link className="footerlink" to="cookies">
-                    Cookies
-                  </Link>
-                </motion.div>
-              </motion.div>
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={staggerContainer}
-              >
-                <motion.p className="footerCopyright" variants={fadeInWithEase}>
-                  &copy; {new Date().getFullYear()} Rangka Empat Studio (BRN)
-                  <br></br>
-                  All Rights Reserved
-                </motion.p>
-              </motion.div>
+                </motion.li>
+              </motion.ul>
+
+              <h5>
+                COPYRIGHT © 2025 RANGKA EMPAT STUDIO
+                <br />
+                ALL RIGHTS RESERVED
+              </h5>
             </div>
           </div>
         </div>
@@ -175,3 +213,5 @@ export default function Footer() {
     </>
   );
 }
+
+export default Footer;
