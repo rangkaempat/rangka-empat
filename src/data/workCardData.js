@@ -1,63 +1,63 @@
-// This is our data of clients for Client Work Cards
+import clientWork1 from "/src/assets/clientWork/clientWork1.webp";
+import clientWork2 from "/src/assets/clientWork/clientWork2.webp";
+import clientWork3 from "/src/assets/clientWork/clientWork3.webp";
+import clientWork4 from "/src/assets/clientWork/clientWork4.webp";
+import clientWork5 from "/src/assets/clientWork/clientWork5.webp";
+import clientWork6 from "/src/assets/clientWork/clientWork6.webp";
+import clientLogo1 from "/src/assets/clientLogos/clientLogo1Dark.webp";
+import clientLogo2 from "/src/assets/clientLogos/clientLogo2Dark.webp";
+import clientLogo3 from "/src/assets/clientLogos/clientLogo3Dark.webp";
+import clientLogo4 from "/src/assets/clientLogos/clientLogo4Dark.webp";
+import clientLogo5 from "/src/assets/clientLogos/clientLogo5Dark.webp";
+import clientLogo6 from "/src/assets/clientLogos/clientLogo6Dark.webp";
 
-// ===========================
-// EXAMPLE USAGE
-// ===========================
-
-// {
-//   workCardItems
-//     .slice(0, 3)
-//     .map((item_) => (
-//       <WorkCard key={item_.id} image={item_.image} client={item_.client} />
-//     ));
-// }
-
-import clientWork1 from "/src/assets/clientWork1.webp";
-import clientWork2 from "/src/assets/clientWork2.webp";
-import clientWork3 from "/src/assets/clientWork3.webp";
-import clientWork4 from "/src/assets/clientWork4.webp";
-
-export const workCardItems = [
+export const workCards = [
   {
-    id: 1,
-    image: clientWork4,
-    client: "Hyrax Oil",
-    link: "#",
-    type: ["Web Design", "Web Development"],
-  },
-  {
-    id: 2,
-    image: clientWork4,
-    client: "Sarawak Lubricants",
-    link: "#",
-    type: ["Web Design"],
-  },
-  {
-    id: 3,
-    image: clientWork4,
-    client: "Face by Aisya",
-    link: "#",
-    type: ["Web Design", "Web Development"],
-  },
-  {
-    id: 4,
-    image: clientWork2,
-    client: "Client 4",
-    link: "#",
-    type: ["Web Design", "Web Development"],
-  },
-  {
-    id: 5,
+    id: "01",
+    link: "/work/amachi's-palagaram",
+    logo: clientLogo1,
     image: clientWork1,
-    client: "Client 5",
-    link: "#",
-    type: ["Web Design", "Web Development"],
+    title: "Amachi's Palagaram",
+    category: "F&B",
   },
   {
-    id: 6,
+    id: "02",
+    link: "/work/property-geek",
+    logo: clientLogo2,
     image: clientWork2,
-    client: "Client 6",
-    link: "#",
-    type: ["Web Design", "Web Development"],
+    title: "Property Geek",
+    category: "Real Estate",
+  },
+  {
+    id: "03",
+    link: "/work/harappan-investments",
+    logo: clientLogo3,
+    image: clientWork3,
+    title: "Harappan Investments",
+    category: "Investment",
+  },
+  {
+    id: "04",
+    link: "/work/face-by-aisya",
+    logo: clientLogo4,
+    image: clientWork4,
+    title: "Face by Aisya",
+    category: "Beauty",
+  },
+  {
+    id: "05",
+    link: "/work/stacked-burgers",
+    logo: clientLogo5,
+    image: clientWork5,
+    title: "Stacked Burgers",
+    category: "F&B",
+  },
+  {
+    id: "06",
+    link: "/work/hyrax-oil",
+    logo: clientLogo6,
+    image: clientWork6,
+    title: "Hyrax Oil",
+    category: "Oil & Gas",
   },
 ];

@@ -7,7 +7,7 @@ import {
   infiniteLoop,
   staggerContainer,
 } from "../../../../functions/motionUtils";
-import { workCardItems } from "../../../../data/workCardData";
+import { workCards } from "../../../../data/workCardData";
 import clientLogo1Light from "/src/assets/clientLogos/clientLogo1Light.webp";
 import clientLogo2Light from "/src/assets/clientLogos/clientLogo2Light.webp";
 import clientLogo3Light from "/src/assets/clientLogos/clientLogo3Light.webp";

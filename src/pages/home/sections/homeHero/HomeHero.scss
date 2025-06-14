@@ -142,17 +142,5 @@ $lightbg: #f2f2f2;
         }
       }
     }
-
-    .homeHeroWorkButton {
-      @media screen and (max-width: 1024px) {
-        display: none;
-      }
-    }
-  }
-}
-
-.homeHeroTagline {
-  @media screen and (max-width: 1024px) {
-    display: none;
   }
 }

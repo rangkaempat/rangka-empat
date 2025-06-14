@@ -6,86 +6,49 @@ $medium: #707070;
 $darkbg: #000000;
 $lightbg: #f2f2f2;
 
-.workCardContainer {
+.workCardContent {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  // flex: 1 1 32%;
-  gap: 1rem;
+  width: 45%;
+  aspect-ratio: 3 / 4.5;
+  text-align: start;
+  gap: 0.5rem;
+  position: relative;
 
   &:hover {
-    .workImage {
-      border: 2px solid #0aaab880;
-      box-shadow: 0px 0px 15px 2px #0aaab880;
-      transition: 0.3s;
-    }
-
-    .workClient {
-      .workClientName {
-        color: $primary;
-        transition: 0.3s;
-      }
+    .clientLink {
+      opacity: 1;
+      transition: 0.3;
     }
   }
 
-  .workImage {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-
-    border-radius: 15px;
-    border: 2px solid #0aaab800;
-    box-shadow: 0px 0px 15px 2px #0aaab800;
-
-    width: 100%;
-    height: 300px;
-
-    img {
-      width: 100%;
-      display: block;
-    }
+  @media screen and (max-width: 1024px) {
+    width: 48%;
   }
 
-  .workClient {
-    display: flex;
-    gap: 1rem;
-    width: 100%;
-    align-items: center;
-
-    .workClientFavicon {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      overflow: hidden;
-
-      img {
-        width: 100%;
-        display: block;
-      }
-    }
+  h3 {
+    text-align: end;
   }
 
-  .workType {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    gap: 1rem;
+  .clientLogo {
+    position: absolute;
+    width: 30%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-    .workTypeIcon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      background: rgba(244, 244, 244, 0.137);
-      backdrop-filter: blur(7.5px);
-      box-shadow: 0px 0px 1px 2px #6868681f;
-      padding: 0.4rem;
-      flex-shrink: 0;
-    }
+  .clientWorkImage {
+    width: 100%;
+  }
+
+  .clientLink {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    color: $light;
+    transition: 0.3;
   }
 }
