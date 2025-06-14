@@ -1,0 +1,92 @@
+$primary: #0aaab8;
+$secondary: #0a6ab8;
+$dark: #323232;
+$light: #ffffff;
+$medium: #707070;
+$darkbg: #000000;
+$lightbg: #f2f2f2;
+
+.workProjectsSection {
+  flex-direction: row;
+  width: 100%;
+  align-items: start;
+  justify-content: center;
+  gap: 0;
+  padding: 5rem 0 5rem 0;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  .workProjectsLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 2rem;
+    width: 25%;
+
+    @media screen and (max-width: 1024px) {
+      display: block;
+      width: 100%;
+      padding: 0 1rem;
+      align-items: center;
+    }
+
+    .workProjectsButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      text-align: end;
+      width: fit-content;
+      padding-right: 2rem;
+      background: none;
+
+      &.active {
+        border-bottom: 1px solid $dark;
+      }
+
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+        padding: 1rem;
+        gap: 2rem;
+        border: none;
+      }
+    }
+
+    .workProjectsMenuButton {
+      padding: 2rem;
+      text-align: center;
+      width: 100%;
+      gap: 2rem;
+    }
+  }
+
+  .workProjectsRight {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid $dark;
+    width: 75%;
+    padding-left: 2rem;
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      padding-left: 0;
+      border-left: none;
+    }
+
+    .workProjectsCardWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      gap: 2rem;
+
+      @media screen and (max-width: 1024px) {
+        justify-content: center;
+        gap: 1rem;
+      }
+    }
+  }
+}

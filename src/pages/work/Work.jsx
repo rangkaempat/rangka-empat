@@ -4,6 +4,7 @@ import Hero from "../../components/hero/Hero";
 import Footer from "../../components/footer/Footer";
 import { ThemeContext } from "../../functions/themeContext";
 import Seo from "../../components/Seo";
+import WorkProjects from "./sections/workProjects/WorkProjects";
 
 function Work() {
   const { darkMode } = useContext(ThemeContext);
@@ -45,11 +46,7 @@ function Work() {
         button="WHAT WE DO"
         link="/services"
       />
-      <section className={darkMode ? "sectionDark" : "sectionLight"}>
-        <div className="sectionWrapper">
-          <div className="sectionContent">Work Section</div>
-        </div>
-      </section>
+      <WorkProjects />
       <Footer />
     </>
   );

@@ -26,6 +26,14 @@ $lightbg: #f2f2f2;
     width: 48%;
   }
 
+  &.workProjectsCard {
+    width: 30%;
+
+    @media screen and (max-width: 1024px) {
+      width: 45%;
+    }
+  }
+
   h3 {
     text-align: end;
   }

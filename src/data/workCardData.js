@@ -14,11 +14,12 @@ import clientLogo6 from "/src/assets/clientLogos/clientLogo6Dark.webp";
 export const workCards = [
   {
     id: "01",
-    link: "/work/amachi's-palagaram",
+    link: "/work/amachis-palagaram",
     logo: clientLogo1,
     image: clientWork1,
     title: "Amachi's Palagaram",
-    category: "F&B",
+    industry: "F&B",
+    category: ["CUSTOM WEB APPS"],
   },
   {
     id: "02",
@@ -26,7 +27,8 @@ export const workCards = [
     logo: clientLogo2,
     image: clientWork2,
     title: "Property Geek",
-    category: "Real Estate",
+    industry: "Real Estate",
+    category: ["REBRANDING"],
   },
   {
     id: "03",
@@ -34,7 +36,8 @@ export const workCards = [
     logo: clientLogo3,
     image: clientWork3,
     title: "Harappan Investments",
-    category: "Investment",
+    industry: "Investment",
+    category: ["REBRANDING"],
   },
   {
     id: "04",
@@ -42,7 +45,8 @@ export const workCards = [
     logo: clientLogo4,
     image: clientWork4,
     title: "Face by Aisya",
-    category: "Beauty",
+    industry: "Beauty",
+    category: ["REBRANDING"],
   },
   {
     id: "05",
@@ -50,7 +54,8 @@ export const workCards = [
     logo: clientLogo5,
     image: clientWork5,
     title: "Stacked Burgers",
-    category: "F&B",
+    industry: "F&B",
+    category: ["CUSTOM WEB APPS"],
   },
   {
     id: "06",
@@ -58,6 +63,7 @@ export const workCards = [
     logo: clientLogo6,
     image: clientWork6,
     title: "Hyrax Oil",
-    category: "Oil & Gas",
+    industry: "Oil & Gas",
+    category: ["REBRANDING", "CUSTOM WEB APPS", "E-COMMERCE", "PRODUCT"],
   },
 ];
