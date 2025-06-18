@@ -8,6 +8,7 @@ import HomeForm from "./sections/homeForm/HomeForm";
 import HomeClients from "./sections/homeClients/HomeClients";
 import Footer from "../../components/footer/Footer";
 import Seo from "../../components/Seo";
+import FAQ from "../../components/faq/faq";
 
 function Home2() {
   return (
@@ -35,6 +36,7 @@ function Home2() {
       <HomeClients />
       <HomeUSP />
       <HomeServices />
+      <FAQ />
       <HomeForm />
       <Footer />
     </>
