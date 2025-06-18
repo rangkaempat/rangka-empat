@@ -8,12 +8,7 @@ import {
 import ButtonForm from "../../../../components/button/ButtonForm";
 import { useForm } from "react-hook-form";
 import { ThemeContext } from "../../../../functions/themeContext";
-
-import CTAform1 from "/src/assets/CTAform1.webp";
-import CTAform2 from "/src/assets/CTAform2.webp";
-import CTAform3 from "/src/assets/CTAform3.webp";
-import CTAform4 from "/src/assets/CTAform4.webp";
-import CTAform5 from "/src/assets/CTAform5.webp";
+import Button from "../../../../components/button/Button";
 
 const features = [
   "Fully Custom Website",
@@ -40,166 +35,152 @@ function HomeForm() {
   return (
     <>
       <section className={darkMode ? "sectionDark" : "sectionLight"}>
-        <div className="sectionWrapper">
-          <div className="sectionContent homeFormContent">
-            {/* Title & Description */}
-            <motion.div
-              className="homeFormTextContainer"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={staggerContainer}
-            >
-              <motion.h2 variants={fadeInWithEase} className="h2width100">
-                <span>Let's Build</span> The Future
-                <br></br>
-                Together.
-              </motion.h2>
-              <motion.p variants={fadeInWithEase} className="description1">
-                Get in touch with our digital experts.
-              </motion.p>
-              <motion.p variants={fadeInWithEase} className="description2">
-                We’ll figure out the best solution for your
-                <br></br>
-                needs.
-              </motion.p>
+        <div className="sectionContent homeFormContent">
+          {/* Title & Description */}
+          <motion.div
+            className="homeFormTextContainer"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={staggerContainer}
+          >
+            <motion.h2 variants={fadeInWithEase} className="textXXXL textBold">
+              CONNECT WITH US
+            </motion.h2>
+            <motion.p variants={fadeInWithEase} className="textLight textXS">
+              Whether you’re a startup, small business, or established brand,
+              we’re here to help you
+              <span className="textBold"> create something extraordinary.</span>
+            </motion.p>
+            <ul className="homeFormContact">
+              <motion.li className="textLight textXS" variants={fadeInWithEase}>
+                • EMAIL{" "}
+                <a href="mailto:we@rangkaempat.com" className="textRegular">
+                  we@rangkaempat.com
+                </a>
+              </motion.li>
+              <motion.li className="textLight textXS" variants={fadeInWithEase}>
+                • PHONE{" "}
+                <a href="tel:+6012-2501207" className="textRegular">
+                  012-2501207
+                </a>
+              </motion.li>
+              <motion.li className="textLight textXS" variants={fadeInWithEase}>
+                • LOCATION{" "}
+                <a
+                  href="https://www.google.com/maps?sca_esv=c00251c694cd13aa&rlz=1C1UEAD_enMY1144MY1144&output=search&q=kuala+lumpur&source=lnms&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeuyr9ljWioGWIw0oasFed3q5v-jrTO4UFmLjWc-eQrSDAn5yCiUOywCEMyD2GzPsD4p6NxyE0nWcubdFo_geguuEzTyhb5YnZGp9oc-5cJgdOWVqSlpwqlRFBrxaDT9YXk-Cdymu63-zeABH1e7STtPakvrAsNBjNpc49sGHXpjHEuW6dw&entry=mc&ved=1t:200715&ictx=111"
+                  className="textRegular"
+                  target="blank__"
+                >
+                  KL, MY.
+                </a>
+              </motion.li>
+            </ul>
+            <Button
+              name="Get in Touch"
+              type={darkMode ? "btnType1" : "btnType1-light"}
+              link="/contact"
+              arrow="contact"
+            />
+          </motion.div>
 
-              <motion.div
-                className="homeFormImageContainer"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={staggerContainer}
-                whileHover={{ y: -10 }}
-                whileTap={{ y: -10 }}
-              >
-                <motion.img
-                  src={CTAform1}
-                  alt="CTA Form 1"
-                  variants={fadeInWithEase}
+          <motion.div
+            className="homeFormTextContainer"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={staggerContainer}
+          >
+            <form onSubmit={handleSubmit(onSubmit)} className="formContainer">
+              <motion.div className="formGroupName" variants={fadeInWithEase}>
+                <label htmlFor="fullName" className="textL textLight">
+                  • NAME*
+                </label>
+                <input
+                  id="fullName"
+                  type="text"
+                  placeholder="> John Doe"
+                  autoComplete="name"
+                  {...register("fullName", {
+                    required: "Full Name is required*",
+                  })}
                 />
-                <motion.img
-                  src={CTAform2}
-                  alt="CTA Form 2"
-                  className="homeFormImage"
-                  variants={fadeInWithEase}
-                  whileHover={{
-                    y: -5,
-                    scale: 1.03,
-                  }}
-                />
-                <motion.img
-                  src={CTAform3}
-                  alt="CTA Form 3"
-                  className="homeFormImage"
-                  variants={fadeInWithEase}
-                  whileHover={{
-                    y: -5,
-                    scale: 1.03,
-                    transition: { delay: 0.2 },
-                  }}
-                />
-                <motion.img
-                  src={CTAform4}
-                  alt="CTA Form 4"
-                  className="homeFormImage"
-                  variants={fadeInWithEase}
-                  whileHover={{
-                    y: -5,
-                    scale: 1.03,
-                    transition: { delay: 0.4 },
-                  }}
-                />
-                <motion.img
-                  src={CTAform5}
-                  alt="CTA Form 5"
-                  className="homeFormImage"
-                  variants={fadeInWithEase}
-                  whileHover={{
-                    y: -5,
-                    scale: 1.03,
-                    transition: { delay: 0.6 },
-                  }}
-                />
+                {errors.fullName && (
+                  <p className="error">{errors.fullName.message}</p>
+                )}
               </motion.div>
-            </motion.div>
-
-            <motion.div
-              className="homeFormTextContainer"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={staggerContainer}
-            >
-              <form onSubmit={handleSubmit(onSubmit)} className="formContainer">
-                <motion.div className="formGroupName">
+              <div className="formContainerHalf">
+                <motion.div className="formGroupHalf" variants={fadeInWithEase}>
+                  <label htmlFor="email" className="textL textLight">
+                    • EMAIL*
+                  </label>
                   <input
-                    type="text"
-                    placeholder="Full Name"
-                    {...register("fullName", {
-                      required: "Full Name is required",
+                    id="email"
+                    type="email"
+                    placeholder="> johndoe@email.com"
+                    autoComplete="email"
+                    {...register("email", {
+                      required: "Email is required*",
+                      pattern: {
+                        value: /^\S+@\S+\.\S+$/,
+                        message: "Invalid email format",
+                      },
                     })}
                   />
-                  {errors.fullName && (
-                    <p className="error">{errors.fullName.message}</p>
+                  {errors.email && (
+                    <p className="error">{errors.email.message}</p>
                   )}
                 </motion.div>
-                <div className="formContainerHalf">
-                  <div className="formGroupHalf">
-                    <input
-                      type="email"
-                      placeholder="Email"
-                      {...register("email", {
-                        required: "Email is required",
-                        pattern: {
-                          value: /^\S+@\S+\.\S+$/,
-                          message: "Invalid email format",
-                        },
-                      })}
-                    />
-                    {errors.email && (
-                      <p className="error">{errors.email.message}</p>
-                    )}
-                  </div>
 
-                  <div className="formGroupHalf">
-                    <input
-                      type="text"
-                      placeholder="Phone"
-                      {...register("phone", {
-                        required: "Phone number is required",
-                        pattern: {
-                          value: /^[0-9]+$/,
-                          message: "Only numbers allowed",
-                        },
-                      })}
-                    />
-                    {errors.countryCode && (
-                      <p className="error">{errors.countryCode.message}</p>
-                    )}
-                    {errors.phone && (
-                      <p className="error">{errors.phone.message}</p>
-                    )}
-                  </div>
-                </div>
-                <div className="formGroup">
-                  <textarea
-                    placeholder="Message"
-                    {...register("message", {
-                      required: "Message is required",
+                <motion.div className="formGroupHalf" variants={fadeInWithEase}>
+                  <label htmlFor="phone" className="textL textLight">
+                    • PHONE
+                  </label>
+                  <input
+                    id="phone"
+                    type="text"
+                    placeholder="> +60123456789"
+                    autoComplete="tel"
+                    {...register("phone", {
+                      pattern: {
+                        value: /^[0-9]+$/,
+                        message: "Only numbers allowed",
+                      },
                     })}
-                  ></textarea>
-                  {errors.message && (
-                    <p className="error">{errors.message.message}</p>
+                  />
+                  {errors.countryCode && (
+                    <p className="error">{errors.countryCode.message}</p>
                   )}
-                </div>
+                  {errors.phone && (
+                    <p className="error">{errors.phone.message}</p>
+                  )}
+                </motion.div>
+              </div>
+              <motion.div className="formGroup" variants={fadeInWithEase}>
+                <label htmlFor="message" className="textL textLight">
+                  • MESSAGE*
+                </label>
+                <textarea
+                  id="message"
+                  placeholder="> Hi! I'd like a website design for my company."
+                  {...register("message", {
+                    required: "Message is required*",
+                  })}
+                ></textarea>
+                {errors.message && (
+                  <p className="error">{errors.message.message}</p>
+                )}
+              </motion.div>
 
-                <div className="ButtonContainer">
-                  <ButtonForm name="Send Message" type="btnType1-form" />
-                </div>
-              </form>
-            </motion.div>
-          </div>
+              <div className="ButtonContainer">
+                <ButtonForm
+                  name="Send Message"
+                  type={darkMode ? "btnType1" : "btnType1-light"}
+                  arrow
+                />
+              </div>
+            </form>
+          </motion.div>
         </div>
       </section>
     </>

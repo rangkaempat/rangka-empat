@@ -28,6 +28,8 @@ export default function Navbar() {
   // Navbar Hide and Scroll
   useEffect(() => {
     const handleScroll = () => {
+      if (isOpen) return; // 🚫 Skip hiding logic when modal is open
+
       const currentScrollY = window.scrollY;
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setShowNavbar(false); // Hide on scroll down
@@ -39,7 +41,7 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, [lastScrollY, isOpen]);
 
   return (
     <>

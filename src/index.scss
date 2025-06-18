@@ -115,34 +115,12 @@ li {
   background-color: $lightbg;
   color: $dark;
   transition: 0.5s;
-
-  button {
-    color: $dark;
-    fill: $dark;
-
-    &:hover {
-      color: $primary;
-      fill: $primary;
-      transition: fill, color 0.5s;
-    }
-  }
 }
 
 .sectionDark {
   background-color: $darkbg;
   color: $light;
   transition: 0.5s;
-
-  button {
-    color: $light;
-    fill: $light;
-
-    &:hover {
-      color: $primary;
-      fill: $primary;
-      transition: fill, color 0.5s;
-    }
-  }
 }
 
 .sectionDarkGradient {

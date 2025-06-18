@@ -42,6 +42,10 @@ function WorkProjects() {
                         ? "textBold active"
                         : "textLight"
                     } textL workProjectsButton`}
+                    style={{
+                      color: darkMode ? "#f2f2f2" : "#323232",
+                      fill: darkMode ? "#f2f2f2" : "#323232",
+                    }}
                     onClick={() => setSelectedCategory(category)}
                   >
                     {category}
@@ -55,6 +59,10 @@ function WorkProjects() {
                 <div>
                   <button
                     className="textBold textL workProjectsButton workProjectsMenuButton active"
+                    style={{
+                      color: darkMode ? "#f2f2f2" : "#323232",
+                      fill: darkMode ? "#f2f2f2" : "#323232",
+                    }}
                     onClick={toggleMenu}
                   >
                     {selectedCategory}
@@ -78,6 +86,8 @@ function WorkProjects() {
                       </svg>
                     )}
                   </button>
+
+                  {/* Menu Modal */}
                   <AnimatePresence mode="wait">
                     {isOpen && (
                       <motion.div
@@ -102,6 +112,10 @@ function WorkProjects() {
                                 ? "textBold"
                                 : "textLight"
                             } textL workProjectsButton`}
+                            style={{
+                              color: darkMode ? "#f2f2f2" : "#323232",
+                              fill: darkMode ? "#f2f2f2" : "#323232",
+                            }}
                             onClick={() => {
                               setSelectedCategory(category);
                               setIsOpen(false);
