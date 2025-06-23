@@ -8,6 +8,11 @@ $lightbg: #f2f2f2;
 
 .footerWrapper {
   max-width: 90%;
+  padding: 3rem 1rem;
+
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+  }
 
   .footerContent2 {
     gap: 1rem;
