@@ -57,6 +57,7 @@ function Hero({ title1, title2, subTitle, button, link }) {
               name={button}
               type={darkMode ? "btnType5-dark" : "btnType5"}
               link={link}
+              arrow="arrow"
             />
           </div>
         </div>

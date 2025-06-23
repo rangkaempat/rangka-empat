@@ -134,6 +134,7 @@ function HomeHero() {
                 name="VIEW OUR WORK"
                 type={darkMode ? "btnType5-dark" : "btnType5"}
                 link="/work"
+                arrow="arrow"
               />
             )}
 
@@ -152,6 +153,7 @@ function HomeHero() {
                 name="VIEW OUR WORK"
                 type={darkMode ? "btnType5-dark" : "btnType5"}
                 link="/work"
+                arrow="arrow"
               />
             )}
           </motion.div>
