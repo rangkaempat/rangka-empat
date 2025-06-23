@@ -30,8 +30,10 @@ function HomeUSP() {
           viewport={{ once: true, amount: 0.2 }}
           variants={staggerContainer}
         >
-          <motion.h2 variants={fadeInWithEase}>Why Choose Us?</motion.h2>
-          <motion.p variants={fadeInWithEase}>
+          <motion.h2 variants={fadeInWithEase} className="textBold textXL">
+            Why Choose Us?
+          </motion.h2>
+          <motion.p variants={fadeInWithEase} className="textLight textM">
             We’re here to bring your ideas to life, blending creativity with
             technology to craft experiences that feel human, authentic, and
             unforgettable.

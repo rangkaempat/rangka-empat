@@ -24,7 +24,7 @@ function HomeServices() {
               viewport={{ once: true, amount: 0.2 }}
               variants={staggerContainer}
             >
-              <motion.h2 variants={fadeInWithEase}>
+              <motion.h2 variants={fadeInWithEase} className="textXL">
                 Our 4 Key Service Pillars
               </motion.h2>
               <motion.p variants={fadeInWithEase}>

@@ -56,11 +56,14 @@ function HomeClients() {
                 variants={staggerContainer}
               >
                 <motion.h2
-                  className="homeClientsTitle"
+                  className="textLight textXL"
                   variants={fadeInWithEase}
                 >
-                  <span>A Malaysian-based </span>Web & Digital Solutions Studio
-                  <span> for Malaysia's Boldest Brands</span>
+                  A Malaysian-based{" "}
+                  <span className="textRegular">
+                    Web & Digital Solutions Studio
+                  </span>{" "}
+                  for Malaysia's Boldest Brands
                 </motion.h2>
 
                 <motion.div

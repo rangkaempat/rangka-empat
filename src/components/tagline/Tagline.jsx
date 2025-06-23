@@ -15,7 +15,7 @@ function Tagline() {
           }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          We Design.
+          WE DESIGN.
         </motion.div>
 
         <motion.span
@@ -26,7 +26,7 @@ function Tagline() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <Typewriter
-            words={["We Code."]}
+            words={["WE CODE."]}
             loop={0}
             cursor
             cursorStyle="|"
@@ -46,7 +46,7 @@ function Tagline() {
           }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          We Deliver.
+          WE DELIVER.
         </motion.div>
 
         <motion.span
@@ -60,7 +60,7 @@ function Tagline() {
           }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          We Care.
+          WE CARE.
         </motion.span>
       </h2>
     </>
