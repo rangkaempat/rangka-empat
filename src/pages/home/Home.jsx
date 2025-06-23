@@ -36,7 +36,7 @@ function Home2() {
       <HomeClients />
       <HomeUSP />
       <HomeServices />
-      <FAQ />
+      {/* <FAQ /> */}
       <HomeForm />
       <Footer />
     </>
