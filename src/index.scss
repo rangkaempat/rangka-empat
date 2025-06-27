@@ -74,6 +74,10 @@ li {
   list-style-type: none;
 }
 
+.sr-only {
+  display: none;
+}
+
 // =======================================
 // STANDARDIZED SECTION STYLES (PLAIN / GRADIENT BACKGROUND)
 // This is a standard style for all sections in the app that have either a light or dark background.

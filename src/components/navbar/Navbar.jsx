@@ -45,23 +45,23 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.div
+      <motion.header
         className={
           darkMode
-            ? "sectionDark navbar2Background"
-            : "sectionLight navbar2Background"
+            ? "sectionDark navbarBackground"
+            : "sectionLight navbarBackground"
         }
         initial={{ y: 0 }}
         animate={{ y: showNavbar ? 0 : "-100%" }}
         transition={{ duration: 0.2, ease: "easeInOut" }}
       >
         <motion.div
-          className="navbar2Container"
+          className="navbarContainer"
           variants={popContainer}
           initial="hidden"
           animate="visible"
         >
-          {/* Navbar Logo */}
+          {/* NAVBAR LOGO */}
           <motion.div variants={popItem}>
             <Link
               to="/"
@@ -71,16 +71,16 @@ export default function Navbar() {
               }}
             >
               <img
-                className="nav2logo"
+                className="navlogo"
                 src={darkMode ? navLogoDark : navLogoLight}
                 alt="Rangka Empat Studio Logo"
               />
             </Link>
           </motion.div>
 
-          {/* NAV BUTTONS */}
-          <motion.div
-            className="nav2ButtonContainer"
+          {/* UTILITY NAV BUTTONS */}
+          <motion.nav
+            className="navButtonContainer"
             variants={popContainer}
             initial="hidden"
             animate="visible"
@@ -120,11 +120,12 @@ export default function Navbar() {
               className="navButtonMenu"
               onClick={toggleMenu}
               variants={popItem}
+              aria-label={isOpen ? "Close menu" : "Open menu"}
             >
-              <h6>MENU</h6>
+              <div className="navButtonMenuText">MENU</div>
               <AnimatePresence mode="wait">
                 {isOpen ? (
-                  <div className="navIcon2">
+                  <div className="navIcon">
                     <motion.svg
                       key="close"
                       xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +142,7 @@ export default function Navbar() {
                     </motion.svg>
                   </div>
                 ) : (
-                  <div className="navIcon2">
+                  <div className="navIcon">
                     <motion.svg
                       key="menu"
                       xmlns="http://www.w3.org/2000/svg"
@@ -160,9 +161,9 @@ export default function Navbar() {
                 )}
               </AnimatePresence>
             </motion.button>
-          </motion.div>
+          </motion.nav>
         </motion.div>
-      </motion.div>
+      </motion.header>
 
       {/* Modal for Nav Links */}
       <AnimatePresence>

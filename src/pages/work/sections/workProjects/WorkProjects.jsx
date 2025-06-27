@@ -21,20 +21,22 @@ function WorkProjects() {
       ? workCards
       : workCards.filter((card) => card.category.includes(selectedCategory));
 
+  const categories = [
+    "ALL PROJECTS",
+    "REBRANDING",
+    "CUSTOM WEB APPS",
+    "E-COMMERCE",
+    "PRODUCT",
+  ];
+
   return (
     <>
       <section className={darkMode ? "sectionDark" : "sectionLight"}>
         <div className="sectionContent workProjectsSection">
-          <div className="workProjectsLeft">
+          <nav className="workProjectsLeft">
             {isDesktop ? (
               <>
-                {[
-                  "ALL PROJECTS",
-                  "REBRANDING",
-                  "CUSTOM WEB APPS",
-                  "E-COMMERCE",
-                  "PRODUCT",
-                ].map((category) => (
+                {categories.map((category) => (
                   <button
                     key={category}
                     className={`${
@@ -98,13 +100,7 @@ function WorkProjects() {
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         style={{ overflow: "hidden" }}
                       >
-                        {[
-                          "ALL PROJECTS",
-                          "REBRANDING",
-                          "CUSTOM WEB APPS",
-                          "E-COMMERCE",
-                          "PRODUCT",
-                        ].map((category, i) => (
+                        {categories.map((category, i) => (
                           <motion.button
                             key={category}
                             className={`${
@@ -134,7 +130,7 @@ function WorkProjects() {
                 </div>
               </>
             )}
-          </div>
+          </nav>
 
           <div className="workProjectsRight">
             <div className="workProjectsCardWrapper">

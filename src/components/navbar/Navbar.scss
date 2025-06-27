@@ -6,7 +6,7 @@ $medium: #707070;
 $darkbg: #000000;
 $lightbg: #f2f2f2;
 
-.navbar2Background {
+.navbarBackground {
   height: 70px;
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@ $lightbg: #f2f2f2;
   z-index: 1000;
   background: none;
 
-  .navbar2Container {
+  .navbarContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,12 +34,12 @@ $lightbg: #f2f2f2;
       padding: 0 1rem;
     }
 
-    .nav2logo {
+    .navlogo {
       height: 40px;
       display: block;
     }
 
-    .nav2ButtonContainer {
+    .navButtonContainer {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -54,7 +54,7 @@ $lightbg: #f2f2f2;
         background: none;
 
         &:hover {
-          h6 {
+          .navButtonMenuText {
             color: $primary;
             transition: 0.3s;
           }
@@ -65,19 +65,18 @@ $lightbg: #f2f2f2;
           }
         }
 
-        h6 {
+        .navButtonMenuText {
           color: black;
           font-size: 19px;
           width: max-content;
           background: rgba(244, 244, 244, 0.8);
           backdrop-filter: blur(7.5px);
           border-radius: 30px;
-          font-weight: 300;
           padding: 0.3rem 3rem 0.3rem 1rem;
           box-shadow: 0px 0px 1px 2px #6868681f;
         }
 
-        .navIcon2 {
+        .navIcon {
           position: absolute;
           right: 0;
           display: flex;
@@ -93,7 +92,7 @@ $lightbg: #f2f2f2;
       }
     }
 
-    .nav2MenuIconDark {
+    .navMenuIconDark {
       svg {
         fill: $light;
         &:hover {

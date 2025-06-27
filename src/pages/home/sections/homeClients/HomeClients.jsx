@@ -61,7 +61,7 @@ function HomeClients() {
                 >
                   A Malaysian-based{" "}
                   <span className="textRegular">
-                    Web & Digital Solutions Studio
+                    Web Design, Development & Digital Solutions Studio
                   </span>{" "}
                   for Malaysia's Boldest Brands
                 </motion.h2>

@@ -14,79 +14,87 @@ $lightbg: #f2f2f2;
     max-width: 100%;
   }
 
-  .footerContent2 {
+  .footerContent {
     gap: 1rem;
 
     @media screen and (max-width: 768px) {
       gap: 3.5rem;
     }
 
-    .footerTopContainer {
-      display: flex;
-      gap: 2rem;
-      justify-content: start;
+    .footerTopWrapper {
       width: 100%;
 
-      @media screen and (max-width: 768px) {
-        flex-direction: column;
-      }
-
-      .footerLink {
+      .footerTopContainer {
         display: flex;
-        gap: 1rem;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-
-        &:hover {
-          svg {
-            fill: $primary;
-            transition: 0.3s;
-          }
-        }
-      }
-
-      h2 {
-        display: flex;
+        gap: 2rem;
+        justify-content: start;
         width: 100%;
-        justify-content: end;
-        gap: 1rem;
-
-        span {
-          font-weight: 200;
-        }
 
         @media screen and (max-width: 768px) {
           flex-direction: column;
         }
+
+        .footerLink {
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem;
+
+          &:hover {
+            svg {
+              fill: $primary;
+              transition: 0.3s;
+            }
+          }
+        }
+
+        h2 {
+          display: flex;
+          width: 100%;
+          justify-content: end;
+          gap: 1rem;
+
+          span {
+            font-weight: 200;
+          }
+
+          @media screen and (max-width: 768px) {
+            flex-direction: column;
+          }
+        }
       }
     }
 
-    .footerSocialsContainer {
-      display: flex;
-      gap: 2rem;
-      justify-content: start;
+    .footerSocialsWrapper {
       width: 100%;
 
-      @media screen and (max-width: 768px) {
-        justify-content: center;
-      }
-
-      .footerLink {
+      .footerSocialsContainer {
         display: flex;
-        gap: 1rem;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
+        gap: 2rem;
+        justify-content: start;
+        width: 100%;
 
         @media screen and (max-width: 768px) {
-          padding: 0.3rem;
+          justify-content: center;
         }
 
-        &:hover {
-          svg {
-            fill: $primary;
-            transition: 0.3s;
+        .footerLink {
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem;
+
+          @media screen and (max-width: 768px) {
+            padding: 0.3rem;
+          }
+
+          &:hover {
+            svg {
+              fill: $primary;
+              transition: 0.3s;
+            }
           }
         }
       }
@@ -124,8 +132,7 @@ $lightbg: #f2f2f2;
         }
       }
 
-      h5 {
-        font-weight: 200;
+      small {
         text-align: end;
 
         @media screen and (max-width: 768px) {
