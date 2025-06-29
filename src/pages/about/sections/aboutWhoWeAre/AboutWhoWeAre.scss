@@ -23,38 +23,50 @@ $lightbg: #f2f2f2;
       text-align: start;
     }
 
-    p {
-      text-align: justify;
+    .aboutWhoWeAreTextRight {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
       border-left: 1px solid $medium;
       padding-left: 3rem;
-    }
-  }
+      gap: 3rem;
 
-  .aboutWhoWeAreCarouselWrapper {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
-
-    @media screen and (max-width: 1024px) {
-      justify-content: center;
-    }
-
-    @media screen and (max-width: 1024px) {
-      flex-direction: column;
-    }
-
-    img {
-      width: 20%;
-
-      @media screen and (max-width: 1024px) {
-        width: 30%;
+      p {
+        text-align: justify;
       }
 
-      @media screen and (max-width: 768px) {
-        width: 90%;
+      .aboutWhoWeAreCarouselWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+          align-items: start;
+          gap: 1rem;
+        }
+
+        img {
+          width: 32%;
+
+          @media screen and (max-width: 768px) {
+            width: 90%;
+          }
+        }
       }
     }
   }
+}
+
+.textMask {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
 }
