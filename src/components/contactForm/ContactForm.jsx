@@ -1,14 +1,11 @@
 import React, { useContext } from "react";
-import "./HomeForm.scss";
+import "./ContactForm.scss";
 import { motion } from "framer-motion";
-import {
-  fadeInWithEase,
-  staggerContainer,
-} from "../../../../functions/motionUtils";
-import ButtonForm from "../../../../components/button/ButtonForm";
+import { fadeInWithEase, staggerContainer } from "../../functions/motionUtils";
+import ButtonForm from "../button/ButtonForm";
 import { useForm } from "react-hook-form";
-import { ThemeContext } from "../../../../functions/themeContext";
-import Button from "../../../../components/button/Button";
+import Button from "../button/Button";
+import { ThemeContext } from "../../functions/themeContext";
 
 const features = [
   "Fully Custom Website",
@@ -19,7 +16,7 @@ const features = [
   "Secure & Reliable",
 ];
 
-function HomeForm() {
+function ContactForm() {
   const { darkMode } = useContext(ThemeContext);
 
   const {
@@ -35,10 +32,10 @@ function HomeForm() {
   return (
     <>
       <section className={darkMode ? "sectionDark" : "sectionLight"}>
-        <div className="sectionContent homeFormContent">
+        <div className="sectionContent contactFormContent">
           {/* Title & Description */}
           <motion.div
-            className="homeFormTextContainer"
+            className="contactFormTextContainer"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
@@ -52,7 +49,7 @@ function HomeForm() {
               we’re here to help you
               <span className="textBold"> create something extraordinary.</span>
             </motion.p>
-            <ul className="homeFormContact">
+            <ul className="contactFormContact">
               <motion.li className="textLight textXS" variants={fadeInWithEase}>
                 • EMAIL{" "}
                 <a href="mailto:we@rangkaempat.com" className="textRegular">
@@ -85,7 +82,7 @@ function HomeForm() {
           </motion.div>
 
           <motion.div
-            className="homeFormTextContainer"
+            className="contactFormTextContainer"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
@@ -187,4 +184,4 @@ function HomeForm() {
   );
 }
 
-export default HomeForm;
+export default ContactForm;

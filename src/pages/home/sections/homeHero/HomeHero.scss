@@ -94,53 +94,6 @@ $lightbg: #f2f2f2;
       align-items: center;
       flex-direction: row;
       width: 100%;
-
-      .workCardContent {
-        display: flex;
-        flex-direction: column;
-        width: 45%;
-        aspect-ratio: 3 / 4.5;
-        text-align: start;
-        gap: 0.5rem;
-        position: relative;
-
-        &:hover {
-          .clientLink {
-            opacity: 1;
-            transition: 0.3;
-          }
-        }
-
-        @media screen and (max-width: 1024px) {
-          width: 48%;
-        }
-
-        h3 {
-          text-align: end;
-        }
-
-        .clientLogo {
-          position: absolute;
-          width: 30%;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
-        }
-
-        .clientWorkImage {
-          width: 100%;
-        }
-
-        .clientLink {
-          position: absolute;
-          left: 50%;
-          bottom: 10%;
-          transform: translate(-50%, -50%);
-          opacity: 0;
-          color: $light;
-          transition: 0.3;
-        }
-      }
     }
   }
 }

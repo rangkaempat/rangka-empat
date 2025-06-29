@@ -65,7 +65,7 @@ export const fadeInWithEase = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1.5,
+      duration: 0.8,
       ease: [0.25, 0.8, 0.25, 1],
     },
   },
@@ -77,7 +77,7 @@ export const fadeInWithEase2 = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1.5,
+      duration: 0.8,
       ease: [0.25, 0.8, 0.25, 1],
     },
   },

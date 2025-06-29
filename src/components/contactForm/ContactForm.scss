@@ -6,18 +6,18 @@ $medium: #707070;
 $darkbg: #000000;
 $lightbg: #f2f2f2;
 
-.homeFormContent {
+.contactFormContent {
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
-  padding: 1rem;
+  padding: 5rem 1rem 1rem 1rem;
   overflow: hidden;
 
   @media screen and (max-width: 1024px) {
     flex-direction: column;
   }
 
-  .homeFormTextContainer {
+  .contactFormTextContainer {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -40,7 +40,7 @@ $lightbg: #f2f2f2;
       }
     }
 
-    .homeFormContact {
+    .contactFormContact {
       display: flex;
       justify-content: start;
       align-items: center;

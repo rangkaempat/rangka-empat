@@ -25,10 +25,14 @@ $lightbg: #f2f2f2;
 
   h2 {
     text-align: start;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
   }
 
   p {
-    color: $medium;
+    // color: $medium;
     width: 70%;
     text-align: justify;
 

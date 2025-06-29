@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import "./Tagline.scss";
 
 function Tagline() {
   return (
     <>
-      <h2 className="textOverflow textL">
+      <h2 className="textOverflow textL tagline">
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -37,7 +38,7 @@ function Tagline() {
         </motion.span>
 
         <motion.div
-          initial={{ opacity: 0, x: 200 }}
+          initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{
             duration: 0.6,

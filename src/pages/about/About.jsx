@@ -5,6 +5,9 @@ import Footer from "../../components/footer/Footer";
 import background from "/src/assets/about-bg-2.webp";
 import { ThemeContext } from "../../functions/themeContext";
 import Seo from "../../components/Seo";
+import AboutWhoWeAre from "./sections/aboutWhoWeAre/AboutWhoWeAre";
+import ContactForm from "../../components/contactForm/ContactForm";
+import AboutOurProcess from "./sections/aboutOurProcess/AboutOurProcess";
 
 function About() {
   const { darkMode } = useContext(ThemeContext);
@@ -38,11 +41,9 @@ function About() {
         button="VIEW OUR WORK"
         link="/work"
       />
-      <section className={darkMode ? "sectionDark" : "sectionLight"}>
-        <div className="sectionWrapper">
-          <div className="sectionContent">About Us Section</div>
-        </div>
-      </section>
+      <AboutWhoWeAre />
+      <AboutOurProcess />
+      <ContactForm />
       <Footer />
     </>
   );

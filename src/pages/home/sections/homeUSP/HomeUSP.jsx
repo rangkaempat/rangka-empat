@@ -30,13 +30,21 @@ function HomeUSP() {
           viewport={{ once: true, amount: 0.2 }}
           variants={staggerContainer}
         >
-          <motion.h2 variants={fadeInWithEase} className="textBold textXL">
-            Why Choose Us?
+          <motion.h2 variants={fadeInWithEase} className="textBold textXXL">
+            WHY <br />
+            CHOOSE <br />
+            RANGKA <br />
+            EMPAT?
           </motion.h2>
-          <motion.p variants={fadeInWithEase} className="textLight textM">
-            We’re here to bring your ideas to life, blending creativity with
-            technology to craft experiences that feel human, authentic, and
-            unforgettable.
+          <motion.p variants={fadeInWithEase} className="textLight textS">
+            At Rangka Empat Studio, we help brands grow through strategic
+            branding, professional web design, and custom-built web
+            applications.
+            <br />
+            <br />
+            Whether you're a startup or established business, we work closely
+            with you to turn ideas into digital experiences that connect and
+            convert.
           </motion.p>
         </motion.div>
       </div>

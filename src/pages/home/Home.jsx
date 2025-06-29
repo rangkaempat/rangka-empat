@@ -4,10 +4,10 @@ import HomeUSP from "./sections/homeUSP/HomeUSP";
 import HomeHero from "./sections/homeHero/HomeHero";
 import HomeServices from "./sections/homeServices/HomeServices";
 import HomePricing from "./sections/homePricing/HomePricing";
-import HomeForm from "./sections/homeForm/HomeForm";
 import HomeClients from "./sections/homeClients/HomeClients";
 import Footer from "../../components/footer/Footer";
 import Seo from "../../components/Seo";
+import ContactForm from "../../components/contactForm/ContactForm";
 import FAQ from "../../components/faq/faq";
 
 function Home2() {
@@ -37,7 +37,7 @@ function Home2() {
       <HomeUSP />
       <HomeServices />
       {/* <FAQ /> */}
-      <HomeForm />
+      <ContactForm />
       <Footer />
     </>
   );

@@ -5,6 +5,7 @@ import Footer from "../../components/footer/Footer";
 import { ThemeContext } from "../../functions/themeContext";
 import Seo from "../../components/Seo";
 import WorkProjects from "./sections/workProjects/WorkProjects";
+import ContactForm from "../../components/contactForm/ContactForm";
 
 function Work() {
   const { darkMode } = useContext(ThemeContext);
@@ -47,6 +48,7 @@ function Work() {
         link="/services"
       />
       <WorkProjects />
+      <ContactForm />
       <Footer />
     </>
   );

@@ -23,10 +23,10 @@ function HomeServices() {
             viewport={{ once: true, amount: 0.2 }}
             variants={staggerContainer}
           >
-            <motion.h2 variants={fadeInWithEase} className="textXL">
-              Our 4 Key Service Pillars
+            <motion.h2 variants={fadeInWithEase} className="textXXXL">
+              EXPERTS IN WHAT WE DO
             </motion.h2>
-            <motion.p variants={fadeInWithEase}>
+            <motion.p variants={fadeInWithEase} className="textXS textLight">
               We offer a comprehensive suite of digital services across four
               core pillars – Branding & Identity, Web Design & User Experience,
               Web Development & Digital Solutions, and Digital Marketing & SEO.

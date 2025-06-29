@@ -68,7 +68,7 @@ function HomeHero() {
                 transition={{ delay: 1.2 }}
               >
                 <h2 className="textLight textS">
-                  Malaysia Custom Web Design, Development & Digital Solutions
+                  Malaysia Web Design, Development & Digital Solutions Studio
                 </h2>
               </motion.div>
             </div>
