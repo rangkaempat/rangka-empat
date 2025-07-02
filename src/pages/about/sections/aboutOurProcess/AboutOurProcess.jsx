@@ -6,6 +6,11 @@ import image1 from "/src/assets/processCard/process-discovery-&-strategy.webp";
 import Button from "../../../../components/button/Button";
 import ProcessCard from "../../../../components/processCard/ProcessCard";
 import processCardData from "../../../../data/processCardData";
+import { motion } from "framer-motion";
+import {
+  fadeInWithEase,
+  staggerContainer,
+} from "../../../../functions/motionUtils";
 
 function AboutOurProcess() {
   const { darkMode } = useContext(ThemeContext);
@@ -14,12 +19,20 @@ function AboutOurProcess() {
     <>
       <section className={darkMode ? "sectionDark" : "sectionLight"}>
         <div className="sectionContent aboutOurProcessContent">
-          <div className="aboutOurProcessTitle">
-            <h2 className="textBold textXXXL">OUR 4-PHASE PROCESS</h2>
-            <p className="textLight textS">
+          <motion.div
+            className="aboutOurProcessTitle"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={staggerContainer}
+          >
+            <motion.h2 className="textBold textXXXL" variants={fadeInWithEase}>
+              OUR 4-PHASE PROCESS
+            </motion.h2>
+            <motion.p className="textLight textS" variants={fadeInWithEase}>
               We like to keep things simple, collaborative, and transparent.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
           <div className="aboutOurProcessCardWrapper">
             {processCardData.map((item, index) => (

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./ProcessCard.scss";
 import Button from "../button/Button";
 import { motion } from "framer-motion";
 import { fadeInWithEase, staggerContainer } from "../../functions/motionUtils";
+import { ThemeContext } from "../../functions/themeContext";
 
 function ProcessCard({ id, title, description, features, image }) {
+  const { darkMode } = useContext(ThemeContext);
+
   return (
     <>
       <motion.div
@@ -24,7 +27,7 @@ function ProcessCard({ id, title, description, features, image }) {
 
           <Button
             name="Start Your Project"
-            type="btnType1"
+            type={darkMode ? "btnType1" : "btnType1-light"}
             link="/start-your-project"
             arrow="rocket"
           />

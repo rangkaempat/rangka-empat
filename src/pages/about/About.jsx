@@ -8,6 +8,7 @@ import Seo from "../../components/Seo";
 import AboutWhoWeAre from "./sections/aboutWhoWeAre/AboutWhoWeAre";
 import ContactForm from "../../components/contactForm/ContactForm";
 import AboutOurProcess from "./sections/aboutOurProcess/AboutOurProcess";
+import AboutOurClients from "./sections/aboutOurClients/AboutOurClients";
 
 function About() {
   const { darkMode } = useContext(ThemeContext);
@@ -43,6 +44,7 @@ function About() {
       />
       <AboutWhoWeAre />
       <AboutOurProcess />
+      <AboutOurClients />
       <ContactForm />
       <Footer />
     </>
