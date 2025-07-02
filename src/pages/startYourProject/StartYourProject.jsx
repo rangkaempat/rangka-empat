@@ -4,10 +4,9 @@ import Hero from "../../components/hero/Hero";
 import Footer from "../../components/footer/Footer";
 import { ThemeContext } from "../../functions/themeContext";
 import Seo from "../../components/Seo";
+import StartYourProjectHero from "./startYourProjectHero/StartYourProjectHero";
 
 function StartYourProject() {
-  const { darkMode } = useContext(ThemeContext);
-
   return (
     <>
       <Seo
@@ -43,19 +42,7 @@ function StartYourProject() {
       />
 
       <Navbar />
-      <Hero
-        title1="START YOUR"
-        title2="PROJECT"
-        subTitle="Hey there! Ready to get started?"
-        button="PRICING"
-        link="/pricing"
-      />
-      <section className={darkMode ? "sectionDark" : "sectionLight"}>
-        <div className="sectionWrapper">
-          <div className="sectionContent">StartYourProject Section</div>
-        </div>
-      </section>
-      <Footer />
+      <StartYourProjectHero />
     </>
   );
 }

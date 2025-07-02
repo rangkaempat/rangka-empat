@@ -216,18 +216,22 @@ li {
 
 .textLight {
   font-weight: 200;
+  transition: font-weight 0.5s;
 }
 
 .textRegular {
   font-weight: 500;
+  transition: font-weight 0.5s;
 }
 
 .textBold {
   font-weight: 700;
+  transition: font-weight 0.5s;
 }
 
 .textExtraBold {
   font-weight: 900;
+  transition: font-weight 0.5s;
 }
 
 /* MOBILE FONT SIZES */

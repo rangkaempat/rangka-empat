@@ -153,6 +153,7 @@ $lightbg: #f2f2f2;
   border: 2px solid white;
   transition: 0.2s;
   width: 280px;
+  background: black;
 
   &:hover {
     border: 2px solid $primary;
@@ -173,6 +174,7 @@ $lightbg: #f2f2f2;
   border: 2px solid black;
   transition: 0.2s;
   width: 280px;
+  background: light;
 
   &:hover {
     border: 2px solid $primary;

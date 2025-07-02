@@ -1,0 +1,182 @@
+$primary: #0aaab8;
+$secondary: #0a6ab8;
+$dark: #323232;
+$light: #ffffff;
+$medium: #707070;
+$darkbg: #000000;
+$lightbg: #f2f2f2;
+
+.startYourProjectContent {
+  padding: 5rem 1rem;
+  flex-direction: row;
+  align-items: start;
+  gap: 0;
+  margin-bottom: 8rem;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .startYourProjectForm {
+    width: 70%;
+    height: 110vh;
+    min-height: fit-content;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    position: relative;
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      //   height: fit-content;
+      height: 110vh;
+      min-height: fit-content;
+      padding: 0;
+    }
+
+    .formDescription {
+      text-align: justify;
+    }
+
+    .formSection {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $medium;
+
+      h2 {
+        text-align: start;
+        padding: 1rem;
+      }
+    }
+
+    .formStepDots {
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0;
+      gap: 0.5rem;
+
+      .stepDot {
+        width: 50px;
+        height: 5px;
+        border-radius: 10px;
+        background: $medium;
+        transition: background 0.3s ease;
+
+        &.active {
+          background: $primary;
+          width: 80px;
+          transition: width 0.5s ease;
+        }
+      }
+    }
+
+    .formQuestionBlock {
+      .formQuestion {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 2rem 0;
+        text-align: start;
+        gap: 1rem;
+
+        @media screen and (max-width: 1024px) {
+          padding: 1rem 0;
+        }
+
+        p {
+          font-style: italic;
+          color: $medium;
+        }
+      }
+
+      .formAnswerWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+        .formAnswer {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          padding: 1rem;
+          gap: 1.5rem;
+          text-align: start;
+
+          @media screen and (max-width: 768px) {
+            padding: 0.3rem;
+          }
+
+          &.selected {
+            .tickbox {
+              background-color: $dark;
+            }
+          }
+
+          .tickbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid $medium;
+            transition: background-color 0.3s;
+            svg {
+              fill: $light;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.textInput,
+.textArea {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-bottom: 1px solid $medium;
+  color: $medium;
+  background: none;
+}
+
+.textArea {
+  height: 300px;
+}
+
+.subfieldList {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 0 0 2rem 0;
+}
+
+.formButtonContainer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 0;
+  gap: 1rem;
+
+  background: linear-gradient(to top, #f2f2f2, #f2f2f200);
+
+  &.dark {
+    background: linear-gradient(to top, #000000, #00000000);
+    transition: background 0.5s;
+  }
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+
+  .formButton {
+    background: none;
+    border: none;
+  }
+}
