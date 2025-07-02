@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import "./WorkCard.scss";
+import { motion } from "framer-motion";
+import { fadeInWithEase, staggerContainer } from "../../functions/motionUtils";
 
 export default function WorkCard({
   id,
@@ -11,7 +13,10 @@ export default function WorkCard({
   workPage,
 }) {
   return (
-    <div className={`workCardContent ${workPage ? "workProjectsCard" : ""}`}>
+    <motion.div
+      className={`workCardContent ${workPage ? "workProjectsCard" : ""}`}
+      variants={fadeInWithEase}
+    >
       <h3>{id}</h3>
       <Link to={link}>
         <img src={logo} alt={`${title} Logo`} className="clientLogo" />
@@ -19,6 +24,6 @@ export default function WorkCard({
       </Link>
       <h4 className="textXXS textRegular">{title}</h4>
       <h5 className="textXXS textLight">{industry}</h5>
-    </div>
+    </motion.div>
   );
 }

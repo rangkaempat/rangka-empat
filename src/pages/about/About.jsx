@@ -42,7 +42,7 @@ function About() {
         link="/work"
       />
       <AboutWhoWeAre />
-      {/* <AboutOurProcess /> */}
+      <AboutOurProcess />
       <ContactForm />
       <Footer />
     </>

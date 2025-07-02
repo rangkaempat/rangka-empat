@@ -5,6 +5,7 @@ import WorkCard from "../../../../components/workCard/WorkCard";
 import { workCards } from "../../../../data/workCardData";
 import mediaQuery from "../../../../functions/mediaQuery";
 import { AnimatePresence, motion } from "framer-motion";
+import { staggerContainer } from "../../../../functions/motionUtils";
 
 function WorkProjects() {
   const { darkMode } = useContext(ThemeContext);
@@ -133,11 +134,17 @@ function WorkProjects() {
           </nav>
 
           <div className="workProjectsRight">
-            <div className="workProjectsCardWrapper">
+            <motion.div
+              className="workProjectsCardWrapper"
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={staggerContainer}
+            >
               {filteredCards.map((card) => (
                 <WorkCard key={card.id} {...card} workPage="True" />
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
