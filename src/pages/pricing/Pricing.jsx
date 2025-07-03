@@ -1,12 +1,24 @@
-import React, { useEffect, useContext } from "react";
+import React, { useRef, useState, useEffect, useContext } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Hero from "../../components/hero/Hero";
 import Footer from "../../components/footer/Footer";
 import { ThemeContext } from "../../functions/themeContext";
 import Seo from "../../components/Seo";
+import PriceCard from "../../components/priceCard/PriceCard";
+import {
+  maintenancePriceCardItems,
+  webPriceCardItems,
+} from "../../data/PriceCardData";
+import "./Pricing.scss";
+import { motion } from "framer-motion";
+import { fadeInWithEase, staggerContainer } from "../../functions/motionUtils";
+import horizontalDragScroll from "../../functions/horizontalDragScroll";
 
 function Pricing() {
   const { darkMode } = useContext(ThemeContext);
+
+  const webCardScrollRef = horizontalDragScroll();
+  const maintenanceCardScrollRef = horizontalDragScroll();
 
   return (
     <>
@@ -45,10 +57,94 @@ function Pricing() {
         button="GET STARTED"
         link="/start-your-project"
       />
-      <section className={darkMode ? "sectionDark" : "sectionLight"}>
-        <div className="sectionWrapper">
-          <div className="sectionContent">Pricing Section</div>
-        </div>
+      <section className="sectionDark">
+        <motion.div
+          className="sectionContent pricingSectionContent"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={staggerContainer}
+        >
+          <motion.h2 className="textBold textXXL" variants={fadeInWithEase}>
+            Web Design Plans
+          </motion.h2>
+          <motion.p className="textLight textS" variants={fadeInWithEase}>
+            Bring your vision to life with our custom web design solutions
+            tailored for startups, SMEs, and growing brands.
+          </motion.p>
+          <motion.p className="textLight" variants={fadeInWithEase}>
+            Whether you need a sleek company profile, a product-focused landing
+            page, or a fully functional e-commerce store, our design plans
+            combine creativity, performance, and SEO best practices to help your
+            business stand out.
+          </motion.p>
+          <motion.div
+            ref={webCardScrollRef}
+            className="priceCardWrapper"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={staggerContainer}
+          >
+            {webPriceCardItems.map((plan, index) => (
+              <PriceCard
+                key={index}
+                id={plan.index}
+                name={plan.name}
+                starting={plan.starting}
+                price={plan.price}
+                target={plan.target}
+                features={plan.features}
+              />
+            ))}
+          </motion.div>
+          <div className="scrollDotWrapper">
+            <div className="scrollDot" />
+            <div className="scrollDot" />
+            <div className="scrollDot" />
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="sectionContent pricingSectionContent"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={staggerContainer}
+        >
+          <motion.h2 className="textBold textXXL" variants={fadeInWithEase}>
+            Maintenance Plans
+          </motion.h2>
+          <motion.p className="textLight textS" variants={fadeInWithEase}>
+            Keep your website secure, up-to-date, and performing at its best
+          </motion.p>
+          <motion.div
+            ref={maintenanceCardScrollRef}
+            className="priceCardWrapper"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={staggerContainer}
+          >
+            {maintenancePriceCardItems.map((plan, index) => (
+              <PriceCard
+                key={index}
+                id={plan.index}
+                name={plan.name}
+                starting={plan.starting}
+                price={plan.price}
+                target={plan.target}
+                features={plan.features}
+              />
+            ))}
+          </motion.div>
+
+          <div className="scrollDotWrapper">
+            <div className="scrollDot" />
+            <div className="scrollDot" />
+            <div className="scrollDot" />
+          </div>
+        </motion.div>
       </section>
       <Footer />
     </>

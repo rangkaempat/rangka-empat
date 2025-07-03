@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "../button/Button";
 import { Link } from "react-router";
 import "./PriceCard.scss";
@@ -8,8 +8,11 @@ import {
   fadeInWithEase,
   staggerContainer,
 } from "../../functions/motionUtils";
+import { ThemeContext } from "../../functions/themeContext";
 
 function PriceCard({ id, name, starting, price, target, features }) {
+  const { darkMode } = useContext(ThemeContext);
+
   // Map names to their respective class types
   const typeClassMap = {
     Starter: "priceType1",
@@ -25,9 +28,7 @@ function PriceCard({ id, name, starting, price, target, features }) {
       <motion.div
         className={`priceCardContainer ${name === "Business" && "type2"}`}
         key={id}
-        initial={{ y: 0 }}
-        whileHover={{ y: -5 }}
-        transition={{ type: "spring", stiffness: 200 }}
+        variants={fadeInWithEase}
       >
         {/* Popular tag */}
         {name === "Business" ? (
@@ -39,14 +40,12 @@ function PriceCard({ id, name, starting, price, target, features }) {
           <h3 className={`priceCardName ${typeClass}`}>{name}</h3>
           <div>
             <p>{starting}</p>
-            <h4 className={`priceCardPrice ${typeClass}`}>{price}</h4>
+            <h4 className={`priceCardPrice textXL ${typeClass}`}>
+              <span className="textM">RM</span>
+              {price}
+            </h4>
             <p className="priceCardTarget">{target}</p>
           </div>
-          {name === "Business" ? (
-            <Button name="Book a Free Consultation" type="btnType1" link="#" />
-          ) : (
-            <Button name="Book a Free Consultation" type="btnType3" link="#" />
-          )}
 
           {/* Price Card Features */}
           <motion.ul
@@ -59,21 +58,14 @@ function PriceCard({ id, name, starting, price, target, features }) {
             {features.map((feature, index) => (
               <motion.li key={index} variants={fadeInWithEase}>
                 <svg
-                  className="w-[20px] h-[20px] text-gray-800 dark:text-white"
-                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
+                  // fill={darkMode ? "#f2f2f2" : "#323232"}
+                  fill="#f2f2f2"
+                  viewBox="0 0 256 256"
                 >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 11.917 9.724 16.5 19 7.5"
-                  />
+                  <path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path>
                 </svg>
                 {feature}
               </motion.li>
@@ -81,33 +73,22 @@ function PriceCard({ id, name, starting, price, target, features }) {
           </motion.ul>
         </div>
 
-        {/* <motion.div
-          className="priceCardLinkWrapper"
-          initial={{ y: 0 }}
-          whileHover={{ y: -2 }}
-          transition={{ type: "spring", stiffness: 200 }}
-        >
-          <Link className="priceCardLink" to="#">
-            Learn More
-            <svg
-              className="w-[24px] h-[24px] text-gray-800 dark:text-white"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1.5"
-                d="M19 12H5m14 0-4 4m4-4-4-4"
-              />
-            </svg>
-          </Link>
-        </motion.div> */}
+        {/* CTA Button */}
+        {name === "Business" ? (
+          <Button
+            name="Book a Free Consultation"
+            // type={darkMode ? "btnType1" : "btnType1-light"}
+            type="btnType1"
+            link="/contact"
+          />
+        ) : (
+          <Button
+            name="Book a Free Consultation"
+            // type={darkMode ? "btnType2" : "btnType2-light"}
+            type="btnType2"
+            link="/contact"
+          />
+        )}
       </motion.div>
     </>
   );

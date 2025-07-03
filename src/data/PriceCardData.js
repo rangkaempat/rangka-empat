@@ -5,7 +5,7 @@ export const webPriceCardItems = [
     id: 1,
     name: "Starter",
     starting: "Starts from",
-    price: "RM1,500",
+    price: "1,500",
     target: "Ideal for freelancers, micro-businesses, or startups.",
     features: [
       "Up to 5 Pages",
@@ -20,7 +20,7 @@ export const webPriceCardItems = [
     id: 2,
     name: "Business",
     starting: "Starts from",
-    price: "RM3,500",
+    price: "3,500",
     target:
       "Perfect for SMEs looking to establish a comprehensive digital identity.",
     features: [
@@ -35,7 +35,7 @@ export const webPriceCardItems = [
     id: 3,
     name: "Enterprise",
     starting: "Starts from",
-    price: "RM5,000",
+    price: "5,000",
     target: "For businesses looking to expand their reach.",
     features: [
       "All in Business Plan",
@@ -54,7 +54,7 @@ export const maintenancePriceCardItems = [
     id: 1,
     name: "Starter",
     starting: "Monthly fee of",
-    price: "RM100",
+    price: "100",
     target: "Ideal for small businesses and personal websites.",
     features: [
       "2 Content Updates",
@@ -68,7 +68,7 @@ export const maintenancePriceCardItems = [
     id: 2,
     name: "Business",
     starting: "Monthly fee of",
-    price: "RM180",
+    price: "180",
     target: "Perfect for growing businesses with active digital presences.",
     features: [
       "All in Starter",
@@ -83,7 +83,7 @@ export const maintenancePriceCardItems = [
     id: 3,
     name: "Enterprise",
     starting: "Monthly fee of",
-    price: "RM350",
+    price: "350",
     target: "For businesses that demand top performance and dedicated support.",
     features: [
       "All in Business",

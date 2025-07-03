@@ -1,0 +1,63 @@
+$primary: #0aaab8;
+$secondary: #0a6ab8;
+$dark: #323232;
+$light: #ffffff;
+$medium: #707070;
+$darkbg: #000000;
+$lightbg: #f2f2f2;
+
+.pricingSectionContent {
+  padding: 5rem 0 8rem 0;
+  overflow: hidden;
+
+  p {
+    max-width: 1000px;
+    padding: 0 1rem;
+  }
+
+  .priceCardWrapper {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+
+    // Optional: hide scrollbar
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (min-width: 1024px) {
+      justify-content: center;
+      overflow-x: visible;
+      scroll-snap-type: none;
+    }
+  }
+
+  .priceCardWrapper.dragging {
+    cursor: grabbing;
+    user-select: none;
+
+    * {
+      pointer-events: none;
+    }
+  }
+
+  .scrollDotWrapper {
+    display: flex;
+    gap: 0.5rem;
+
+    .scrollDot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: white;
+    }
+  }
+}
