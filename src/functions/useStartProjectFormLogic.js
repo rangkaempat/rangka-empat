@@ -71,6 +71,7 @@ export default function useStartProjectFormLogic() {
     currentSectionIndex,
     currentQuestionIndex,
     formResponses,
+    setFormResponses,
     handleContinue,
     handleBack,
     handleSubmit,

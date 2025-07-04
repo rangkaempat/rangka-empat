@@ -20,17 +20,12 @@ $lightbg: #f2f2f2;
 
   .startYourProjectForm {
     width: 70%;
-    height: 110vh;
-    min-height: fit-content;
     padding-top: 2rem;
     padding-left: 1rem;
     position: relative;
 
     @media screen and (max-width: 1024px) {
       width: 100%;
-      //   height: fit-content;
-      height: 110vh;
-      min-height: fit-content;
       padding: 0;
     }
 

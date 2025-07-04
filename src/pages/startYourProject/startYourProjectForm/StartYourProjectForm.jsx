@@ -27,6 +27,7 @@ function StartYourProjectForm() {
     currentSectionIndex,
     currentQuestionIndex,
     formResponses,
+    setFormResponses,
     handleContinue,
     handleBack,
     handleSubmit,
