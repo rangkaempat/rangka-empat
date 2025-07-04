@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import "./StartYourProjectHero.scss";
+import "./StartYourProjectForm.scss";
 import { ThemeContext } from "../../../functions/themeContext";
 import FormButton from "../../../components/button/ProjectFormButton";
 import background from "/src/assets/start-your-project-background.webp";
@@ -10,6 +10,7 @@ import {
   fadeSlide,
   staggerContainer,
 } from "../../../functions/motionUtils";
+import useStartProjectFormLogic from "../../../functions/useStartProjectFormLogic";
 
 // TO ADD:
 // 1. Save progress to localStorage
@@ -19,67 +20,20 @@ import {
 // 5. Input Validation
 // 6. Submission Handling
 
-function StartYourProjectHero() {
+function StartYourProjectForm() {
   const { darkMode } = useContext(ThemeContext);
-  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [formResponses, setFormResponses] = useState({});
 
-  //   Continue Button Logic Handling
-  const handleContinue = () => {
-    if (currentSectionIndex === 0) {
-      const currentSection = startProjectFormData[0];
-      if (currentQuestionIndex < currentSection.questions.length - 1) {
-        setCurrentQuestionIndex((prev) => prev + 1);
-        return;
-      }
-    }
-
-    // Move to next section
-    if (currentSectionIndex < startProjectFormData.length - 1) {
-      setCurrentSectionIndex((prev) => prev + 1);
-      setCurrentQuestionIndex(0); // Reset for section 0 reuse
-    }
-  };
-
-  //   Back Button Logic Handling
-  const handleBack = () => {
-    if (currentSectionIndex === 0 && currentQuestionIndex > 0) {
-      setCurrentQuestionIndex((prev) => prev - 1);
-      return;
-    }
-
-    if (currentSectionIndex > 0) {
-      setCurrentSectionIndex((prev) => prev - 1);
-      setCurrentQuestionIndex(
-        startProjectFormData[currentSectionIndex - 1].questions.length - 1
-      );
-    }
-  };
-
-  //   Submit Button Logic Handling
-  const handleSubmit = () => {
-    console.log("✅ Final form submission", formResponses);
-    // TODO: Send data to backend or navigate to thank you page
-  };
-
-  //   User Input Collection
-  const handleAnswer = (questionId, answer) => {
-    setFormResponses((prev) => ({
-      ...prev,
-      [questionId]: answer,
-    }));
-  };
-
-  //   Progress Indicator Logic
-  const totalSteps =
-    startProjectFormData[0].questions.length +
-    (startProjectFormData.length - 1);
-
-  const currentStep =
-    currentSectionIndex === 0
-      ? currentQuestionIndex
-      : startProjectFormData[0].questions.length + (currentSectionIndex - 1);
+  const {
+    currentSectionIndex,
+    currentQuestionIndex,
+    formResponses,
+    handleContinue,
+    handleBack,
+    handleSubmit,
+    handleAnswer,
+    totalSteps,
+    currentStep,
+  } = useStartProjectFormLogic();
 
   return (
     <>
@@ -323,4 +277,4 @@ function StartYourProjectHero() {
   );
 }
 
-export default StartYourProjectHero;
+export default StartYourProjectForm;

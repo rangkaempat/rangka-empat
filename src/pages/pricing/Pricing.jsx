@@ -1,3 +1,11 @@
+// Pricing Page
+// Description: Displays scrollable pricing cards (Web and Maintenance plans) with mouse drag and dot indicators.
+// Features:
+// - Drag-to-scroll support via horizontalDragScroll()
+// - Visual scroll position via <ScrollDots />
+// Reusable parts:
+// - <PriceCard />, <ScrollDots />, horizontalDragScroll()
+
 import React, { useRef, useState, useEffect, useContext } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Hero from "../../components/hero/Hero";
@@ -13,12 +21,16 @@ import "./Pricing.scss";
 import { motion } from "framer-motion";
 import { fadeInWithEase, staggerContainer } from "../../functions/motionUtils";
 import horizontalDragScroll from "../../functions/horizontalDragScroll";
+import ScrollDots from "../../components/scrollDots/ScrollDots";
+import mediaQuery from "../../functions/mediaQuery";
 
 function Pricing() {
   const { darkMode } = useContext(ThemeContext);
+  const isDesktop = mediaQuery("(min-width: 1025px)");
 
   const webCardScrollRef = horizontalDragScroll();
   const maintenanceCardScrollRef = horizontalDragScroll();
+  const cardWidth = 280 + 16; // assume 280px card + 1rem gap
 
   return (
     <>
@@ -98,11 +110,13 @@ function Pricing() {
               />
             ))}
           </motion.div>
-          <div className="scrollDotWrapper">
-            <div className="scrollDot" />
-            <div className="scrollDot" />
-            <div className="scrollDot" />
-          </div>
+          {!isDesktop && (
+            <ScrollDots
+              containerRef={webCardScrollRef}
+              totalItems={webPriceCardItems.length}
+              itemWidth={cardWidth}
+            />
+          )}
         </motion.div>
 
         <motion.div
@@ -139,11 +153,13 @@ function Pricing() {
             ))}
           </motion.div>
 
-          <div className="scrollDotWrapper">
-            <div className="scrollDot" />
-            <div className="scrollDot" />
-            <div className="scrollDot" />
-          </div>
+          {!isDesktop && (
+            <ScrollDots
+              containerRef={maintenanceCardScrollRef}
+              totalItems={maintenancePriceCardItems.length}
+              itemWidth={cardWidth}
+            />
+          )}
         </motion.div>
       </section>
       <Footer />

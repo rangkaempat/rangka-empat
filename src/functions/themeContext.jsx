@@ -1,3 +1,12 @@
+// ThemeContext (Dark/Light Mode)
+// Description: Provides dark/light mode state using React Context.
+// Features:
+// - Saves user preference in localStorage
+// - Applies "sectionDark" or "sectionLight" class to <body>
+// How to Use:
+// 1. Wrap your App in <ThemeProvider>
+// 2. Access via: const { darkMode } = useContext(ThemeContext);
+
 import { createContext, useState, useEffect } from "react";
 
 // Create the context

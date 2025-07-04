@@ -4,7 +4,7 @@ import Hero from "../../components/hero/Hero";
 import Footer from "../../components/footer/Footer";
 import { ThemeContext } from "../../functions/themeContext";
 import Seo from "../../components/Seo";
-import StartYourProjectHero from "./startYourProjectHero/StartYourProjectHero";
+import StartYourProjectForm from "./startYourProjectForm/StartYourProjectForm";
 
 function StartYourProject() {
   return (
@@ -42,7 +42,7 @@ function StartYourProject() {
       />
 
       <Navbar />
-      <StartYourProjectHero />
+      <StartYourProjectForm />
     </>
   );
 }

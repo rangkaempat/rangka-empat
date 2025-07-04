@@ -9,10 +9,11 @@ $lightbg: #f2f2f2;
 .pricingSectionContent {
   padding: 5rem 0 8rem 0;
   overflow: hidden;
+  gap: 1rem;
 
   p {
     max-width: 1000px;
-    padding: 0 1rem;
+    padding: 1rem;
   }
 
   .priceCardWrapper {
@@ -44,20 +45,8 @@ $lightbg: #f2f2f2;
     cursor: grabbing;
     user-select: none;
 
-    * {
-      pointer-events: none;
-    }
-  }
-
-  .scrollDotWrapper {
-    display: flex;
-    gap: 0.5rem;
-
-    .scrollDot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: white;
-    }
+    // * {
+    //   pointer-events: none;
+    // }
   }
 }

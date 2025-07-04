@@ -1,3 +1,11 @@
+// horizontalDragScroll Hook
+// Description: A reusable custom hook that enables horizontal drag-to-scroll for mouse users.
+// Returns: a ref to attach to any horizontally scrollable container (e.g., card wrapper).
+// Usage: const scrollRef = horizontalDragScroll(); then <div ref={scrollRef}>...</div>
+// Notes:
+// - Works alongside native touch scrolling.
+// - Adds .dragging class for optional styling feedback.
+
 import { useRef, useEffect } from "react";
 
 export default function horizontalDragScroll() {

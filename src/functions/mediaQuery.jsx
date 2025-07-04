@@ -1,12 +1,16 @@
-import { useEffect, useState } from "react";
+// useMediaQuery Hook
+// Description: A custom hook that returns a boolean for responsive breakpoints.
+// Params:
+// - query (string): a valid CSS media query (e.g., "(max-width: 768px)")
+// Returns:
+// - true if the media query matches, false otherwise
+// How to Use:
+// const isDesktop = useMediaQuery("(min-width: 1025px)")
+//
+// Note:
+// This runs in real-time and listens for changes in screen size.
 
-/**
- * useMediaQuery - a custom hook that returns true or false
- * based on whether the current screen matches the given media query.
- *
- * @param {string} query - CSS media query string e.g. "(min-width: 1025px)"
- * @returns {boolean} - true if the query matches, false otherwise
- */
+import { useEffect, useState } from "react";
 
 export default function mediaQuery(query) {
   const [matches, setMatches] = useState(() => {
