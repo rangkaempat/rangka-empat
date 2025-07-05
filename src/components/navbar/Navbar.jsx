@@ -117,7 +117,7 @@ export default function Navbar() {
 
             {/* MENU BUTTON*/}
             <motion.button
-              className="navButtonMenu"
+              className={darkMode ? "navButtonMenu" : "navButtonMenu light"}
               onClick={toggleMenu}
               variants={popItem}
               aria-label={isOpen ? "Close menu" : "Open menu"}

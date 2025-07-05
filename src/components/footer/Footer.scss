@@ -29,6 +29,11 @@ $lightbg: #f2f2f2;
         gap: 2rem;
         justify-content: start;
         width: 100%;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 1024px) {
+          justify-content: center;
+        }
 
         @media screen and (max-width: 768px) {
           flex-direction: column;

@@ -5,7 +5,7 @@ import "./USPCard.scss";
 function USPCard({ image, title, description, animation }) {
   return (
     <>
-      <motion.div className="USPCard" variants={animation}>
+      <motion.div className="USPCardContainer" variants={animation}>
         <img src={image} alt={title} />
         <div className="USPCardDetails">
           <h3>{title}</h3>

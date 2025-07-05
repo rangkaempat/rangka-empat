@@ -41,7 +41,7 @@ $lightbg: #f2f2f2;
     }
   }
 
-  .priceCardWrapper.dragging {
+  &.dragging {
     cursor: grabbing;
     user-select: none;
 

@@ -9,10 +9,12 @@ import {
 } from "../../../../functions/motionUtils";
 import USPCard from "../../../../components/USPCard/USPCard";
 import { uspCards } from "../../../../data/USPCardData";
+import horizontalDragScroll from "../../../../functions/horizontalDragScroll";
 
 function HomeUSP() {
   const { darkMode } = useContext(ThemeContext);
-  const dragContainerRef = useRef(null);
+  const dragContainerRef = horizontalDragScroll();
+  const cardWidth = 24 % +16; // assume 280px card + 1rem gap
 
   return (
     <section
@@ -49,28 +51,24 @@ function HomeUSP() {
         </motion.div>
       </div>
 
-      <div className="homeUSPDragWrapper" ref={dragContainerRef}>
-        <motion.div
-          className="homeUSPCardContainer"
-          drag="x"
-          dragConstraints={dragContainerRef}
-          whileTap={{ cursor: "grabbing" }}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={staggerContainer}
-        >
-          {uspCards.map((card, index) => (
-            <USPCard
-              key={index}
-              image={card.image}
-              title={card.title}
-              description={card.description}
-              animation={fadeInWithEase}
-            />
-          ))}
-        </motion.div>
-      </div>
+      <motion.div
+        className="homeUSPCardWrapper"
+        ref={dragContainerRef}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={staggerContainer}
+      >
+        {uspCards.map((card, index) => (
+          <USPCard
+            key={index}
+            image={card.image}
+            title={card.title}
+            description={card.description}
+            animation={fadeInWithEase}
+          />
+        ))}
+      </motion.div>
     </section>
   );
 }

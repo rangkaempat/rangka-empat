@@ -23,6 +23,7 @@ import { fadeInWithEase, staggerContainer } from "../../functions/motionUtils";
 import horizontalDragScroll from "../../functions/horizontalDragScroll";
 import ScrollDots from "../../components/scrollDots/ScrollDots";
 import mediaQuery from "../../functions/mediaQuery";
+import ContactForm from "../../components/contactForm/ContactForm";
 
 function Pricing() {
   const { darkMode } = useContext(ThemeContext);
@@ -162,6 +163,8 @@ function Pricing() {
           )}
         </motion.div>
       </section>
+
+      <ContactForm />
       <Footer />
     </>
   );

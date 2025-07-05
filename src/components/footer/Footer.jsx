@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import { ThemeContext } from "../../functions/themeContext";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import Button from "../button/Button";
 import {
   fadeInWithEase,
   fadeInWithEase2,
@@ -56,6 +57,22 @@ function Footer() {
                   <Link to="/pricing" className="footerLink">
                     PRICING
                   </Link>
+                </motion.li>
+                <motion.li variants={fadeInWithEase2}>
+                  <Button
+                    name="START YOUR PROJECT"
+                    link="/start-your-project"
+                    arrow="rocket"
+                    type={darkMode ? "btnType1" : "btnType1-light"}
+                  />
+                </motion.li>
+                <motion.li variants={fadeInWithEase2}>
+                  <Button
+                    name="CONTACT"
+                    link="/contact"
+                    arrow="contact"
+                    type={darkMode ? "btnType5-dark" : "btnType5"}
+                  />
                 </motion.li>
               </motion.ul>
             </nav>
