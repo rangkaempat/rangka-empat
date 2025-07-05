@@ -39,14 +39,14 @@ $lightbg: #f2f2f2;
       overflow-x: visible;
       scroll-snap-type: none;
     }
-  }
 
-  &.dragging {
-    cursor: grabbing;
-    user-select: none;
+    &.dragging {
+      cursor: grabbing;
+      user-select: none;
 
-    // * {
-    //   pointer-events: none;
-    // }
+      // * {
+      //   pointer-events: none;
+      // }
+    }
   }
 }
