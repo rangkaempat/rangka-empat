@@ -58,8 +58,8 @@ function ContactForm() {
               </motion.li>
               <motion.li className="textLight textXS" variants={fadeInWithEase}>
                 • PHONE{" "}
-                <a href="tel:+6012-2501207" className="textRegular">
-                  012-2501207
+                <a href="tel:+6016-2694377" className="textRegular">
+                  016-2694377
                 </a>
               </motion.li>
               <motion.li className="textLight textXS" variants={fadeInWithEase}>
