@@ -52,6 +52,7 @@ function HomeServices() {
                 title={service.title}
                 description={service.description}
                 tags={service.tags}
+                link={service.link}
               />
             ))}
           </motion.div>

@@ -6,7 +6,7 @@ import ServicesCard4 from "/src/assets/servicesCard/ServicesCard4.webp";
 export const servicesCards = [
   {
     image: ServicesCard1,
-    title: "Branding & Identity",
+    title: "BRANDING & IDENTITY",
     description:
       "Build a brand that stands out. From memorable logos to full-scale brand strategies, we craft identities that connect and inspire. Our designs go beyond visuals – they tell your story and set you apart in a crowded market.",
     tags: [
@@ -18,10 +18,11 @@ export const servicesCards = [
       "Brand Naming",
       "Brand Tagline",
     ],
+    link: "/services/#branding",
   },
   {
     image: ServicesCard2,
-    title: "Web Design & User Experience (UI/UX)",
+    title: "WEB DESIGN & USER EXPERIENCE (UI/UX)",
     description:
       "Design that delights and converts. We design beautiful, intuitive digital experiences that captivate users and drive conversions. Every pixel, every interaction, meticulously crafted for impact.",
     tags: [
@@ -36,10 +37,11 @@ export const servicesCards = [
       "Web Redesign",
       "Design Systems",
     ],
+    link: "/services/#web-design",
   },
   {
     image: ServicesCard3,
-    title: "Web Development & Digital Solutions",
+    title: "WEB DEVELOPMENT & DIGITAL SOLUTIONS (SAAS)",
     description:
       "Custom-built solutions for the digital era. Whether you're launching a startup or scaling a platform, we develop robust, modern, and scalable web applications tailored to your business goals.",
     tags: [
@@ -53,10 +55,11 @@ export const servicesCards = [
       "Database Management",
       "Maintenance & Support",
     ],
+    link: "/services/#web-development",
   },
   {
     image: ServicesCard4,
-    title: "Digital Marketing & SEO",
+    title: "COGNITIVE MARKETING & SEO",
     description:
       "Maximize your online reach. From SEO to content creation and social media, we drive growth and visibility across digital channels. Strategic campaigns that convert and bring measurable results.",
     tags: [
@@ -69,5 +72,6 @@ export const servicesCards = [
       "Content Marketing",
       "Social Media",
     ],
+    link: "/services/#SEO",
   },
 ];

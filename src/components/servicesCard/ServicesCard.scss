@@ -7,30 +7,28 @@ $lightbg: #f2f2f2;
 
 .servicesCard {
   flex: 0 0 auto;
-  height: 400px;
   width: 100%;
+  height: 80vh;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   position: relative;
   border: 1px solid rgba(122, 122, 122, 0);
-  // border-radius: 30px;
 
   @media screen and (max-width: 425px) {
     height: 500px;
   }
 
   &:hover {
-    border: 1px solid $primary;
-    box-shadow: 0px 0px 15px 2px $primary;
-    transition: 0.3s;
-
     .servicesCardDetails {
-      h5 {
+      h3 {
         color: $primary;
         transition: 0.3s;
-        svg {
+
+        .servicesCardArrow {
           fill: $primary;
+          bottom: 10px;
           transition: 0.3s;
         }
       }
@@ -70,15 +68,18 @@ $lightbg: #f2f2f2;
     z-index: 2; // ensure text stays above gradient
     text-align: justify;
 
-    h5 {
+    h3 {
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: start;
       gap: 1rem;
 
-      svg {
+      .servicesCardArrow {
         fill: $light;
+        position: relative;
+        bottom: 0;
+        transition: 0.3s;
       }
     }
 

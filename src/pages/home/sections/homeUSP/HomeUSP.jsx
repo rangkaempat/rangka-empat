@@ -39,9 +39,17 @@ function HomeUSP() {
             EMPAT?
           </motion.h2>
           <motion.p variants={fadeInWithEase} className="textLight textS">
-            At Rangka Empat Studio, we help brands grow through strategic
-            branding, professional web design, and custom-built web
-            applications.
+            At Rangka Empat Studio, we help brands grow through{" "}
+            <motion.span variants={fadeInWithEase} className="textBold">
+              strategic branding,
+            </motion.span>{" "}
+            <motion.span variants={fadeInWithEase} className="textBold">
+              professional web design,
+            </motion.span>{" "}
+            and{" "}
+            <motion.span variants={fadeInWithEase} className="textBold">
+              custom-built web applications.
+            </motion.span>
             <br />
             <br />
             Whether you're a startup or established business, we work closely

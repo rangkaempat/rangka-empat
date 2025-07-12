@@ -8,8 +8,8 @@ function USPCard({ image, title, description, animation }) {
       <motion.div className="USPCardContainer" variants={animation}>
         <img src={image} alt={title} />
         <div className="USPCardDetails">
-          <h3>{title}</h3>
-          <p>{description}</p>
+          <h3 className="textBold textM">{title}</h3>
+          <p className="textLight textXS">{description}</p>
         </div>
       </motion.div>
     </>
