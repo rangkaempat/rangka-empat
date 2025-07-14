@@ -1,15 +1,6 @@
 name: Deploy to Hostinger via FTP
 
-on:
-  push:
-    branches:
-      - main
-    paths:
-      - "src/**"
-      - "public/**"
-      - "vite.config.*"
-      - "package.json"
-      - "package-lock.json"
+on: push
 
 jobs:
   build-and-deploy:
