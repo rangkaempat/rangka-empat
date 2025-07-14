@@ -30,7 +30,7 @@ jobs:
       - name: Build Vite project
         run: npm run build
 
-      - name: Deploy dist/ to Hostinger via FTP (clean slate)
+      - name: Deploy dist/ to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -40,3 +40,39 @@ jobs:
           local-dir: dist
           server-dir: public_html/
           dangerous-clean-slate: true
+
+      - name: Notify Discord on success (embed)
+        if: success()
+        run: |
+          curl -H "Content-Type: application/json" \
+          -X POST \
+          -d '{
+                "embeds": [{
+                  "title": "✅ Deploy to Hostinger Succeeded",
+                  "description": "**Commit:** [${{ github.event.head_commit.message }}](${{ github.event.head_commit.url }})\n**By:** ${{ github.actor }}\n**Branch:** `${{ github.ref_name }}`",
+                  "color": 65280,
+                  "footer": {
+                    "text": "Rangka Empat Studio • GitHub Actions"
+                  },
+                  "timestamp": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"
+                }]
+              }' \
+          ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+      - name: Notify Discord on failure (embed)
+        if: failure()
+        run: |
+          curl -H "Content-Type: application/json" \
+          -X POST \
+          -d '{
+                "embeds": [{
+                  "title": "❌ Deploy to Hostinger Failed",
+                  "description": "**Commit:** [${{ github.event.head_commit.message }}](${{ github.event.head_commit.url }})\n**By:** ${{ github.actor }}\n**Branch:** `${{ github.ref_name }}`",
+                  "color": 16711680,
+                  "footer": {
+                    "text": "Rangka Empat Studio • GitHub Actions"
+                  },
+                  "timestamp": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"
+                }]
+              }' \
+          ${{ secrets.DISCORD_WEBHOOK_URL }}
