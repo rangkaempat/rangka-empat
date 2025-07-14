@@ -1,6 +1,6 @@
-# ----------------------------------------
+# -----------------------------------------
 # 🔁 Force HTTPS and non-www version
-# ----------------------------------------
+# -----------------------------------------
 RewriteEngine On
 
 # Redirect www to non-www
@@ -11,9 +11,9 @@ RewriteRule ^(.*)$ https://rangkaempat.com/$1 [L,R=301]
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://rangkaempat.com/$1 [L,R=301]
 
-# ----------------------------------------
+# -----------------------------------------
 # ⚙️ React SPA fallback routing
-# ----------------------------------------
+# -----------------------------------------
 RewriteBase /
 
 # Don’t rewrite index.html
