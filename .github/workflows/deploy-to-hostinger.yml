@@ -25,11 +25,11 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.RANGKA_EMPAT_FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          username: ${{ secrets.RANGKA_EMPAT_FTP_USERNAME }}
+          password: ${{ secrets.RANGKA_EMPAT_FTP_PASSWORD }}
           protocol: ftp
           local-dir: dist/
-          server-dir: public_html/
+          server-dir: domains/rangkaempat.com/public_html/
           dangerous-clean-slate: true
 
       - name: Notify Discord on success (embed)
