@@ -31,6 +31,8 @@ jobs:
           local-dir: dist/
           server-dir: ./
           dangerous-clean-slate: true
+          exclude: |
+            amachicms_fe/**
 
       - name: Notify Discord on success (embed)
         if: success()
