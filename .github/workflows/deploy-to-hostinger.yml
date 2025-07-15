@@ -1,6 +1,9 @@
 name: Deploy to Hostinger via FTP
 
-on: push
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build-and-deploy:
@@ -30,9 +33,9 @@ jobs:
           protocol: ftp
           local-dir: dist/
           server-dir: ./
-          dangerous-clean-slate: true
           exclude: |
             amachicms_fe/**
+          delete: true
 
       - name: Notify Discord on success (embed)
         if: success()
@@ -41,7 +44,7 @@ jobs:
           -X POST \
           -d '{
                 "embeds": [{
-                  "title": "✅ Deploy to Hostinger Succeeded",
+                  "title": "✅ Deploy Rangka Empat Website to Hostinger Succeeded",
                   "description": "**Commit:** [${{ github.event.head_commit.message }}](${{ github.event.head_commit.url }})\n**By:** ${{ github.actor }}\n**Branch:** `${{ github.ref_name }}`",
                   "color": 65280,
                   "footer": {
@@ -59,7 +62,7 @@ jobs:
           -X POST \
           -d '{
                 "embeds": [{
-                  "title": "❌ Deploy to Hostinger Failed",
+                  "title": "❌ Deploy Rangka Empat Website to Hostinger Failed",
                   "description": "**Commit:** [${{ github.event.head_commit.message }}](${{ github.event.head_commit.url }})\n**By:** ${{ github.actor }}\n**Branch:** `${{ github.ref_name }}`",
                   "color": 16711680,
                   "footer": {
