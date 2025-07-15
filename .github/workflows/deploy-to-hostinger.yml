@@ -29,7 +29,7 @@ jobs:
           password: ${{ secrets.RANGKA_EMPAT_FTP_PASSWORD }}
           protocol: ftp
           local-dir: dist/
-          server-dir: public_html/
+          server-dir: ./
           dangerous-clean-slate: true
 
       - name: Notify Discord on success (embed)
