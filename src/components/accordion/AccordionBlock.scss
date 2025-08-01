@@ -1,0 +1,45 @@
+
+.accordionBlock {
+  border-bottom: 1px solid #ccc;
+  padding: 16px 0;
+  margin: 50px 0;
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  
+}
+
+
+
+.accordionHeader span {
+  font-size: 1.5rem;
+  color: #888;
+}
+
+.accordionContent {
+  margin-top: 12px;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-left: 20px;
+
+                  @media screen and (max-width: 1024px) {
+  text-align: left;
+    margin-left: 0px;
+
+
+
+    }
+
+    @media screen and (max-width: 768px) {
+  text-align: left;
+    margin-left: 0px;
+
+
+
+    }
+}

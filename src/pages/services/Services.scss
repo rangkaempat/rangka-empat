@@ -1,0 +1,149 @@
+  $primary: #0aaab8;
+$secondary: #0a6ab8;
+$dark: #323232;
+$light: #ffffff;
+$darkbg: #000000;
+$lightbg: #f2f2f2;
+
+  .servicesCardContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    padding: 5rem 1rem 0rem 1rem;
+
+    @media screen and (max-width: 1024px) {
+      width: 55%;
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+              flex-direction: column;
+
+    }
+  }
+
+
+  .serviceContentContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    padding: 8rem 1rem 5rem 1rem;
+    @media screen and (max-width: 1024px) {
+      width: 55%;
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+              flex-direction: column;
+
+    }
+  }
+
+  .serviceContent {
+    display: flex;
+    flex-direction: column;
+      background-color: #323232;
+
+    gap: 2rem;
+    width: 20%;
+    @media screen and (max-width: 1024px) {
+      width: 55%;
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+              flex-direction: column;
+
+    }
+  }
+
+  .serviceContentDetails {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+        @media screen and (max-width: 1024px) {
+      width: 100%;
+
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+
+    }
+
+  }
+
+    .relatedProjectDiv {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+
+  }
+
+  .relatedProjectCardDiv {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  gap: 2rem;
+          @media screen and (max-width: 1024px) {
+              flex-direction: column;
+
+
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+
+
+    }
+}
+
+  .leftCardTitle {
+  align-self: stretch;
+  padding: 20px;
+
+  }
+
+  .leftCardTitleDetails { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 0.5rem;
+    color: $light;
+text-align: end;
+
+    @media screen and (max-width: 1024px) {
+     align-items: center;
+
+    }
+
+    @media screen and (max-width: 768px) {
+     align-items: center;
+
+
+    }
+
+  }
+
+  .contentTitle {
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: left;
+        @media screen and (max-width: 1024px) {
+    text-align: center;
+
+    }
+
+    @media screen and (max-width: 768px) {
+    text-align: center;
+
+
+    }
+  }
+  
