@@ -2,7 +2,7 @@ import React from "react";
 import { fadeInWithEase } from "../../functions/motionUtils";
 import { Link } from "react-router";
 import { motion } from "framer-motion";
-import "./servicesCard.scss";
+import "./ServicesCard.scss";
 
 function RelatedProjectCard({ image, number, title, description, link, tags }) {
   return (
